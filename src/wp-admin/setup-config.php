@@ -5,6 +5,8 @@
  * The permissions for the base directory must allow for writing files in order
  * for the wp-config.php to be created using this page.
  *
+ * @internal This file must be parsable by PHP4.
+ *
  * @package WordPress
  * @subpackage Administration
  */
@@ -40,10 +42,12 @@ define('WP_DEBUG', false);
 /**#@-*/
 
 require_once(ABSPATH . WPINC . '/load.php');
+require_once(ABSPATH . WPINC . '/version.php');
+wp_check_php_mysql_versions();
+
 require_once(ABSPATH . WPINC . '/compat.php');
 require_once(ABSPATH . WPINC . '/functions.php');
 require_once(ABSPATH . WPINC . '/class-wp-error.php');
-require_once(ABSPATH . WPINC . '/version.php');
 
 if (!file_exists(ABSPATH . 'wp-config-sample.php'))
 	wp_die('É necessário que o arquivo wp-config-sample.php exista no seu servidor. Por favor re-envie este arquivo da instalação do WordPress.');
@@ -57,12 +61,6 @@ if (file_exists(ABSPATH . 'wp-config.php'))
 // Check if wp-config.php exists above the root directory but is not part of another install
 if (file_exists(ABSPATH . '../wp-config.php') && ! file_exists(ABSPATH . '../wp-settings.php'))
 	wp_die("<p>O arquivo 'wp-config.php' já existe um nível acima de sua instalação do WordPress. Se você precisa redefinir qualquer item de configuração deste arquivo, por favor apague-o primeiro. Você pode tentar <a href='install.php'>instalar agora</a>.</p>");
-
-if ( version_compare( $required_php_version, phpversion(), '>' ) )
-	wp_die( sprintf( /*WP_I18N_OLD_PHP*/'O seu servidor está usando a versão %1$s do PHP, mas o WordPress necessita pelo menos a versão %2$s.'/*/WP_I18N_OLD_PHP*/, phpversion(), $required_php_version ) );
-
-if ( !extension_loaded('mysql') && !file_exists(ABSPATH . 'wp-content/db.php') )
-	wp_die( /*WP_I18N_OLD_MYSQL*/'Parece que a extensão MySQL necessária para o WordPress está faltando na sua instalação do PHP.'/*/WP_I18N_OLD_MYSQL*/ );
 
 if (isset($_GET['step']))
 	$step = $_GET['step'];
