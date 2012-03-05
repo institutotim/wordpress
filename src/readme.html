@@ -8,8 +8,7 @@
 <body>
 <h1 id="logo">
 	<a href="http://wordpress.org/"><img alt="WordPress" src="wp-admin/images/wordpress-logo.png" width="250" height="68" /></a>
-	<br /> 
-	Versão 3.2.1
+	<br /> Versão 3.3.1
 </h1>
 <p style="text-align: center">Plataforma de Publicação Semântica Pessoal</p>
 
@@ -20,7 +19,8 @@
 <h1>A famosa instalação de 5 minutos</h1>
 <ol>
 	<li>Descompacte o pacote em uma pasta vazia e faça o upload de tudo.</li>
-	<li>Abra <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> em seu navegador. Você será conduzido ao processo de configuração do arquivo <code>wp-config.php</code> com os detalhes de conexão do seu banco de dados.        <ol>
+	<li>Abra <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> em seu navegador. Você será conduzido ao processo de configuração do arquivo <code>wp-config.php</code> com os detalhes de conexão do seu banco de dados.
+      <ol>
 	        <li>Se por algum motivo isto não funcionar, não se preocupe. Isto não funciona em todos os servidores de hospedagem. Abra o arquivo <code>wp-config-sample.php</code> com um editor de texto como o WordPad ou similar e preencha suas informações de conexão do banco de dados.</li>
 	        <li>Salve o arquivo como <code>wp-config.php</code> e faça o upload.</li>
 	        <li>Abra o arquivo <span class="file"><a href="wp-admin/install.php">/wp-admin/install.php</a></span> no seu navegador.</li>
@@ -46,8 +46,24 @@
 	    <li>Faça o upload dos novos arquivos.</li>
 	    <li>Acesse a página <span class="file"><a href="wp-admin/upgrade.php">/wp-admin/upgrade.php</a> com seu navegador.</span></li>
 </ol>
+
 <h2>Modificações nos Modelos dos Temas</h2>
 <p>Se você personalizou os modelos de seu tema, provavelmente terá que fazer algumas modificações em todas versões mais importantes. </p>
+
+<h1>Migrando de outros sistemas</h1>
+<p>O WordPress consegue <a href="http://codex.wordpress.org/pt-br:Importando_conte%C3%BAdo">importar conteúdo de vários sistemas</a>. Primeiro você precisa instalar o WordPressd conforme descrito acima, e depois utilize <a href="wp-admin/import.php" title="Importar para o WordPress">nossa ferramenta para importar</a>.</p>
+
+<h1>Requisitos do sistema</h1>
+<ul>
+	<li><a href="http://php.net/">PHP</a> versão <strong>5.2.4</strong> ou mais alta.</li>
+	<li><a href="http://www.mysql.com/">MySQL</a> versão <strong>5.0</strong> ou mais alta.</li>
+</ul>
+
+<h2>Recomendações do sistema</h2>
+<ul>
+	<li>O módulo <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">mod_rewrite</a> do Apache.</li>
+	<li>Um link para <a href="http://wordpress.org/">http://wordpress.org</a> no seu site.</li>
+</ul>
 
 <h1>Recursos Online</h1>
 <p>Se você ainda possui alguma dúvida que não foi esclarecida neste documento, aproveite a numerosa quantidade de recusos online do WordPress (em inglês):</p>
@@ -64,21 +80,7 @@
 		<dd>Há um canal de chat online que é usado para discussões entre pessoas que utilizam o WordPress e ocasionalmente para tópicos de suporte. A página do wiki acima deve apontá-lo na direção correta. (<a href="irc://irc.freenode.net/wordpress">irc.freenode.net #wordpress</a>)</dd>
 </dl>
 
-<h1>Requisitos do Sistema</h1>
-<ul>
-	<li>Versão do <a href="http://php.net/">PHP</a> <strong>4.3</strong> ou superior.</li>
-	<li>Versão do <a href="http://www.mysql.com/">MySQL</a> <strong>4.1.2</strong> ou superior.</li>
-</ul>
-<h2>Recomendações do sistema</h2> 
-	<ul> 
-	    <li>O módulo Apache <a href="http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">mod_rewrite</a>.</li> 
-	    <li>Um link para <a href="http://wordpress.org/">http://wordpress.org</a> em seu site.</li> 
-	</ul> 
-
-<h1>Migrando de outros sistemas</h1> 
-	<p>O WordPress pode <a href="http://codex.wordpress.org/Importing_Content">importar conteúdo de vários sistemas</a>. Primeiro você precisa instalar o WordPress e fazê-lo funcionar como descrito acima, antes de usar <a href="wp-admin/import.php" title="Import to WordPress">nossas ferramentas de importação</a>.</p> 
-	 
-	<h1>Interfaces <abbr title="eXtensible Markup Language">XML</abbr>-<abbr title="Remote Procedure Call">RPC</abbr> e Atom</h1>
+<h1>Interfaces <abbr title="eXtensible Markup Language">XML</abbr>-<abbr title="Remote Procedure Call">RPC</abbr> e Atom</h1>
 <p>Você pode publicar no seu blog WordPress com ferramentas como o <a href="http://download.live.com/writer">Windows Live Writer</a>, <a href="http://illuminex.com/ecto/">Ecto</a>, <a href="http://bloggar.com/">w.bloggar</a>, <a href="http://radio.userland.com">Radio Userland</a> (o que significa que você pode usar o recurso email-to-blog do Radio), <a href="http://www.newzcrawler.com/">NewzCrawler</a>, e outras ferramentas que possuem suporte a <abbr title="application programming interface">API</abbr> para blogs! :) Você pode ler mais sobre isso no <a href="http://codex.wordpress.org/XML-RPC_Support">suporte ao <abbr>XML</abbr>-<abbr>RPC</abbr> no Codex</a>.</p>
 
 <h1>Publicar Via Email</h1>
@@ -90,10 +92,12 @@
 
 <h1>Notas Finais</h1>
 <ul>
-	<li>Se você tiver qualquer sugestão, idéias, ou comentários ou se você (unhum!) encontrou um erro, participe conosco dos <a href="http://wordpress.org/support/">Fóruns de Suporte</a> (em inglês).</li>
+	<li>Se você tiver qualquer sugestão, idéias, ou comentários ou se você (glup!) encontrou um erro, participe conosco dos <a href="http://br.forums.wordpress.org/">Fóruns de Suporte</a>.</li>
 	<li>Agora, o WordPress tem uma <abbr title="application programming interface">API</abbr> de plugin robusta que torna a criação de plugins fácil. Se você for um programador interessado em utilizar esta funcionalidade, consulte a <a href="http://codex.wordpress.org/Plugin_API" title="WordPress plugin API">documentação de plugin no Codex</a> (em inglês). Na grande maioria dos casos, não será necessário modificar o código principal.</li>
 </ul>
 
+
+<h1>Share the Love</h1>
 <p>O Wordpress não tem uma campanha de marketing multi-milionária ou o patrocínio de celebridades, mas temos algo muito melhor: você. Se você gostar do WordPress, considere a possibilidade de recomendá-lo a um amigo ou configurá-lo para alguém com menos conhecimentos do que você, ou ainda, escrever para um autor que não conheça o WordPress.</p>
 
 <p>O WordPress é a continuação oficial do <a href="http://cafelog.com/">b2/cafélog</a>, que veio do Michel V. O trabalho foi continuado pelos <a href="http://wordpress.org/about/">desenvolvedores do WordPress</a>. Se você quiser apoiar o WordPress, por favor, considere fazer uma <a href="http://wordpress.org/donate/" title="Donate to WordPress">doação</a>.</p>
