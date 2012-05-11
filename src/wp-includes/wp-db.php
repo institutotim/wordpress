@@ -752,7 +752,7 @@ class wpdb {
 <li>O usuário <code>%2$s</code> possui permissão para usar o banco de dados <code>%1$s</code>?</li>
 <li>Em alguns sistemas o nome do seu banco de dados possui como prefixo o seu nome de usuário, portanto ele seria algo como <code>username_%1$s</code>. Pode ser este o problema?</li>
 </ul>
-<p>Se você não sabe como configurar seu banco de dados você deveria <strong>contatar o seu servidor</strong>. Se nada der certo, você pode encontrar ajuda nos <a href="http://br.forums.wordpress.org">Fóruns de Suporte do WordPress</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, $db, $this->dbuser ), 'db_select_fail' );
+<p>Se você não sabe como configurar seu banco de dados você deveria <strong>contatar o seu servidor</strong>. Se nada der certo, você pode encontrar ajuda nos <a href="http://br.forums.wordpress.org">Fóruns de Suporte do WordPress</a>.</p>'/*/WP_I18N_DB_SELECT_DB*/, htmlspecialchars( $db, ENT_QUOTES ), htmlspecialchars( $this->dbuser, ENT_QUOTES ) ), 'db_select_fail' );
 			return;
 		}
 	}
@@ -1046,7 +1046,7 @@ class wpdb {
 	<li>Você tem certeza que o servidor do banco de dados está funcionando?</li>
 </ul>
 <p>Se você não tem certeza sobre o que estes termos significam, provavelmente você deve contatar sua hospedagem.Se você ainda precisar de ajuda, você sempre poderá visitar os <a href=\'http://wordpress.org/support/\'>Fóruns de Suporte do WordPress</a>.</p>
-'/*/WP_I18N_DB_CONN_ERROR*/, $this->dbhost ), 'db_connect_fail' );
+'/*/WP_I18N_DB_CONN_ERROR*/, htmlspecialchars( $this->dbhost, ENT_QUOTES ) ), 'db_connect_fail' );
 
 			return;
 		}
