@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Twenty Eleven package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2012-06-17 12:53:13+0000\n"
+"PO-Revision-Date: 2012-06-28 01:44:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,10 +11,10 @@ msgstr ""
 "Project-Id-Version: Twenty Eleven\n"
 
 msgid "Showcase Template"
-msgstr ""
+msgstr "Modelo Vitrine"
 
 msgid "Sidebar Template"
-msgstr ""
+msgstr "Modelo Lateral"
 
 #: image.php:30
 msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
