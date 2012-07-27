@@ -59,7 +59,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * Você pode ter várias instalações em um único banco de dados se você der para cada um um único
  * prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'hl_';
 
 /**
  * O idioma localizado do WordPress é o inglês por padrão.
