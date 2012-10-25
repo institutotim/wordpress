@@ -16,7 +16,7 @@
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'database_name_here');
+define('DB_NAME', 'nomedoBD');
 
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'username_here');
@@ -59,7 +59,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * Você pode ter várias instalações em um único banco de dados se você der para cada um um único
  * prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'hl_';
+$table_prefix  = 'wp_';
 
 /**
  * O idioma localizado do WordPress é o inglês por padrão.
