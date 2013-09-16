@@ -147,7 +147,7 @@ a.more {
 }
 
 p.excerpt {
-    height:58px;
+    max-height:58px;
     overflow:hidden;
     position:relative;
     a {
@@ -301,6 +301,7 @@ section#main-section {
     }
 
     #about {
+        padding-bottom:35px;
         position:relative;
         article {
             background:@timBlue4;
@@ -361,11 +362,22 @@ section#main-section {
 
     #main-aside {
         background:rgb(224, 236, 242);
-        border:1px solid rgb(203, 215, 220);
-        border-radius:24px;
+        border-color:rgb(203, 215, 220);
+        border-style:solid;
+        border-width:0 1px;
         margin-top:10px;
         min-height:200px;
         padding:30px 0;
+        &:after {
+            background-image:url(../img/aba_rodape_interna.gif);
+            background-position:bottom center;
+            background-repeat:no-repeat;
+            background-size:100% auto;
+            content:"";
+            height:100px;
+            margin-top:20px;
+            width:100%;
+        }
         
         article {
             color:rgb(102,102,102);
