@@ -64,6 +64,9 @@ html, body {
 
 .btn-default {
     #gradient > .tim-button-gradient(#aaaaaa, #aaaaaa, #898989, #898989);
+    &:hover, &:active {
+        #gradient > .tim-button-gradient(#aaaaaa, #aaaaaa, #898989, #898989);
+    }
 }
 
 .btn-info {
@@ -76,13 +79,17 @@ html, body {
 .btn-warning {
     #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
     color:#69879D;
-    &:hover {
+    &:hover, &:active {
         color:#69879D;
+        #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
     }
 }
 
 .btn-success {
     #gradient > .tim-button-gradient(#78ab00, #78ab00, #528500, #528500);
+    &:hover, &:active {
+        #gradient > .tim-button-gradient(#78ab00, #78ab00, #528500, #528500);
+    }
 }
 
 
