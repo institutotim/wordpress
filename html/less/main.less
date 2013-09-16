@@ -1,0 +1,340 @@
+@import "bootstrap-3.0.0/bootstrap.less";
+@import "font-awesome/font-awesome.less";
+
+// FONTS
+@font-face {
+  font-family: 'Trade Gothic';
+  src: url('../fonts/trade-gothic/tradegothicltstd-webfont.eot');
+  src: url('../fonts/trade-gothic/tradegothicltstd-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/trade-gothic/tradegothicltstd-webfont.woff') format('woff'),
+       url('../fonts/trade-gothic/tradegothicltstd-webfont.ttf') format('truetype'),
+       url('../fonts/trade-gothic/tradegothicltstd-webfont.svg#glyphicons-halflingsregular') format('svg');
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family:'Trade Gothic';
+}
+
+// COLOURS
+@timBlue1:rgb(7, 47, 230);
+@timBlue2:rgb(0, 115, 207);
+@timBlue3:rgb(44, 156, 211);
+@timBlue4:rgb(0, 196, 223);
+@timBlue5:rgb(196, 217, 228);
+@timInfinity1:rgb(254, 209, 0);
+@timInfinity2:rgb(227, 114, 34);
+@timLiberty1:rgb(122, 184, 0);
+@timLiberty2:rgb(190, 214, 0);
+@timCorporativo1:rgb(94, 106, 113);
+@timCorporativo2:rgb(152, 30, 50);
+
+// MIXINS
+#gradient {
+    .tim-button-gradient(@first-color, @mid-color-1, @mid-color-2, @end-color) {
+        background: #ffb76b; /* Old browsers */
+        background: -moz-linear-gradient(top,  @first-color 0%, @mid-color-1 50%, @mid-color-2 51%, @end-color 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@first-color), color-stop(50%,@mid-color-1), color-stop(51%,@mid-color-2), color-stop(100%,@end-color)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@first-color', endColorstr='@end-color',GradientType=0 ); /* IE6-9 */
+    }
+}
+
+html, body {
+    height:100%;
+}
+
+// BUTTONS CUSTOMIZATION
+.btn, .btn:hover, .btn:active {
+    border:none;
+    box-shadow:0 0 7px #ddd;
+    color:#fff;
+    font-size:11px;
+    text-transform:uppercase;   
+}
+
+.btn-danger {
+    #gradient > .tim-button-gradient(#f89300, #f89300, #fb8500, #fb8500);
+    &:hover, &:active {
+        #gradient > .tim-button-gradient(#ffaa00, #ffaa00, #f89400, #f89400);
+    }
+}
+
+.btn-default {
+    #gradient > .tim-button-gradient(#aaaaaa, #aaaaaa, #898989, #898989);
+}
+
+.btn-info {
+    #gradient > .tim-button-gradient(#008ac8, #008ac8, #005ea7, #005ea7);
+    &:hover, &:active {
+        #gradient > .tim-button-gradient(#009cd3, #009cd3, #0073bc, #0073bc);
+    }
+}
+
+.btn-warning {
+    #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
+    color:#69879D;
+    &:hover {
+        color:#69879D;
+    }
+}
+
+.btn-success {
+    #gradient > .tim-button-gradient(#78ab00, #78ab00, #528500, #528500);
+}
+
+
+// IMAGES CUSTOMIZATION
+.img-wrapper {
+    display:inline-block;
+    height:165px;
+    overflow:hidden;
+    padding-bottom:35px;
+    position:relative;
+    width:100%;
+    &:after {
+        #gradient > .vertical(#ddd, #fff);
+        border-radius:24px 0 0 0;
+        bottom:0;
+        content:"";
+        height:34px;
+        left:0;
+        margin-top:1px;
+        position:absolute;
+        right:0;
+    }
+    .img {
+        border:none;
+        border-radius:0 0 4px 24px;
+        bottom:35px;
+        display:block;
+        height:auto;
+        position:absolute;
+        width:100%;
+    }
+}
+
+.shadow {
+    position:relative;
+    &:after {
+        #gradient > .vertical(#ddd, #fff);
+        border-radius:24px 0 0 0;
+        bottom:-35px;
+        content:"";
+        height:34px;
+        left:0;
+        margin-top:1px;
+        position:absolute;
+        right:0;    
+    }
+}
+
+// TYPOGRAPHY
+
+// HEADER
+header#main-header {
+    background-image:url(../img/bg-header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow:0 0 20px #999;
+    height:80px;
+    margin:50px 0 25px;
+    position:relative;
+    #brand {
+        left:18px;
+        position:absolute;
+        top:-13px;
+    }
+    #title {
+        left:220px;
+        position:absolute;
+        top:15px;
+        h1 {
+            color:white;
+            font-family:"Trade Gothic";
+            font-size:30px;
+            margin:0;
+            padding:0;
+            text-transform:uppercase;
+        }
+        h2 {
+            color:#5DCCDC;
+            font-family:"Trade Gothic";
+            font-size:13px;
+            font-weight:normal;
+            margin:0;
+            padding:0;
+        }
+    }
+}
+
+// FOOTER
+footer#main-footer {
+    background-image:url(../img/bg-footer.jpg);
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    height:200px;
+    margin-top:100px;
+}
+
+// NAV
+nav#main-nav {
+    a {
+        color:#0072AC;
+        font-size:15px;
+        text-transform:uppercase;
+        &:hover {
+            color:#666;
+            text-decoration:none;
+        }
+    }
+    ul {
+        list-style:none;
+        margin:0 0 50px 0;
+        padding:0;
+        li {
+            display:inline-block;
+            margin:0 0 0 20px;
+            padding:0;
+            &:last-child {
+                margin-right:1px;
+            }
+        }
+    }
+}
+
+// HOME MAIN SECTION
+section#main-section {
+    // HIGHLIGHT BOX
+    .highlight-wrapper {
+        height:335px;
+        overflow:hidden;
+        position:relative;
+        .highlight-container {
+            height:335px;
+            overflow:hidden;
+            position:relative;
+            .content {
+                background:rgba(10, 26, 66, .9);
+                bottom:35px;
+                border-radius:0 0 4px 24px;
+                padding:20px;
+                position:absolute;
+                z-index:10;
+                h1 {
+                    color:#fff;
+                    font-size:27px;
+                    line-height:1;
+                    margin:0 0 7px 0;
+                    padding:0;
+                    text-transform:uppercase;
+                }
+                p {
+                    color:#fff;
+                    margin:0;
+                    padding:0;
+                }
+            }
+            .img-wrapper {
+                height:335px;
+                z-index:1;
+            }
+        }
+    }
+
+    #about {
+        position:relative;
+        article {
+            background:@timBlue4;
+            border-radius:0 0 4px 24px;
+            color:#fff;
+            height:300px;
+            padding:20px;
+            h1 {
+                font-size:27px;
+                line-height:1;
+                margin:0 0 14px 0;
+                padding:0;
+                text-transform:uppercase;
+            }
+        }
+    }
+
+    #secondary-nav {
+        margin:10px 0 35px;
+        a {
+            display:block;
+            line-height:2;
+        }
+    }
+
+    #projects {
+        article {
+            color:rgb(102,102,102);
+            font-family:@font-family-sans-serif;
+            font-size:11px;
+            margin-bottom:10px;
+        }
+
+        h1 {
+            color:rgb(0, 125, 195);
+            font-size:24px;
+            line-height:1;
+            margin-bottom:35px;
+        }
+        
+        h2 {
+            color:rgb(0, 125, 195);
+            font-size:18px;
+            line-height:1;
+            margin-bottom:10px;
+        }
+
+        .img-wrapper {
+            height:155px;
+            &:after {
+                height:18px;
+            }
+            .img {
+                bottom:19px;
+            }
+        }
+    }
+}
+
+// HELPERS
+.alignleft {
+    float:left;
+}
+.alignright {
+    float:right;
+}
+.textcenter {
+    text-align:center;
+}
+.textleft {
+    text-align:left;
+}
+.textright {
+    text-align:right;
+}
+
+.bottom {
+    margin-bottom:0 !important;
+    padding-bottom:0 !important;
+}
+.left {
+    margin-left:0 !important;
+    padding-left:0 !important;
+}
+.right {
+    margin-right:0 !important;
+    padding-right:0 !important;
+}
+.top {
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
