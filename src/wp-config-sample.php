@@ -16,13 +16,13 @@
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'nomedoBD');
+define('DB_NAME', 'instituto-tim');
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'username_here');
+define('DB_USER', 'root');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', '');
 
 /** nome do host do MySQL */
 define('DB_HOST', 'localhost');
@@ -32,6 +32,7 @@ define('DB_CHARSET', 'utf8');
 
 /** O tipo de collate do banco de dados. Não altere isso se tiver dúvidas. */
 define('DB_COLLATE', '');
+define('DOMAIN_CURRENT_SITE', 'localhost/instituto-tim');
 
 /**#@+
  * Chaves únicas de autenticação e salts.
@@ -59,7 +60,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * Você pode ter várias instalações em um único banco de dados se você der para cada um um único
  * prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'hl_';
 
 /**
  * O idioma localizado do WordPress é o inglês por padrão.
