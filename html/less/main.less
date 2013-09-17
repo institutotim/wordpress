@@ -404,7 +404,6 @@ section#main-section {
             color:rgb(102,102,102);
             font-family:@font-family-sans-serif;
             font-size:11px;
-            margin-bottom:40px;
             &:last-child {
                 border:none;
                 margin-bottom:0;
@@ -449,6 +448,27 @@ section#main-section {
                 line-height:1;
                 margin:-30px -15px 16px -15px;
                 padding:20px;
+            }
+            nav.prev,nav.next {
+                background-position:center center;
+                background-repeat:no-repeat;height:36px;
+                position:absolute;
+                top:124px;
+                z-index:10;
+                width:36px;
+                a {
+                    display:block;
+                    height:36px;
+                    width:36px;
+                }
+            }
+            nav.prev {
+                background-image:url(../img/prev.png);
+                left:-15px;
+            }
+            nav.next {
+                background-image:url(../img/next.png);
+                right:-15px;
             }
         }
     }
