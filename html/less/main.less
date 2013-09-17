@@ -10,9 +10,37 @@
        url('../fonts/trade-gothic/tradegothicltstd-webfont.ttf') format('truetype'),
        url('../fonts/trade-gothic/tradegothicltstd-webfont.svg#glyphicons-halflingsregular') format('svg');
 }
-
-body, h1, h2, h3, h4, h5, h6 {
+body {
+    color:rgb(102,102,102);
+    font-size:12px;
+}
+h1, h2, h3, h4, h5, h6 {
     font-family:'Trade Gothic';
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#007dc3;
+}
+h1 {
+    font-size:24px;
+}
+h2 {
+    font-size:20px;
+}
+h3 {
+    font-size:18px;
+}
+h4 {
+    font-size:16px;
+}
+h5 {
+    font-size:12px;
+    text-transform:uppercase;
+}
+h6 {
+    font-size:12px;
+    text-transform:uppercase;
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
 // COLOURS
@@ -195,15 +223,16 @@ header#main-header {
 
 // FOOTER
 footer#main-footer {
-    background-image:url(../img/bg-footer.jpg);
+    background-image:url(../img/bg_rodape.gif);
     background-position:top center;
     background-repeat:no-repeat;
     background-size:100% auto;
+    font-family:'Trade Gothic';
     margin-top:80px;
     padding:65px 0 35px;
     nav {
         ul {
-            margin-bottom:65px;
+            margin-bottom:35px;
         }
     }
     ul {
@@ -241,6 +270,7 @@ nav#main-nav {
     margin:35px 0 35px 0;
     a {
         color:#0072AC;
+        font-family:'Trade Gothic';
         font-size:15px;
         text-transform:uppercase;
         &:hover {
@@ -321,6 +351,7 @@ section#main-section {
             right:0;
             top:0;
             h1 {
+                color:#fff;
                 font-size:27px;
                 line-height:1;
                 left:20px;
