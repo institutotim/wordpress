@@ -391,14 +391,8 @@ section#main-section {
     }
 
     #main-aside {
-        background:rgb(224, 236, 242);
-        border-color:rgb(203, 215, 220);
-        border-radius:4px;
-        border-style:solid;
-        border-width:1px;
         margin-top:10px;
         min-height:200px;
-        padding:30px 0 3px;
         
         article {
             color:rgb(102,102,102);
@@ -411,10 +405,13 @@ section#main-section {
         }
 
         h1 {
+            background:#fff;
+            border-radius:4px 4px 0 0;
             color:rgb(0, 125, 195);
             font-size:24px;
             line-height:1;
-            margin-bottom:35px;
+            margin:0 -15px 15px -15px;
+            padding:20px;
         }
         
         h2 {
@@ -441,14 +438,14 @@ section#main-section {
             height:auto;
         }
 
-        .editais {
-            h1 {
-                background:#fff;
-                border-radius:4px 4px 0 0;
-                line-height:1;
-                margin:-30px -15px 16px -15px;
-                padding:20px;
-            }
+        .editais, .solutions {
+            background:rgb(224, 236, 242);
+            border-color:rgb(203, 215, 220);
+            border-radius:4px;
+            border-style:solid;
+            border-width:1px;
+            margin-bottom:25px;
+            
             nav.prev,nav.next {
                 background-position:center center;
                 background-repeat:no-repeat;height:36px;
