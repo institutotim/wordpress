@@ -8,9 +8,9 @@
 
     <link rel="stylesheet/less" type="text/css" href="less/main.less">
 
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/less-1.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/instituto.js"></script>
 
 </head>
@@ -46,10 +46,10 @@
                                 <article>
                                     <div class="content">
                                         <h1>O Círculo da Matemática</h1>
-                                        <p class="excerpt">Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non.</p>
+                                        <p class="excerpt">Instituto TIM faz parceria com professores da Universidade de Harvard</p>
                                     </div>
                                     <div class="img-wrapper">
-                                        <img src="img/prefuse73.jpg" class="img"/>
+                                        <img src="img/img_001.jpg" class="img"/>
                                     </div>
                                 </article>
                             </div>
@@ -57,22 +57,14 @@
                     </div>
                     <div id="about" class="col-lg-4 col-md-4">
                         <article class="shadow">
-                            <h1>Instituto TIM</h1>  
-                            <p class="excerpt">Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non.</p>
+                            <h1>Nossa Missão</h1>  
+                            <p class="excerpt">Criar e potencializar recursos e estratégias para a democratização da ciência e inovação, que promovam o desenvolvimento humano no Brasil, tendo a tecnologia móvel entre os principais habilitadores.</p>
                             <p class="more textright"><a href="" class="btn btn-warning">Saiba mais</a></p>
                         </article>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
-                        <nav id="secondary-nav">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-3"><a href="" class="btn btn-info col-lg-12 col-md-12">Ensino</a></div>
-                                <div class="col-lg-3 col-md-3 col-sm-3"><a href="" class="btn btn-info col-lg-12 col-md-12">Aplicações</a></div>
-                                <div class="col-lg-3 col-md-3 col-sm-3"><a href="" class="btn btn-info col-lg-12 col-md-12">Inclusão</a></div>
-                                <div class="col-lg-3 col-md-3 col-sm-3"><a href="" class="btn btn-info col-lg-12 col-md-12">Trabalho</a></div>
-                            </div>
-                        </nav>
                         <div id="projects">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
@@ -82,8 +74,22 @@
                                     </div>
                                 </div>
                             </div>
+                            <script type="text/javascript">
+                            $(document).ready(function() {
+                                $("#secondary-nav a").tooltip();
+                            })
+                            </script>
+                            <nav id="secondary-nav" class="row">
+                                <ul class="clearfix">
+                                    <li><a href="" class="btn btn-default col-lg-12 col-md-12">Todos</a></li>
+                                    <li class="ensino"><a href="" class="btn btn-ensino col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que toda criança e jovem tem direito a uma educação em ciência e em matemática que represente os avanços da produção de conhecimentos dessas áreas. Por isso,investe em projetos inovadores, promove a formação de professores da rede pública, apoia museus e centros de ciência e tecnologia, cria e democratiza estratégias e recursos didáticos que contribuam para o ensino das ciências e matemáticas.">Ensino</a></li>
+                                    <li class="aplicacoes"><a href="" class="btn btn-aplicacoes col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas devem servir ao desenvolvimento humano. Por isso, investe para encontrar aplicações e soluções tecnológicas que contribuam para melhorias do trabalho de instituições que atuem com esse objetivo.">Aplicações</a></li>
+                                    <li class="inclusao"><a href="" class="btn btn-inclusao col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas são a base de uma nova forma de trabalho. Por isso, investe na criação e democratização de recursos e estratégias de ensino que promovam a inclusão tecnológica produtiva de jovens.">Inclusão</a></li>
+                                    <li class="trabalho"><a href="" class="btn btn-trabalho col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas são a base de uma nova forma de trabalho. Por isso, investe na criação e democratização de recursos e estratégias de ensino que promovam a inclusão tecnológica produtiva de jovens.">Trabalho</a></li>
+                                </ul>
+                            </nav>
                             <div class="row">
-                                <article class="col-lg-4 col-md-4 col-sm-6">
+                                <article class="trabalho col-lg-4 col-md-4 col-sm-6">
                                     <div class="img-wrapper">
                                         <img src="img/prefuse73.jpg" class="img">
                                     </div>
@@ -91,7 +97,7 @@
                                     <p class="excerpt"><a href="">Adipiscing sit velit hac porttitor habitasse, facilisis a nascetur elementum, vel pulvinar facilisis mattis aliquet integer turpis pellentesque quis, ac dis. Nunc nec pellentesque tempor.</a></p>
                                     <p><a href="" class="more">Saiba mais...</a></p>
                                 </article>
-                                <article class="col-lg-4 col-md-4 col-sm-6">
+                                <article class="inclusao col-lg-4 col-md-4 col-sm-6">
                                     <div class="img-wrapper">
                                         <img src="img/prefuse73.jpg" class="img">
                                     </div>
@@ -99,7 +105,7 @@
                                     <p class="excerpt"><a href="">Adipiscing sit velit hac porttitor habitasse, facilisis a nascetur elementum, vel pulvinar facilisis mattis aliquet integer turpis pellentesque quis, ac dis. Nunc nec pellentesque tempor.</a></p>
                                     <p><a href="" class="more">Saiba mais...</a></p>
                                 </article>
-                                <article class="col-lg-4 col-md-4 col-sm-6">
+                                <article class="aplicacoes col-lg-4 col-md-4 col-sm-6">
                                     <div class="img-wrapper">
                                         <img src="img/prefuse73.jpg" class="img">
                                     </div>
