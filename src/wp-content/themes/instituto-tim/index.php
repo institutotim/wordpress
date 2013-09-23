@@ -1,27 +1,5 @@
 <?php get_header(); ?>
 
-        <div class="col-lg-offset-1 col-lg-10">
-            <header id="main-header">
-                <div id="brand">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logotipo.png"/>
-                </div>
-                <div id="title">
-                    <h1>Instituto Tim</h1>
-                    <h2>Augue cursus non nunc, a pellentesque pulvinar nec porta, dapibus lorem adipiscing nec, vut, purus amet.</h2>
-                </div>
-            </header>
-            <nav id="main-nav" class="row">
-                <div class="col-lg-12 col-md-12">
-                    <ul class="clearfix textcenter">
-                        <li><a href="">Conheça o Instituto TIM</a></li>
-                        <li><a href="">Notícias</a></li>
-                        <li><a href="">Projetos</a></li>
-                        <li><a href="">Soluções</a></li>
-                        <li><a href="">Editais</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <section id="main-section">
                 <div class="row">
                     <div id="highlight" class="col-lg-8 col-md-8">
                         <div class="highlight-wrapper">
@@ -153,21 +131,5 @@
                         </aside>
                     </div>
                 </div>
-            </section>
-
-            <footer id="main-footer">
-                <nav>
-                    <ul class="textcenter">
-                        <li><a href="">Sobre o Instituto TIM</a></li>
-                        <li><a href="">Contato</a></li>
-                        <li><a href="">Perguntas Frequentes</a></li>
-                    </ul>
-                </nav>
-                <ul class="textcenter">
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/logotipo.png"></li>
-                </ul>
-                <p class="textcenter"><small>© Copyright TIM Celular 2010. Todos os direitos reservados.</small></p>
-            </footer>
-        </div>
 
 <?php get_footer(); ?>

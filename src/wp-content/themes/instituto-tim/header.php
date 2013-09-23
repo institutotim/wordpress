@@ -50,3 +50,20 @@
 <body <?php body_class(); ?>>
 
     <div class="container">
+        <div class="col-lg-offset-1 col-lg-10">
+            <header id="main-header">
+                <div id="brand">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logotipo.png"/>
+                </div>
+                <div id="title">
+                    <h1><?php bloginfo( 'name' ); ?></h1>
+                    <h2><?php bloginfo ( 'description' ); ?></h2>
+                </div>
+            </header>
+            <nav id="main-nav" class="row">
+                <div class="col-lg-12 col-md-12">
+
+                    <?php wp_nav_menu( array( 'menu' => 'Header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '' ) ); ?>
+                </div>
+            </nav>
+            <section id="main-section">
