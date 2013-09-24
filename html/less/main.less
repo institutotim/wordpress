@@ -42,6 +42,25 @@ h6 {
   margin-bottom:0;
   padding-bottom:0;
 }
+// TYPOGRAPHY
+a.more {
+  background-image:url(../img/bullet.png);
+  background-position:left center;
+  background-repeat:no-repeat;
+  padding-left:12px;        
+}
+
+p.excerpt {
+  font-size:12px;
+  max-height:48px;
+  min-height:48px;
+  overflow:hidden;
+  position:relative;
+  a {
+    color:rgb(102,102,102);
+  }
+}
+
 
 // COLOURS
 @ensino:rgb(26, 39, 105);
@@ -184,24 +203,6 @@ html, body {
   }
 }
 
-// TYPOGRAPHY
-a.more {
-  background-image:url(../img/bullet.png);
-  background-position:left center;
-  background-repeat:no-repeat;
-  padding-left:12px;        
-}
-
-p.excerpt {
-  font-size:12px;
-  max-height:48px;
-  min-height:48px;
-  overflow:hidden;
-  position:relative;
-  a {
-    color:rgb(102,102,102);
-  }
-}
 
 // HEADER
 header#main-header {
@@ -345,9 +346,10 @@ section#main-section {
             padding:0;
             text-transform:uppercase;
           }
-          p {
+          p.excerpt {
             color:#fff;
             margin:0;
+            min-height:0;
             padding:0;
           }
         }
