@@ -129,24 +129,12 @@ if(function_exists('register_sidebar')) {
     ) );
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////   LOGIN SCREEN  //////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
+//========================================================== Login screen ==========================================================//
 
 function institutotim_custom_login_logo() {
 	echo '
         <style type="text/css">
-	        .login h1 a { background-image: url('. html::getImageUrl('logo.png') .'); background-size: auto; }
+	        .login h1 a { background-image: url('. html::getImageUrl('logotipo.png') .'); height: 105px; background-size: auto; }
         </style>';
 }
 add_action('login_head', 'institutotim_custom_login_logo');
@@ -162,18 +150,7 @@ function custom_login_headerurl($url) {
 }
 add_filter ('login_headerurl', 'custom_login_headerurl');
 
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////// CUSTOM MENUS  //////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
+//========================================================== Custom menus ==========================================================//
 
 add_action( 'init', 'institutotim_custom_menus' );
 function institutotim_custom_menus() {
@@ -182,54 +159,7 @@ function institutotim_custom_menus() {
     ) );
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////// COMMENTS  //////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-
-if (!function_exists('institutotim_comment')):
-
-    function institutotim_comment($comment, $args, $depth) {
-        $GLOBALS['comment'] = $comment;
-        ?>
-        <li <?php comment_class("clearfix"); ?> id="comment-<?php comment_ID(); ?>">
-            <p class="comment-meta alignright bottom">
-                <?php comment_reply_link(array('depth' => $depth, 'max_depth' => $args['max_depth'])) ?> <?php edit_comment_link( __('Edit', 'institutotim'), '| ', ''); ?>          
-            </p>    
-            <p class="comment-meta bottom">
-                <?php printf( __('By %s on %s at %s.', 'institutotim'), get_comment_author_link(), get_comment_date(), get_comment_time()); ?>
-                <?php if($comment->comment_approved == '0') : ?><br/><em><?php _e('Your comment is awaiting moderation.', 'institutotim'); ?></em><?php endif; ?>
-            </p>
-            <?php echo get_avatar($comment, 66); ?>
-            <div class="content">
-                <?php comment_text(); ?>
-            </div>
-        </li>
-        <?php
-    }
-
-endif; 
-
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////// JAVSCRIPT & CSS  ///////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
+//========================================================== Javascript & CSS ==========================================================//
 
 add_action('wp_print_scripts', 'institutotim_addJS');
 function institutotim_addJS() {
@@ -249,7 +179,22 @@ function institutotim_addJS() {
 
 }
 
-add_action('wp_print_styles', 'institutotim_addCSS');
-function institutotim_addCSS() {
-    //wp_enqueue_style('XXXXXX', get_stylesheet_directory_uri().'/css/XXXXX.css');
+//========================================================== Comments ==========================================================//
+
+function comments_tim_clear( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+
+?>
+    <div <?php comment_class( array('comments', 'clearfix') ); ?> id="comment-<?php comment_ID();?>">
+        <?php echo get_avatar( $comment, '56' ); ?>
+        <div class="content-of-comment">
+            <h3><?php comment_author_link(); ?> <span>(<?php comment_date('d/m/Y'); ?> ás <?php comment_date('H:i'); ?>)</span>
+            </h3>
+            <div class="text-comment"><?php comment_text(); ?></div>
+        </div>
+
+        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Responder', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+    </div>
+
+    <?php
 }

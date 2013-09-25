@@ -16,58 +16,71 @@ function comment_add_microid($classes)
 add_filter('comment_class','comment_add_microid');
 ?>
 
+<?php if ('open' == $post->comment_status) : ?>
+
 <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1') );?>>
 
-
-<?php if ('open' == $post->comment_status) : ?>
     <h1 class="entry-title"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h1>
 
-   
-<?php endif; ?>
-
-
-        <div class="comments clearfix">
-            <img class="image-of-user" src="http://1.gravatar.com/avatar/1b3419a457dc543aefadfa474bb18889?s=56&r=pg&d=mm">
-            <div class="content-of-comment">
-                <h3><a href="#" target="_blank" title="Gutierri Barboza">Gutierri Barboza</a> <span>(15/09/2019 ás 14:21)</span></h3>
-                <p>Eu poderia comentar um monte de coisas feias, apenas para ocupar espaço, mas não vou fazer isso, pelo menos não hoje. Um dia vou poder comentar o que eu quiser neste espaço, ai quando alguém tentar editar o comentário o WordPress vai bugar por completo</p>
-            </div>
-        </div>
-
+        <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
 
         <div class="clear"></div>
 
-
-        <form action="<?php bloginfo( 'url' ); ?>/wp-comments-post.php" method="post" id="form-comentario" class="clearfix">
         <?php if(get_option('comment_registration') && !$user_ID) : ?>
-            
-            <p><?php _e('Logged in as', 'institutotim'); ?> <a href="<?php print get_option('siteurl'); ?>/wp-admin/profile.php"><?php print $user_identity; ?></a>. <a href="<?php print get_option('siteurl'); ?>/wp-login.php?action=logout" title="Logout">Logout &raquo;</a></p>
-            
-            <label for="comment">Comentário:</label>
-            <textarea name="comment" id="comment" cols="80" rows="10"></textarea>
 
-            <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="Enviar comentário" type="submit" />
-            <input name="comment_post_ID" value="1" type="hidden">
+            <p><?php printf( __( 'You must be %sloggedin%s to post a comment.', 'institutotim'), "<a href='" . get_option('siteurl') . "/wp-login.php?redirect_to=" . urlencode(get_permalink()) ."'>", "</a>" ); ?></p>       
         
         <?php else : ?>
 
-        <label for="author">Nome <span>(*)</span>:</label>
-        <input name="author" id="author" value="<?php echo $comment_author; ?>" size="22" value="<?php _e('name', 'institutotim'); ?>" type="text" />
+        <div id="respond">
+            <form action="<?php bloginfo( 'url' ); ?>/wp-comments-post.php" method="post" id="form-comments" class="clearfix">
 
-        <label for="email">Email<span>(*)</span>:</label>
-        <input name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" type="text" />
+                <?php comment_id_fields(); ?> 
+                <?php if($user_ID) : ?>
 
-        <label for="url">WebSite:</label>
-        <input name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" type="text" />
+                    <p><?php _e('Logged in as', 'institutotim'); ?> <a href="<?php print get_option('siteurl'); ?>/wp-admin/profile.php"><?php print $user_identity; ?></a>. <a href="<?php print get_option('siteurl'); ?>/wp-login.php?action=logout" title="Logout">Logout &raquo;</a></p>
+                    
+                    <label for="comment">Comentário:</label>
+                    <textarea name="comment" id="comment" cols="80" rows="10"></textarea>
 
-        <label for="comment">Comentário:</label>
-        <textarea name="comment" id="comment" cols="80" rows="10"></textarea>
+                <?php else: ?>
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label for="author">Nome <span>(*)</span>:</label>
+                                <input class="form-control" name="author" control="author" id="author" value="<?php echo $comment_author; ?>" size="22" type="text" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="email">Email <span>(*)</span>:</label>
+                                <input class="form-control" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" type="text" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label for="url">WebSite:</label>
+                                <input class="form-control" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" type="text" />
+                            </div>
+                        </div>
 
-        <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="Enviar comentário" type="submit" />
-        <input name="comment_post_ID" value="1" type="hidden">
-        
-        <?php endif;?>
-        
-        </form>
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <label for="comment">Comentário:</label>
+                                <textarea class="form-control" name="comment" id="comment" rows="7"></textarea>
+                            </div>
+                        </div>
+                    
+                <?php endif; ?><!--End verification if the user is logged-->
 
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="Enviar comentário" type="submit" />
+                            <?php cancel_comment_reply_link( __('cancel', 'institutotim') ); ?>
+                        </div>
+                    </div>
+                    <input name="comment_post_ID" value="1" type="hidden">
+
+                <?php do_action('comment_form', $post->ID); ?>
+
+            </form>
+        </div>
+    <?php endif; ?><!--End verification if the user is logged for comment-->
 </div>
+
+<?php endif; ?>

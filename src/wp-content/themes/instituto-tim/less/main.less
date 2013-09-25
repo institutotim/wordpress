@@ -540,13 +540,14 @@ section#main-section {
 
 .comments {
     border-bottom: solid 1px #EDEDED;
-    border-radius: 7px;
+    border-radius: 4px;
     box-shadow: 3px 2px 6px #EDEDED, 0px 0px 6px #F1F1F1;
     padding: 8px;
-    margin: 0 0 25px 0;
+    position: relative;
+    margin: 12px 0 12px 0;
 }
-.comments .image-of-user {
-    border-radius: 7px;
+.comments .avatar {
+    border-radius: 4px;
     box-shadow: 1px 2px 2px #CFCFCF3;
     float: left;
     width: 13,607142857%;
@@ -563,50 +564,68 @@ section#main-section {
     font-size: 11px;
     font-weight: italic;
 }
-
-//COMMENTS FORM
-
-#form-comentario {
-    border-top: solid 1px #EFEFEF;
-    padding-top: 20px;
-    margin-top: 10px;
-}
-#form-comentario label, #form-comentario input[type="text"], #form-comentario label, #form-comentario input[type="submit"], #form-comentario textarea{
+.comments .content-of-comment .text-comment {
     display: block;
 }
-#form-comentario label {
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0 0 10px 0;
+.comments .comment-reply-link {
+    background: #EFF5FC;
+    border-radius: 2px;
+    padding: 3px 6px;
+    position: absolute;
+    right: 8px;
+    .transition(all 0.2s);
+    text-decoration: none;
+    top: 8px;
 }
-#form-comentario label > span {
+.comments .comment-reply-link:hover {
+    background: #E1EBF7;
+}
+//COMMENTS OF ADMIN
+.comment-author-admin h3 {
+    background: url("../img/star-admin.png") no-repeat scroll 53px center transparent;
+    color: #F7A52D;
+}
+.comment-author-admin h3 > span {
+    margin: 0 0 0 24px !important;
+}
+#cancel-comment-reply-link {
+    display: inline-block;
+    padding: @padding-base-vertical @padding-base-horizontal;
+    margin-bottom: 0; // For input.btn
+    font-weight: @btn-font-weight;
+    line-height: @line-height-base;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border:none;
+    box-shadow:0 0 7px #ddd;
+    color:#fff;
+    font-size:11px;
+    text-transform:uppercase;   
+    border-radius: @border-radius-base;
+    white-space: nowrap;
+    .user-select(none);
+    #gradient > .tim-button-gradient(#aaaaaa, #aaaaaa, #898989, #898989);
+    &:hover, &:active {
+    #gradient > .tim-button-gradient(#aaaaaa, #aaaaaa, #898989, #898989);
+    }
+}
+
+//COMMENTS FORM
+#form-comments {
+    border-top: solid 1px #EFEFEF;
+    padding-top: 20px;
+    margin-top: 25px;
+    input[type="text"], textarea {
+        box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
+        -moz-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
+        -webkit-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
+        -ms-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
+        -o-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
+    }
+}
+#form-comments label > span {
     color: #E03333;
     font-size: 10px;
     vertical-align: top;
-}
-#form-comentario input[type="text"] {
-    width: 245px;
-}
-#form-comentario textarea {
-    width: auto;
-}
-#form-comentario input[type="text"], #form-comentario textarea {
-    border: 1px solid #E9E9E9;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    -ms-border-radius: 4px 4px 4px 4px;
-    -o-border-radius: 4px 4px 4px 4px;
-    box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
-    -moz-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
-    -webkit-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
-    -ms-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
-    -o-box-shadow: 1px -2px 4px #EFEFEF inset, 2px 2px 1px #DFDFDF;
-    color: #A7A7A7;
-    font-size: 14px;
-    margin: 0 0 16px 0;
-    padding: 6px 10px;
-}
-#form-comentario input[type="text"]:hover, #form-comentario textarea:hover {
-    color: #A1A1A1;
 }
