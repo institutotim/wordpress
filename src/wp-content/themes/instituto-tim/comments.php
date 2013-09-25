@@ -40,8 +40,12 @@ add_filter('comment_class','comment_add_microid');
 
                     <p><?php _e('Logged in as', 'institutotim'); ?> <a href="<?php print get_option('siteurl'); ?>/wp-admin/profile.php"><?php print $user_identity; ?></a>. <a href="<?php print get_option('siteurl'); ?>/wp-login.php?action=logout" title="Logout">Logout &raquo;</a></p>
                     
-                    <label for="comment">Comentário:</label>
-                    <textarea name="comment" id="comment" cols="80" rows="10"></textarea>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                            <label for="comment">Comentário:</label>
+                            <textarea class="form-control" name="comment" id="comment" rows="7"></textarea>
+                        </div>
+                    </div>
 
                 <?php else: ?>
                         <div class="row">
