@@ -168,7 +168,7 @@ function comments_tim_clear( $comment, $args, $depth ) {
             <div class="text-comment"><?php comment_text(); ?></div>
         </div>
 
-        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Responder', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Responder', 'depth' => $depth, 'max_depth' => '4' ) ) ); ?>
     </div>
 
 <?php

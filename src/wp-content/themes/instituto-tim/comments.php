@@ -21,9 +21,7 @@ add_filter('comment_class','comment_add_microid');
 <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1') );?>>
 
     <h1 class="entry-title"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h1>
-
-        <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
-
+            <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
         <div class="clear"></div>
 
         <?php if(get_option('comment_registration') && !$user_ID) : ?>
