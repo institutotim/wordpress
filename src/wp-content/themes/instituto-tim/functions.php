@@ -130,7 +130,8 @@ add_action( 'login_enqueue_scripts', 'favicon_wp_login' );
 add_action( 'init', 'institutotim_custom_menus' );
 function institutotim_custom_menus() {
     register_nav_menus( array(
-        'main' => __('Menu name', 'institutotim'),
+        'header' => __('Menu Principal', 'institutotim'),
+        'footer' => __('Menu do Rodapé', 'institutotim')
     ) );
 }
 
