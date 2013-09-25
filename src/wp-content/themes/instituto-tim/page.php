@@ -2,7 +2,7 @@
 
 <?php if ( have_posts()) : while ( have_posts()) : the_post(); ?>
 
-    <?php html::part('loop', 'single'); ?>
+    <?php html::part('loop', 'page'); ?>
 
 <?php endwhile; ?>
 <?php else : ?>
