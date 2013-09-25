@@ -52,14 +52,21 @@
         <div class="col-lg-offset-1 col-lg-10">
             <header id="main-header">
                 <div id="brand">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logotipo.png"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12"/>
                 </div>
-                <div id="title">
-                    <h1><?php bloginfo( 'name' ); ?></h1>
-                    <h2><?php bloginfo ( 'description' ); ?></h2>
+                
+                <div id="goto-tim">
+                    <a href="http://www.tim.com.br">Visite o site da tim</a>
                 </div>
-            </header>
 
+                <div id="search">
+                    <form class="form-horizontal">
+                        <input type="search" class="form-control" placeholder="O que você procura?"/>
+                        <input type="submit" value="OK"/>
+                    </form>
+                </div>                
+            </header>
+            
             <nav id="main-nav" class="row">
                 <div class="col-lg-12 col-md-12">
                     <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>
