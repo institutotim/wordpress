@@ -270,11 +270,12 @@ nav#main-nav {
     margin: 35px 0 35px 0;
     position: relative;
     z-index: 30;
+    
     a { 
         color: #0072AC;
-        display: block;
+        display: inline-block;
         font-family: 'Trade Gothic';
-        font-size: 15px;
+        font-size: 16px;
         padding: 10px 15px;
         position: relative;
         text-transform: uppercase;
@@ -284,6 +285,16 @@ nav#main-nav {
             color: #666;
             text-decoration: none;
         }
+    }
+
+    span.plus {
+        background-image: url(../img/bullet_menu.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 13px;
+        margin-left: 5px;
+        width: 14px;
     }
 
     ul {
@@ -308,6 +319,7 @@ nav#main-nav {
         .box-shadow(0 0 10px #999);
         display: none;
         left: 0;
+        padding: 10px;
         position: absolute;
         right: 0;
         text-align: left;

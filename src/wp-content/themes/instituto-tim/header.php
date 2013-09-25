@@ -62,7 +62,7 @@
 
             <nav id="main-nav" class="row">
                 <div class="col-lg-12 col-md-12">
-                    <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '' ) ); ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>
                 </div>
             </nav>
 
