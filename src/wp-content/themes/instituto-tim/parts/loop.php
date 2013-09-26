@@ -1,6 +1,6 @@
 <article class="post-structure-of-list post-entry">
     <div class="row">
-        <div class="col-lg-4 thumbnail_post">
+        <div class="col-lg-4">
             <?php 
                 if( get_the_post_thumbnail() ) :
                     echo the_post_thumbnail( array('254', 180) );
