@@ -1,20 +1,20 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-    <?php while (have_posts()) : the_post();?>
-        <?php html::part('loop', ''); ?>
-    <?php endwhile;?>
-<?php else : ?>
+<div <?php post_class( 'col-lg-10', 'col-lg-offset-1' );?>>
 
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <h1 class="entry-title">Nada encontrado</h1>
-            <div class="entry-content">
-                <p>Não encontramos nada relacionado á "<b><i><?php echo get_search_query();?></i>"</b></p>
-            </div>
-        </div>
-    </div>
+    <header class="page-header">
+        <h1 class="page-title"><?php printf( __( 'Resultados da busca por "%s"', 'institutotim' ), get_search_query() ); ?></h1>
+    </header>
 
-<?php endif; ?>
+    <?php if ( have_posts()) : while ( have_posts()) : the_post(); ?>
+
+        <?php html::part('loop'); ?>
+
+    <?php endwhile; ?>
+    <?php else : ?>
+        <p>Nenhum resultado encontrado. Por favor, realize uma nova busca.</p>
+    <?php endif; ?>
+
+</div>
 
 <?php get_footer(); ?>
