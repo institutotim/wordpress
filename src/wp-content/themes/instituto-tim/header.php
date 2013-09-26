@@ -52,7 +52,9 @@
         <div class="col-lg-offset-1 col-lg-10">
             <header id="main-header">
                 <div id="brand">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12"/>
+                    <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12"/>
+                    </a>
                 </div>
                 
                 <div id="goto-tim">
@@ -60,8 +62,8 @@
                 </div>
 
                 <div id="search">
-                    <form class="form-horizontal">
-                        <input type="search" class="form-control" placeholder="O que você procura?"/>
+                    <form method="get" class="form-horizontal" action="<?php echo home_url( '/' ); ?>">
+                        <input type="search" class="form-control" name="s" placeholder="O que você procura?"/>
                         <input type="submit" value="OK"/>
                     </form>
                 </div>                
