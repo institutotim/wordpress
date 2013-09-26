@@ -1045,7 +1045,6 @@ function Wp_easy_data_init() {
                 
                 $fields = substr($fields, 0, strlen($fields) - 2);
                 $values = substr($values, 0, strlen($values) - 2);
-                
                 mysql_query("INSERT INTO {$this->table} ($fields) VALUES ($values)");
                 $this->ID = $this->info->ID = mysql_insert_id();
 

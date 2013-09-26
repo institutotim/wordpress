@@ -8,10 +8,7 @@
                 <?php global $BannersApoiadores; ?>
 
                 <ul class="textcenter">
-                    <?php $BannersApoiadores->print_items_by_position('executiva'); ?>
-                    <!-- <li><img src="<?php echo get_template_directory_uri() ?>/img/logotipo.png" class="tim"></li>
-                    <li><img src="<?php echo get_template_directory_uri() ?>/img/pronatec.png"></li>
-                    <li><img src="<?php echo get_template_directory_uri() ?>/img/pais-rico-pais-sem-pobreza.jpg"></li> -->
+                    <?php $BannersApoiadores->print_items_by_position('apoiadores'); ?>
                 </ul>
                 <p class="textcenter"><small>© Copyright TIM Celular 2010. Todos os direitos reservados.</small></p>
             </footer>

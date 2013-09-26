@@ -95,7 +95,7 @@ class BannersApoiadores {
             foreach ($items as $item) {
                 $title = esc_attr($item->info->nome);
                 $imageLink = wp_get_attachment_url($item->info->image);
-                echo "<a href='{$item->info->url}' class='logo' title='$title'><img src='{$imageLink}' alt='$title'/></a>";
+                echo "<li><a href='{$item->info->url}' class='logo' title='$title'><img src='{$imageLink}' alt='$title'/></a></li>";
             
             }
         

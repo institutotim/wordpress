@@ -32,7 +32,6 @@ if ($_POST['crud_submit']) {
         $this->message = __('Item Created', 'wp-easy-data');
         
     }
-    
     do_action('wp-easy-data-after-save', $item);
 }
 
