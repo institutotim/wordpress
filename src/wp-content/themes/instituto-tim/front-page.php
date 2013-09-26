@@ -63,12 +63,13 @@
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                 <?php foreach ($project_categories as $category) { echo $category->name; } ?>
                             </span>
-                            <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?>
+                            <?php the_post_thumbnail('', array('class' => 'img')); ?>
                         </div>
                         <h2 class="top"><?php the_title(); ?></h2>
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
                         <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
                     </article>
+
                 <?php endwhile; ?>
             </div>
         </div>
