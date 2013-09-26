@@ -126,12 +126,37 @@ body {
 
 // IMAGES CUSTOMIZATION
 .img-wrapper {
-  display: inline-block;
-  height: 165px;
   overflow: hidden;
   padding-bottom: 35px;
   position: relative;
-  width: 100%;
+  img {
+    border-radius: 0 0 0 24px;
+    height: auto;
+    width: 100%;
+  }
+  span {
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    &.ensino {
+      background-color: @ensino; 
+    }
+    &.aplicacoes {
+      background-color: @aplicacoes; 
+    }
+    &.inclusao {
+      background-color: @inclusao; 
+    }
+    &.trabalho {
+      background-color: @trabalho; 
+    }
+  }
+}
+.shadow {
+  position: relative;
   &:after {
     #gradient > .vertical(#ddd, #fff);
     border-radius: 24px 0 0 0;
@@ -141,33 +166,10 @@ body {
     left: 0;
     margin-top: 1px;
     position: absolute;
-    right: 0;
-  }
-  .img {
-    border: none;
-    border-radius: 0 0 4px 24px;
-    bottom: 35px;
-    display: block;
-    height: auto;
-    position: absolute;
-    width: 100%;
-  }
-}
-
-.shadow {
-  position: relative;
-  &:after {
-    #gradient > .vertical(#ddd, #fff);
-    border-radius: 24px 0 0 0;
-    bottom: -35px;
-    content: "";
-    height: 34px;
-    left: 0;
-    margin-top: 1px;
-    position: absolute;
     right: 0;    
   }
 }
+
 
 
 // TYPOGRAPHY
@@ -417,12 +419,17 @@ section#main-section {
     overflow: hidden;
     position: relative;
     .highlight-container {
-      height: 335px;
+      height: 300px;
       overflow: hidden;
       position: relative;
+      .img-wrapper {
+        border-radius: 0 0 4px 24px;
+        height: 300px;
+        padding-bottom: 0;
+      }
       .content {
         background: rgba(10, 26, 66, .9);
-        bottom: 35px;
+        bottom: 0;
         border-radius: 0 0 4px 24px;
         left: 0;
         padding: 20px;
@@ -444,24 +451,19 @@ section#main-section {
           padding: 0;
         }
       }
-      .img-wrapper {
-        height: 335px;
-        z-index: 1;
-      }
     }
   }
 
   #about {
-    padding-bottom: 35px;
+    height: 335px;
     position: relative;
     article {
       background: @timBlue4;
       border-radius: 0 0 4px 24px;
-      bottom: 0;
+      bottom: 35px;
       color: #fff;
-      height: 300px;
       left: 0;
-      position: abolute;
+      position: absolute;
       right: 0;
       top: 0;
       h1 {
@@ -476,7 +478,7 @@ section#main-section {
         top: 20px;
       }
       p.excerpt {
-        bottom: 40px;
+        bottom: 50px;
         font-size: 16px;
         left: 20px;
         max-height: none !important;
@@ -607,37 +609,6 @@ section#main-section {
       font-size: 16px;
       line-height: 1;
       margin-bottom: 10px;
-    }
-
-    .img-wrapper {
-      height: 155px;
-      &:after {
-        height: 18px;
-      }
-      .img {
-        bottom: 19px;
-      }
-      .ensino, .aplicacoes, .trabalho, .inclusao {
-        color: #fff;
-        padding: 3px 10px;
-        position: absolute;
-        right: 0;
-        text-transform: uppercase;
-        top: 15px;
-        z-index: 20;
-      }
-      .ensino {
-        background: @ensino;
-      }
-      .aplicacoes {
-        background: @aplicacoes;
-      }
-      .trabalho {
-        background: @trabalho;
-      }
-      .inclusao {
-        background: @inclusao;
-      }
     }
   }
 

@@ -2,7 +2,7 @@
 
 <div class="row">
     <div id="highlight" class="col-lg-8 col-md-8">
-        <div class="highlight-wrapper">
+        <div class="highlight-wrapper shadow">
             <div class="highlight-container">
                 <article>
                     <div class="content">
@@ -16,8 +16,8 @@
             </div>
         </div>
     </div>
-    <div id="about" class="col-lg-4 col-md-4">
-        <article class="shadow">
+    <div id="about" class="col-lg-4 col-md-4 shadow">
+        <article>
             <h1>Instituto TIM</h1>  
             <p class="excerpt">Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non.</p>
             <p class="more textright"><a href="" class="btn btn-warning">Saiba mais</a></p>
@@ -59,11 +59,11 @@
                     <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
 
                     <article id="project-<?php the_ID() ?>" class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="img-wrapper">
+                        <div class="img-wrapper shadow">
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                 <?php foreach ($project_categories as $category) { echo $category->name; } ?>
                             </span>
-                            <?php the_post_thumbnail('', array('class' => 'img')); ?>
+                            <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?>
                         </div>
                         <h2 class="top"><?php the_title(); ?></h2>
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
