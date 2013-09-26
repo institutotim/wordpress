@@ -30,7 +30,7 @@ function institutotim_setup() {
     
     // POST THUMBNAILS
     add_theme_support('post-thumbnails');
-    //set_post_thumbnail_size( 200, 150, true );
+    set_post_thumbnail_size( 181, 121, true );
 
     //REGISTRAR AQUI TODOS OS TAMANHOS UTILIZADOS NO LAYOUT
     //add_image_size('nome',X,Y);

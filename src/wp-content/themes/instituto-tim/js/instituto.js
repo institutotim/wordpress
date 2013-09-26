@@ -24,6 +24,8 @@
 			}
 		);
 
+		$('#secondary-nav').find('a').tooltip();
+
 	});
 
 })(jQuery);

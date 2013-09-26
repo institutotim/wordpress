@@ -26,113 +26,50 @@
 </div>
 <div class="row">
     <div class="col-lg-8 col-md-8">
-        <nav id="secondary-nav" class="row">
-            <ul class="clearfix">
-                <li class="ensino"><a href="" class="btn btn-ensino col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que toda criança e jovem tem direito a uma educação em ciência e em matemática que represente os avanços da produção de conhecimentos dessas áreas. Por isso,investe em projetos inovadores, promove a formação de professores da rede pública, apoia museus e centros de ciência e tecnologia, cria e democratiza estratégias e recursos didáticos que contribuam para o ensino das ciências e matemáticas.">Ensino</a></li>
-                <li class="aplicacoes"><a href="" class="btn btn-aplicacoes col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas devem servir ao desenvolvimento humano. Por isso, investe para encontrar aplicações e soluções tecnológicas que contribuam para melhorias do trabalho de instituições que atuem com esse objetivo.">Aplicações</a></li>
-                <li class="inclusao"><a href="" class="btn btn-inclusao col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas são a base de uma nova forma de trabalho. Por isso, investe na criação e democratização de recursos e estratégias de ensino que promovam a inclusão tecnológica produtiva de jovens.">Inclusão</a></li>
-                <li class="trabalho"><a href="" class="btn btn-trabalho col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" title="O Instituto TIM acredita que as inovações tecnológicas são a base de uma nova forma de trabalho. Por isso, investe na criação e democratização de recursos e estratégias de ensino que promovam a inclusão tecnológica produtiva de jovens.">Trabalho</a></li>
-            </ul>
-        </nav>
         <div id="projects">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-8"><h1 class="top">Projetos Instituto TIM</h1></div>
-                        <div class="col-lg-6 col-md-6 col-sm-4 textright"><a href="" class="btn btn-success">Ver todos</a></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12"><h1 class="top">Projetos Instituto TIM</h1></div>
                     </div>
                 </div>
             </div>
+            
+            <nav id="secondary-nav" class="row">
+                <ul class="clearfix">
+                    <?php $terms = get_terms('projects_categories', array('hide_empty' => 0)); ?>
+                    <?php foreach($terms as $term) : ?>
+                        <li class="<?php echo $term->slug; ?>">
+                            <a href="" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
+                                <?php echo $term->name; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+
             <div class="row">
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="ensino">Ensino</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_006.jpg" class="img">
-                    </div>
-                    <h2 class="top">Ciência Sem Fronteiras</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
+                <?php $projects = new WP_Query(array(
+                    'post_type' => 'project',
+                    'posts_per_page' => -1
+                )) ?>
 
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="aplicacoes">Aplicações</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_005.jpg" class="img">
-                    </div>
-                    <h2 class="top">Mapas Culturais</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
-                
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="aplicacoes">Aplicações</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_002.jpg" class="img">
-                    </div>
-                    <h2 class="top">SP Em Suas Mãos</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
-                
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="ensino">Ensino</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_010.jpg" class="img">
-                    </div>
-                    <h2 class="top">Apoio a Museus</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
-                
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="ensino">Ensino</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_008.jpg" class="img">
-                    </div>
-                    <h2 class="top">TIM Faz Ciência</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
-                
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="aplicacoes">Aplicações</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_004.jpg" class="img">
-                    </div>
-                    <h2 class="top">Pastoral da Criança</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
+                <?php while( $projects->have_posts() ) : $projects->the_post(); ?>
 
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="trabalho">Trabalho</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_007.jpg" class="img">
-                    </div>
-                    <h2 class="top">TIM Tec</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
+                    <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
 
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="aplicacoes">Aplicações</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_003.jpg" class="img">
-                    </div>
-                    <h2 class="top">UPP Social</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
-
-                <article class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="img-wrapper">
-                        <span class="ensino">Ensino</span>
-                        <img src="<?php echo get_template_directory_uri() ?>/img/img_009.jpg" class="img">
-                    </div>
-                    <h2 class="top">O Círculo da Matemática</h2>
-                    <p class="excerpt"><a href="">Aliquam aliquet platea ac, habitasse. Lectus cum ultricies, urna! Aliquet in a vel sed rhoncus elementum!</a></p>
-                    <p><a href="" class="more">Saiba mais...</a></p>
-                </article>
+                    <article id="project-<?php the_ID() ?>" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="img-wrapper">
+                            <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
+                                <?php foreach ($project_categories as $category) { echo $category->name; } ?>
+                            </span>
+                            <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?>
+                        </div>
+                        <h2 class="top"><?php the_title(); ?></h2>
+                        <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
+                        <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
+                    </article>
+                <?php endwhile; ?>
             </div>
         </div>
     </div>
