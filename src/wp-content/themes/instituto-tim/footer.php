@@ -2,7 +2,7 @@
 
             <footer id="main-footer">
                 <nav>
-                    <?php wp_nav_menu ( array('theme_location' => 'footer', 'items_wrap' => '<ul class="textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '') ); ?>
+                    <?php wp_nav_menu ( array('theme_location' => 'footer', 'items_wrap' => '<ul class="textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 1) ); ?>
                 </nav>
 
                 <?php global $BannersApoiadores; ?>
