@@ -70,7 +70,7 @@
                         <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
                     </article>
 
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_query(); ?>
             </div>
         </div>
     </div>
