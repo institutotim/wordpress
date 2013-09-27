@@ -74,7 +74,7 @@ return false;
 add_filter( 'show_admin_bar' , 'remove_admin_bar');
 
 //========================================================== Excerpt more ==========================================================//
-
+/*
 add_filter('utils_excerpt_more_link', 'institutotim_utils_excerpt_more',10,2);
 function institutotim_utils_excerpt_more($more_link, $post){
 return '<br /><br />[<a class="more-link" href="'. get_permalink($post->ID) . '">' . __('Continue reading &raquo;', 'institutotim') . '</a>]';
@@ -84,7 +84,7 @@ add_filter( 'excerpt_more', 'institutotim_auto_excerpt_more' );
 function institutotim_auto_excerpt_more( $more ) {
 global $post;
 return '<br /><br />[<a class="more-link" href="'. get_permalink($post->ID) . '">' . __('Continue reading &raquo;', 'institutotim') . '</a>]';
-}
+}*/
 function custom_excerpt_length( $length ) {
     return 80;
 }

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<div <?php post_class( 'col-lg-10', 'col-lg-offset-1' );?>>
     <?php if ( have_posts() ) : ?>
         <header class="page-header">
             <h1 class="archive-title"><?php
@@ -17,10 +16,14 @@
         </header>
 
         <?php while ( have_posts() ) : the_post(); ?>
-            
-            <?php html::part('loop'); ?>
-        
+        <div class="row">        
+            <div class="col-lg-12">
+                <?php html::part('loop'); ?>
+            </div>
+        </div>
         <?php endwhile; ?>
+
+        <?php html::part('pagination'); ?>
 
     <?php else : ?>
         
@@ -33,7 +36,5 @@
         </div>
         
     <?php endif; ?>
-
-</div>
 
 <?php get_footer(); ?>

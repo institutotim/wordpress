@@ -732,7 +732,7 @@ section#main-section {
 }
 
 //TRANSITIONS
-.comment-reply-link, h1.entry-title a, .post-structure-of-list {
+.comment-reply-link, h1.entry-title a, .post-structure-of-list, .pagination-of-pages a {
   .transition(all 0.4s);
 }
 
@@ -742,7 +742,7 @@ section#main-section {
     word-wrap: break-word;
   }
   h1.entry-title a:hover, .more-link:hover {
-    color: rgb(0, 51, 122);
+    color: @timBlue3;
     text-decoration: none;
   }
   .entry-content {
@@ -754,9 +754,35 @@ section#main-section {
   }
 }
 
+// PAGINATION
+.pagination-of-pages {
+    border-bottom: 2px solid #E1E1E1;
+    margin: 10px 0 0 0;
+    text-align: center;
+    .page-numbers, .current {
+          border-bottom: solid 2px transparent;
+          display: inline-block;
+          font-size: 14px;
+          padding: 2px 35px 8px 35px;
+          margin-bottom: -2px;
+          text-decoration: none;
+        }
+    a {
+        color: #CBCBCB;
+    }
+    a:hover {
+        color: @timBlue3;
+        border-color: @timBlue3;
+    }
+    .current {
+        color: @timBlue3;
+        border-color: @timBlue3;
+    }
+}
+
 // COMMENTS
 .comments {
-  border-bottom: solid 1px #EDEDED;
+  border-bottom: solid 1px #EEEEEE;
   border-radius: 4px;
   box-shadow: 3px 2px 6px #EDEDED, 0px 0px 6px #F1F1F1;
   padding: 8px;
@@ -767,6 +793,10 @@ section#main-section {
 .comments .avatar {
   border-radius: 4px;
   box-shadow: 1px 2px 2px #CFCFCF3;
+  -moz-box-shadow: 1px 2px 2px #CFCFCF3;
+  -webkit-box-shadow: 1px 2px 2px #CFCFCF3;
+  -o-box-shadow: 1px 2px 2px #CFCFCF3;
+  -ms-box-shadow: 1px 2px 2px #CFCFCF3;
   float: left;
   width: 13,607142857%;
 }
@@ -797,6 +827,7 @@ section#main-section {
 .comments .comment-reply-link:hover {
   background: #E1EBF7;
 }
+
 //COMMENTS OF ADMIN
 .comment-author-admin h3 {
   background: url("../img/star-admin.png") no-repeat scroll 53px center transparent;
@@ -830,7 +861,7 @@ section#main-section {
 
 //COMMENTS FORM
 #form-comments {
-  border-top: solid 1px #EFEFEF;
+  border-top: solid 1px #EEEEEE;
   padding-top: 20px;
   margin-top: 25px;
   input[type="text"], textarea {
@@ -855,14 +886,14 @@ header#main-header #search input[type="search"] {
 
 //POST STRUCTURE OF LIST
 .post-structure-of-list {
-  border-bottom: solid 2px rgb(44, 156, 211);
+  border-bottom: solid 2px @inclusao;
   box-shadow: 0 3px 8px #D1D1D1;
   -moz-box-shadow: 0 3px 8px #D1D1D1;
   -webkit-box-shadow: 0 3px 8px #D1D1D1;
   -o-box-shadow: 0 3px 8px #D1D1D1;
   -ms-box-shadow: 0 3px 8px #D1D1D1;
   padding: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 32px;
 }
 .post-structure-of-list:hover {
   background: #F5F5F5;
