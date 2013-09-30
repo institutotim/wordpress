@@ -26,6 +26,16 @@
 
 		$('#secondary-nav').find('a').tooltip();
 
+        //Open description of post
+        $('.global-open-description-post-here').each(function(){
+            
+            var close_or_open_description = $(this).find('> .description-post-here');
+
+            $(this).find('.open-description-post-here').click(function(){
+                close_or_open_description.toggle("fast");
+            });
+        
+        });
 	});
 
 })(jQuery);
