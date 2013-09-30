@@ -25,24 +25,25 @@
                 <ul class="description-post-here clearfix">
                     <li class="list-category">
                         <b>Categorias:</b><br />
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
-                        <span>Categorie</span>
+                        <?php
+                            //by wordpress codex
+                            $categories = get_the_category();
+                            $separator = '';
+                            $output = '';
+                            if($categories) :
+                                foreach($categories as $category) :
+
+                                    $output .= '<span><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a></span>';
+
+                                endforeach;
+
+                                echo trim($output, $separator);
+                            endif;
+
+                        ?>
                     </li>
-                    <li><b>Autor:</b> Gutierri Barboza</li>
-                    <li><b>Em:</b> 12/12/2012</li>
+                    <li><b>Autor:</b> <?php the_author();?></li>
+                    <li><b>Em:</b> <?php the_date( 'd/m/Y' );?></li>
                 </ul>
         </div>
     </div>
