@@ -21,7 +21,21 @@ add_filter('comment_class','comment_add_microid');
 <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1') );?>>
 
     <h3 class="entry-title"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
-            <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
+
+    <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
+        
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+
+        <div class="row">
+            <div class="col-lg-10">
+                <nav class="comments-nav">
+                    <div class="alignleft"><?php previous_comments_link( __( '&laquo; Older Comments', 'institutotim' ) ); ?></div>
+                    <div class="alignright"><?php next_comments_link( __( 'Newer Comments &raquo;', 'institutotim' ) ); ?></div>
+                </nav>
+            </div>
+        </div>
+    <?php endif; ?>
+
         <div class="clear"></div>
 
         <?php if(get_option('comment_registration') && !$user_ID) : ?>
