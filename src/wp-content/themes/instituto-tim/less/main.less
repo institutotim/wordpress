@@ -904,7 +904,7 @@ header#main-header #search input[type="search"] {
     -webkit-box-shadow: 0 3px 8px #D1D1D1;
     -o-box-shadow: 0 3px 8px #D1D1D1;
     -ms-box-shadow: 0 3px 8px #D1D1D1;
-    padding: 0; // 1em 1em 0 1em;
+    padding: 0;
     margin-bottom: 32px;
     .padding-content-list-posts {
         padding: 1em;
@@ -937,10 +937,7 @@ header#main-header #search input[type="search"] {
         margin: 0 20px;
         float: right;
     }
-    .description-post-here > li.list-category {
-        max-width: 400px;
-    }
-    .description-post-here > li.list-category > span {
+    .description-post-here a {
         background:#27A9E5;
         border: solid 1px #2A90BF;
         border-radius: 2px;
@@ -948,14 +945,14 @@ header#main-header #search input[type="search"] {
         -moz-border-radius: 2px;
         -o-border-radius: 2px;
         -ms-border-radius: 2px;
+        color: #fff;
         display: inline-block;
         padding: 2px 3px 3px 3px;
-        margin: 2px;
+        margin: 1px 2px;
         text-align: center;
     }
-
-    .description-post-here > li.list-category > span a{
-        color: #FFFFFF;
+    .description-post-here .list-categories {
+        margin-top:-3px;
     }
 }
 
