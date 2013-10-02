@@ -744,7 +744,7 @@ section#main-section {
 }
 
 //TRANSITIONS
-.comment-reply-link, h1.entry-title a, .post-structure-of-list, .pagination-of-pages a {
+.comment-reply-link, h1.entry-title a, .post-structure-of-list, .pagination-of-pages a, .fild-tags a {
   .transition(all 0.4s);
 }
 
@@ -757,13 +757,31 @@ section#main-section {
     color: @timBlue3;
     text-decoration: none;
   }
-  .entry-content {
-    word-wrap: break-word;
-    img {
-      height: auto;
-      max-width: 100%;
+    .entry-content {
+        word-wrap: break-word;
+        img {
+            height: auto;
+            max-width: 100%;
+        }
     }
-  }
+    .fild-tags {
+        border-top: solid 1px #EEEEEE;
+        margin: 15px 0;
+        padding-top: 15px;
+        text-align: left;
+    }
+    .fild-tags a {
+        background: @timBlue3;
+        border-radius: 3px;
+        color: #FFF;
+        display: inline-block;
+        padding: 2px 7px;
+        margin: 2px;
+        text-decoration: none;
+    }
+    .fild-tags a:hover {
+        background: @timBlue2;
+    }
 }
 
 // PAGINATION
