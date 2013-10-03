@@ -24,7 +24,7 @@ add_filter('comment_class','comment_add_microid');
 <?php if ('open' == $post->comment_status) : ?>
 
     <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1') );?>>
-        <h3 class="entry-title"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
+        <h3 class="entry-title title-post-line"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
 
         <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
 
