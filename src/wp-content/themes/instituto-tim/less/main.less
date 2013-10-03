@@ -1,7 +1,6 @@
 @import "bootstrap-3.0.0/bootstrap.less";
 @import "font-awesome/font-awesome.less";
 
-
 // COLOURS
 @ensino: rgb(26, 39, 105);
 @aplicacoes: rgb(0, 115, 207);
@@ -19,7 +18,6 @@
 @timLiberty2: rgb(190, 214, 0);
 @timCorporativo1: rgb(94, 106, 113);
 @timCorporativo2: rgb(152, 30, 50);
-
 
 // FONTS
 @font-face {
@@ -784,6 +782,25 @@ section#main-section {
     }
 }
 
+// POST Format Gallery
+.gallery {
+    display: block;
+    text-align: center;
+    .gallery-item {
+        display: inline-block;
+        padding: 2px;
+        margin: 3px auto;
+
+        img:hover {
+            border-color: @timBlue2 !important;
+        }
+        .gallery-caption {
+            color: #777777;
+            margin-top: 5px;
+        }
+    }
+}
+
 // PAGINATION
 .pagination-of-pages {
     border-bottom: 2px solid #E1E1E1;
@@ -840,7 +857,7 @@ section#main-section {
     .content-of-comment img {
         max-width: 100%;
     }
-    
+
     .content-of-comment h3 {
         margin-top: 0;
     }
