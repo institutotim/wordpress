@@ -41,7 +41,9 @@
   font-style: normal;
 }
 
-
+a:link, a:visited, a:active, a { 
+    outline: none;
+}
 // BODY
 html, body {
   height: 100%;
@@ -428,6 +430,28 @@ section#main-section {
     height: 335px;
     overflow: hidden;
     position: relative;
+    #high-light-navigation {
+        bottom: 43px;
+        position: absolute;
+        right: 10px;
+        z-index: 99;
+        a {
+            background: @timBlue5;
+            border-radius: 50%;
+            -moz-border-radius: 50%;            
+            -webkit-border-radius: 50%;            
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            display: inline-block;
+            font-size: 0;
+            height: 12px;
+            margin: 0 0 0 7px;
+            width: 12px;
+        }
+        a:hover, a.activeSlide {
+            background: @timBlue4;
+        }
+    }
     .highlight-container {
       height: 300px;
       overflow: hidden;
@@ -436,6 +460,9 @@ section#main-section {
         border-radius: 0 0 4px 24px;
         height: 300px;
         padding-bottom: 0;
+      }
+      article {
+        width: 100%;
       }
       .content {
         background: rgba(10, 26, 66, .9);

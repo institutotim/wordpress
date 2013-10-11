@@ -3,23 +3,36 @@
 <div class="row">
     <div id="highlight" class="col-lg-8 col-md-8">
         <div class="highlight-wrapper shadow">
+            <span id="high-light-navigation"></span>
             <div class="highlight-container">
-                <article>
+                <?php $destaques = new WP_Query( array('posts_per_page' => -1, 'post_type' => 'post', 'meta_key' => '_home' )); ?>
+                <?php if ($destaques->have_posts()) : while ($destaques->have_posts()): $destaques->the_post(); ?>
+                <?php if ( get_the_post_thumbnail() ) :?>
+                <article id="post-<?php the_ID();?>">
                     <div class="content">
-                        <h1>O Círculo da Matemática</h1>
-                        <p class="excerpt">Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non.</p>
+                        <h1><?php echo get_the_title(); ?></h1>
+                        <p class="excerpt"><?php echo get_the_excerpt();?></p>
                     </div>
                     <div class="img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/prefuse73.jpg" class="img"/>
+                        <a href="<?php echo get_permalink();?>">
+                            <?php the_post_thumbnail('destaque_high_light', array('class' => 'img')); ?>
+                        </a>
                     </div>
                 </article>
+                
+                <?php 
+                        endif;
+                        endwhile;
+                        endif;
+                ?>
+                
             </div>
         </div>
     </div>
     <div id="about" class="col-lg-4 col-md-4 shadow">
         <article>
-            <h1>Instituto TIM</h1>  
-            <p class="excerpt">Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non. Magna a, tincidunt pid cursus phasellus. Tortor enim magnis montes. Magna nec amet ridiculus, porttitor, purus augue tincidunt, tempor turpis? Pid, massa vel phasellus, tincidunt pellentesque adipiscing arcu sagittis non.</p>
+            <h1><?php echo get_option('title_highlight_box');?></h1>  
+            <p class="excerpt"><?php echo get_option('text_highlight_box');?></p>
             <p class="more textright"><a href="" class="btn btn-warning">Saiba mais</a></p>
         </article>
     </div>
@@ -38,9 +51,11 @@
             <nav id="secondary-nav" class="row">
                 <ul class="clearfix">
                     <?php $terms = get_terms('projects_categories', array('hide_empty' => 0)); ?>
-                    <?php foreach($terms as $term) : ?>
+                    <?php foreach($terms as $term) :
+                          $term_link = get_term_link( $term );
+                    ?>
                         <li class="<?php echo $term->slug; ?>">
-                            <a href="" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
+                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
                                 <?php echo $term->name; ?>
                             </a>
                         </li>

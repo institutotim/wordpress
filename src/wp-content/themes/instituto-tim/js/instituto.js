@@ -36,6 +36,15 @@
             });
         
         });
+
+        $('.highlight-container').cycle({
+            fx: 'fade',
+            timeout: 2000,
+            speed: 300,
+            pager: '#high-light-navigation'
+            
+        });
+
 	});
 
 })(jQuery);

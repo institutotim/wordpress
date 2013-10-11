@@ -4,6 +4,7 @@ include dirname(__FILE__).'/includes/congelado-functions.php';
 include dirname(__FILE__).'/includes/html.class.php';
 include dirname(__FILE__).'/includes/utils.class.php';
 include dirname(__FILE__).'/includes/banners-apoiadores.php';
+include dirname(__FILE__).'/includes/hacklab_post2home/hacklab_post2home.php';
 // include dirname(__FILE__).'/includes/form.class.php';
 
 
@@ -151,6 +152,7 @@ function institutotim_addJS() {
     wp_enqueue_script('congelado', get_stylesheet_directory_uri().'/js/congelado.js', array('jquery-ui-widget'));
     wp_enqueue_script('less_js', get_stylesheet_directory_uri().'/js/less-1.4.1.min.js', array('jquery'));
     wp_enqueue_script('bootstrap_js', get_stylesheet_directory_uri().'/js/bootstrap.min.js', array('jquery'));
+    wp_enqueue_script('cycle_js', get_stylesheet_directory_uri().'/js/jquery.cycle.all.js', array('jquery'));
     wp_enqueue_script('instituto_js', get_stylesheet_directory_uri().'/js/instituto.js', array('jquery'));
 
     wp_localize_script('congelado', 'vars', array(
@@ -158,6 +160,10 @@ function institutotim_addJS() {
     ));
 
 }
+
+//=========================================================== Size Thumbnail ===========================================================//
+
+add_image_size('destaque_high_light', 603, 300);
 
 //========================================================== Comments single ==========================================================//
 
