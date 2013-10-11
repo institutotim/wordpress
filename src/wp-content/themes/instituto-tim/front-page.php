@@ -33,7 +33,10 @@
         <article>
             <h1><?php echo get_option('title_highlight_box');?></h1>  
             <p class="excerpt"><?php echo get_option('text_highlight_box');?></p>
-            <p class="more textright"><a href="" class="btn btn-warning">Saiba mais</a></p>
+            <?php $pageURLID = get_option('rela_highlight_box');
+                $linkURL = get_page_link($pageURLID); 
+            ?>
+            <p class="more textright"><a href="<?php echo $linkURL;?>" class="btn btn-warning">Saiba mais</a></p>
         </article>
     </div>
 </div>
