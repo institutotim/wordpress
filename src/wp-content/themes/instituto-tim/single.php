@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts()) : while ( have_posts()) : the_post(); ?>
-
-    <?php html::part('loop', 'single'); ?>
+    <?php html::part('loop-single', get_post_type()); ?>
 
 <?php endwhile; ?>
 <?php else : ?>
