@@ -39,12 +39,21 @@
 
         $('.highlight-container').cycle({
             fx: 'fade',
-            timeout: 2000,
+            timeout: 4500,
             speed: 300,
             pager: '#high-light-navigation'
             
         });
 
+        $('.highlight-sidebar').cycle({
+            fx: 'fade',
+            slideExpr: 'article',
+            speed: 300,
+            timeout: 0,
+            prev: '.solutions nav.prev',
+            next: '.solutions nav.next'
+            
+        });
 	});
 
 })(jQuery);

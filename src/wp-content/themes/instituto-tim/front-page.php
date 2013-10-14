@@ -94,37 +94,7 @@
     </div>
     <div class="col-lg-4 col-md-4">
         <aside id="main-aside" >
-            <div class="editais">
-                <div class="col-lg-12 col-md-12">
-                    <h1>Editais</h1>
-                    <nav class="prev"><a href=""></a></nav>
-                    <article class="col-lg-12 col-md-12">
-                        <div class="img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prefuse73.jpg" class="img">
-                        </div>
-                        <h2 class="top">Destaque Nº1</h2>
-                        <p class="excerpt"><a href="">Adipiscing sit velit hac porttitor habitasse, facilisis a nascetur elementum, vel pulvinar facilisis mattis aliquet integer turpis pellentesque quis, ac dis. Nunc nec pellentesque tempor.</a></p>
-                        <p><a href="" class="more">Saiba mais...</a></p>
-                    </article>
-                    <nav class="next"><a href=""></a></nav>
-                </div>
-            </div>
-
-            <div class="solutions">
-                <div class="col-lg-12 col-md-12">
-                    <h1>Soluções</h1>
-                    <nav class="prev"><a href=""></a></nav>
-                    <article class="col-lg-12 col-md-12">
-                        <div class="img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/prefuse73.jpg" class="img">
-                        </div>
-                        <h2 class="top">Destaque Nº1</h2>
-                        <p class="excerpt"><a href="">Adipiscing sit velit hac porttitor habitasse, facilisis a nascetur elementum, vel pulvinar facilisis mattis aliquet integer turpis pellentesque quis, ac dis. Nunc nec pellentesque tempor.</a></p>
-                        <p><a href="" class="more">Saiba mais...</a></p>
-                    </article>
-                    <nav class="next"><a href=""></a></nav>
-                </div>
-            </div>
+            <?php dynamic_sidebar();?>
         </aside>
     </div>
 </div>
