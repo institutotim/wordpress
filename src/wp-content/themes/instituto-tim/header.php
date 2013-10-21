@@ -47,27 +47,35 @@
 
 <body <?php body_class(); ?>>
 
+    <header id="main-header">
+      <div class="container">
+        <div class="col-lg-offset-1 col-lg-10">
+          <div class="row">
+            <div id="goto-tim" class="col-lg-12">
+                <a href="http://www.tim.com.br">Portal Tim</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div id="brand" class="col-lg-4 left">
+                <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="col-lg-12 col-md-12"/>
+                </a>
+            </div>
+        
+            <div id="search" class="col-lg-8 right">
+                <form method="get" class="form-horizontal" action="<?php echo home_url( '/' ); ?>">
+                    <input type="search" class="form-control" name="s" placeholder="O que você procura?"/>
+                    <input type="submit" value="OK"/>
+                </form>
+            </div>                
+          </div>
+        </div>
+      </div>
+    </header>
+    
     <div class="container">
         <div class="col-lg-offset-1 col-lg-10">
-            <header id="main-header">
-                <div id="brand">
-                    <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12 col-md-12"/>
-                    </a>
-                </div>
-                
-                <div id="goto-tim">
-                    <a href="http://www.tim.com.br">Visite o site da tim</a>
-                </div>
-
-                <div id="search">
-                    <form method="get" class="form-horizontal" action="<?php echo home_url( '/' ); ?>">
-                        <input type="search" class="form-control" name="s" placeholder="O que você procura?"/>
-                        <input type="submit" value="OK"/>
-                    </form>
-                </div>                
-            </header>
-            
             <nav id="main-nav" class="row">
                 <div class="col-lg-12 col-md-12">
                     <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>

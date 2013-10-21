@@ -30,6 +30,17 @@
 }
 
 @font-face {
+    font-family: 'TeutonNormal';
+    src: url('../fonts/teutonnormal/teutonnormal-webfont.eot');
+    src: url('../fonts/teutonnormal/teutonnormal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/teutonnormal/teutonnormal-webfont.woff') format('woff'),
+         url('../fonts/teutonnormal/teutonnormal-webfont.ttf') format('truetype'),
+         url('../fonts/teutonnormal/teutonnormal-webfont.svg#TeutonNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/font-awesome/fontawesome-webfont.eot?v=@{FontAwesomeVersion}');
   src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=@{FontAwesomeVersion}') format('embedded-opentype'),
@@ -50,9 +61,9 @@ html, body {
 }
 
 body {
-  background-image: url(../img/bg_topo.png);
-  background-position: center -40px;
-  background-repeat: no-repeat;
+  // background-image: url(../img/bg_topo.png);
+  // background-position: center 0;
+  // background-repeat: no-repeat;
   color: rgb(102,102,102);
   font-size: 12px;
 }
@@ -241,64 +252,66 @@ p.excerpt {
 
 // HEADER
 header#main-header {
-  height: 150px;
-  margin-top:10px;
-  position: relative;
-  #brand {
-    position: absolute;
-    width: 350px;
-    z-index: 10;
-    img {
-      margin-left: -33px;
+  background-image: url(../img/barra-tim-fundo.gif);
+  background-repeat: repeat-x;  
+  height: 123px;
+  #goto-tim {
+    height: 41px;
+    a {
+      background-image: url(../img/spritesMenuSup_03.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      color: #707a84;
+      font-family: "TeutonNormal";
+      font-size: 12px;
+      line-height: 3.5;
+      margin-left: 55px;
+      padding-left: 26px;
+      text-transform: uppercase;
+      &:hover {
+        background-image: url(../img/spritesMenuSup_03-hover.png);
+        color: white;
+        text-decoration: none;
+      }
     }
   }
-  #goto-tim {
-    background-image: url(../img/bg_site_tim.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 35px;
-    position: absolute;
-    right: -1px;
-    top:8px;
-    width: 154px;
+  #brand {
+    height: 82px;
+    z-index: 10;
     a {
-      color: white;
-      font-size: 11px;
-      position: absolute;
-      right: 8px;
-      text-transform: uppercase;
-      top: 10px;
+      line-height: 7;
     }
   }
   #search {
     background-image: url(../img/bg_box_busca.png);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    top: 65px;
-    width: 722px;
-    input[type="search"] {
-      background-color: rgb(194, 255, 255);
-      border: none;
-      left: 100px;
-      position: absolute;
-      right: 55px;
-      top: 9px;
-      width: auto;
-    }
-    input[type="submit"] {
-      #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
-      border: 2px solid @timBlue3;
-      border-radius: 4px;
-      color: @timBlue3;
-      height: 35px;
-      position: absolute;
-      right: 10px;
-      text-align: center;
-      top: 8px;
-      width: 35px;
+    height: 82px;
+    position: relative;
+    form {
+      height: 82px;
+      position: relative;
+      input[type="search"] {
+        background-color: rgb(194, 255, 255);
+        border: none;
+        left: -6px;
+        position: absolute;
+        right: 50px;
+        top: 24px;
+        width: auto;
+      }
+      input[type="submit"] {
+        #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
+        border: 2px solid @timBlue3;
+        border-radius: 4px;
+        color: @timBlue3;
+        height: 35px;
+        position: absolute;
+        right: 6px;
+        text-align: center;
+        top: 23px;
+        width: 35px;
+      }
     }
   }
 }
@@ -338,9 +351,6 @@ footer#main-footer {
       img {
         height: 36px;
         width: auto;
-        &.tim {
-          height: 48px;
-        }
       }
     }
   }
