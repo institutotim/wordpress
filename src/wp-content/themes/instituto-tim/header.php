@@ -52,7 +52,7 @@
             <header id="main-header">
                 <div id="brand">
                     <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12"/>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim.png" class="col-lg-12 col-md-12"/>
                     </a>
                 </div>
                 
