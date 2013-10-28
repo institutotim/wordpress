@@ -154,6 +154,7 @@ function institutotim_addJS() {
     wp_enqueue_script('bootstrap_js', get_stylesheet_directory_uri().'/js/bootstrap.min.js', array('jquery'));
     wp_enqueue_script('cycle_js', get_stylesheet_directory_uri().'/js/jquery.cycle.all.js', array('jquery'));
     wp_enqueue_script('instituto_js', get_stylesheet_directory_uri().'/js/instituto.js', array('jquery'));
+    wp_enqueue_script('respond_js', get_stylesheet_directory_uri().'/js/respond.min.js', array('jquery'));
 
     wp_localize_script('congelado', 'vars', array(
         'ajaxurl' => admin_url('admin-ajax.php')

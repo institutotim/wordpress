@@ -14,6 +14,9 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- IE Compatibility modes -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
         <title><?php
             /* Print the <title> tag based on what is being viewed. */
@@ -36,9 +39,11 @@
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/img/favicon.ico" type="image/x-icon" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-        <link rel="stylesheet/less" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/less/main.less">
+        
         <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie.css">
         <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
         <![endif]-->
         <?php wp_head(); ?>
@@ -64,11 +69,13 @@
             </div>
         
             <div id="search" class="col-lg-8 right">
-                <form method="get" class="form-horizontal" action="<?php echo home_url( '/' ); ?>">
-                    <input type="search" class="form-control" name="s" placeholder="O que você procura?"/>
-                    <input type="submit" value="OK"/>
+                <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
+                    <div class="col-lg-11">
+                        <input type="text" class="form-control" name="s" placeholder="O que você procura?"/>
+                    </div>
+                    <input type="submit" class="col-lg-1" value="OK"/>
                 </form>
-            </div>                
+            </div>
           </div>
         </div>
       </div>

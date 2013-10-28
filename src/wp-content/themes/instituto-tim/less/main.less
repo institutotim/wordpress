@@ -79,7 +79,7 @@ body {
     background: -o-linear-gradient(top,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* IE10+ */
     background: linear-gradient(to bottom,  @first-color 0%,@mid-color-1 50%,@mid-color-2 51%,@end-color 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@first-color', endColorstr='@end-color',GradientType=0 ); /* IE6-9 */
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@first-color),argb(@end-color))); // IE9 and down
   }
 }
 
@@ -283,22 +283,19 @@ header#main-header {
     }
   }
   #search {
-    background-image: url(../img/bg_box_busca.png);
-    background-position: center center;
-    background-repeat: no-repeat;
     height: 82px;
     position: relative;
     form {
+      background-image: url(../img/bg_box_busca.png);
+      background-position: center center;
+      background-repeat: no-repeat;
       height: 82px;
+      padding-top: 24px;
       position: relative;
-      input[type="search"] {
+      input[type="text"] {
         background-color: rgb(194, 255, 255);
         border: none;
-        left: -6px;
-        position: absolute;
-        right: 50px;
-        top: 24px;
-        width: auto;
+        margin-left: 0;
       }
       input[type="submit"] {
         #gradient > .tim-button-gradient(#fff, #fff, #ebebeb, #ebebeb);
@@ -306,11 +303,8 @@ header#main-header {
         border-radius: 4px;
         color: @timBlue3;
         height: 35px;
-        position: absolute;
-        right: 6px;
+        margin-left: -11px;
         text-align: center;
-        top: 23px;
-        width: 35px;
       }
     }
   }
@@ -979,11 +973,6 @@ section#main-section {
         font-size: 10px;
         vertical-align: top;
     }
-}
-
-//HEADER
-header#main-header #search input[type="search"] {
-  width: 78.4%;
 }
 
 //POST STRUCTURE OF LIST
