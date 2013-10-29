@@ -54,26 +54,26 @@
 
     <header id="main-header">
       <div class="container">
-        <div class="col-lg-offset-1 col-lg-10">
+        <div class="col-lg-offset-1 col-lg-10 col-md-12">
           <div class="row">
-            <div id="goto-tim" class="col-lg-12">
+            <div id="goto-tim" class="col-lg-12 col-md-12">
                 <a href="http://www.tim.com.br">Portal Tim</a>
             </div>
           </div>
 
           <div class="row">
-            <div id="brand" class="col-lg-4 left">
+            <div id="brand" class="col-lg-4 col-md-4 left">
                 <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="col-lg-12 col-md-12"/>
                 </a>
             </div>
         
-            <div id="search" class="col-lg-8 right">
+            <div id="search" class="col-lg-8 col-md-8 right">
                 <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
-                    <div class="col-lg-11">
+                    <div class="col-lg-11 col-md-11">
                         <input type="text" class="form-control" name="s" placeholder="O que você procura?"/>
                     </div>
-                    <input type="submit" class="col-lg-1" value="OK"/>
+                    <input type="submit" class="col-lg-1 col-md-1" value="OK"/>
                 </form>
             </div>
           </div>
@@ -82,7 +82,7 @@
     </header>
     
     <div class="container">
-        <div class="col-lg-offset-1 col-lg-10">
+        <div class="col-lg-offset-1 col-lg-10 col-md-12">
             <nav id="main-nav" class="row">
                 <div class="col-lg-12 col-md-12">
                     <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>

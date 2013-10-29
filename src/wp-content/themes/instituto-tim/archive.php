@@ -17,7 +17,7 @@
 
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="row">        
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12">
                 <?php html::part('loop'); ?>
             </div>
         </div>

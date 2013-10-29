@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div <?php post_class( 'col-lg-10', 'col-lg-offset-1' );?>>
+<div <?php post_class( 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-md-offset-1' );?>>
 
     <header class="page-header">
         <h1 class="page-title"><?php printf( __( 'Resultados da busca por "%s"', 'institutotim' ), get_search_query() ); ?></h1>

@@ -58,7 +58,7 @@
                           $term_link = get_term_link( $term );
                     ?>
                         <li class="<?php echo $term->slug; ?>">
-                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
+                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
                                 <?php echo $term->name; ?>
                             </a>
                         </li>

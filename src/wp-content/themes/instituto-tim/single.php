@@ -7,7 +7,7 @@
 <?php else : ?>
 	
     <div class="row">
-	    <div <?php post_class( 'col-lg-10', 'col-lg-offset-1' );?>>
+	    <div <?php post_class( 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-md-offset-1' );?>>
 	        <h1 class="entry-title">Erro 404</h1>
 	        <div class="entry-content">
 	            <p>A página solicitada não existe ou está fora do ar temporariamente</p>
