@@ -10,7 +10,7 @@
                 <ul class="textcenter">
                     <?php $BannersApoiadores->print_items_by_position('apoiadores'); ?>
                 </ul>
-                <p class="textcenter"><small>© Copyright TIM Celular 2010. Todos os direitos reservados.</small></p>
+                <p class="textcenter"><small><?php echo get_option('text_copyright_footer');?></small></p>
             </footer>
         </div>
     </div>
