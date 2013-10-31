@@ -52,7 +52,6 @@
             timeout: 0,
             prev: '.solutions nav.prev',
             next: '.solutions nav.next'
-            
         });
 	});
 

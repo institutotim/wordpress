@@ -11,7 +11,7 @@
                         <img src="<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id($post->ID) ) ?>" class="img">
                     </div>
                     <h2 class="top"><?php the_title();?></h2>
-                    <p class="excerpt"><a href="<?php the_permalink();?>"><?php the_excerpt();?></a></p>
+                    <div class="excerpt"><a href="<?php the_permalink();?>"><?php the_excerpt();?></a></div>
                     <p><a href="<?php the_permalink();?>" class="more">Saiba mais...</a></p>
                 </article>
             <?php endwhile;?>
