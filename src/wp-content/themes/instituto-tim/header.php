@@ -70,10 +70,10 @@
         
             <div id="search" class="col-lg-8 col-md-8 right">
                 <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
-                    <div class="col-lg-11 col-md-11">
+                    <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="O que você procura?"/>
                     </div>
-                    <input type="submit" class="col-lg-1 col-md-1" value="OK"/>
+                    <button type="submit" class="col-lg-1-col-md-1"><i class="icon-search"></i></button>
                 </form>
             </div>
           </div>
