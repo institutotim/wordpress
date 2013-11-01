@@ -71,11 +71,13 @@
                     'post_type' => 'project',
                     'posts_per_page' => -1
                 )) ?>
+                
+                <?php $cc = 1; ?>
 
                 <?php while( $projects->have_posts() ) : $projects->the_post(); ?>
 
                     <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
-
+                    
                     <article id="project-<?php the_ID() ?>" class="col-lg-4 col-md-4 col-sm-6">
                         <div class="img-wrapper shadow">
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
@@ -87,6 +89,9 @@
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
                         <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
                     </article>
+                    <?php $cc++; if ($cc % 3 == 0) : $cc = 1; ?>
+                    <div class="clearfix"></div>
+                    <?php endif; ?>
 
                 <?php endwhile; wp_reset_query(); ?>
             </div>
