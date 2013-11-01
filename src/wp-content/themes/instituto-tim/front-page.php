@@ -72,7 +72,7 @@
                     'posts_per_page' => -1
                 )) ?>
                 
-                <?php $cc = 1; ?>
+                <?php $cc = 0; ?>
 
                 <?php while( $projects->have_posts() ) : $projects->the_post(); ?>
 
