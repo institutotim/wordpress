@@ -89,7 +89,7 @@
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
                         <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
                     </article>
-                    <?php $cc++; if ($cc % 3 == 0) : $cc = 1; ?>
+                    <?php $cc++; if ($cc % 3 == 0) : $cc = 0; ?>
                     <div class="clearfix"></div>
                     <?php endif; ?>
 
