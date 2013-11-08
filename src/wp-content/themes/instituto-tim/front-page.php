@@ -11,7 +11,7 @@
                 <article id="post-<?php the_ID();?>">
                     <div class="content">
                         <h1><?php echo get_the_title(); ?></h1>
-                        <p class="excerpt"><?php echo get_the_excerpt();?></p>
+                        <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 19, ' [...]')?></p>
                     </div>
                     <div class="img-wrapper">
                         <a href="<?php echo get_permalink();?>">
