@@ -1,7 +1,6 @@
 <article class="post-structure-of-list post-entry">
     <div class="row padding-content-list-posts">
         <div class="col-lg-4 col-md-4 col-sm-12">
-		<span class="date-post"><?php the_date('d . n . Y');?></span>
             <?php 
                 if( get_the_post_thumbnail() ) :
                     echo the_post_thumbnail( array('254', 180) );
@@ -12,6 +11,7 @@
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12">
             <h1 class="entry-title top"><a href="<?php the_permalink();?>" title="<?php echo get_the_title();?>"><?php the_title();?></a></h1>
+			<p><strong>Publicado em </strong><?php the_date();?></p>
             <?php $post_ID = get_the_ID(); ?>
             <?php the_excerpt();?>
         </div>
