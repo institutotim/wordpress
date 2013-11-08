@@ -52,7 +52,8 @@ class solucoes
                 'title',
                 'editor',
                 'thumbnail',
-                'page-attributes'
+                'page-attributes',
+		'excerpt'
             ),
             //'taxonomies' => array('taxonomia')
             )

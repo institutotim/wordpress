@@ -51,7 +51,8 @@ class project
             'supports' => array(
                 'title',
                 'editor',
-                'thumbnail'
+                'thumbnail',
+		'excerpt'
             ),
             'taxonomies' => array('projects_categories')
             )
