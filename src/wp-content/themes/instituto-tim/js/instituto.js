@@ -45,13 +45,22 @@
             
         });
 
-        $('.highlight-sidebar').cycle({
+        $('.solutions .highlight-sidebar').cycle({
             fx: 'fade',
             slideExpr: 'article',
             speed: 300,
             timeout: 0,
             prev: '.solutions nav.prev',
             next: '.solutions nav.next'
+        });
+
+        $('.videos .highlight-sidebar').cycle({
+            fx: 'fade',
+            slideExpr: 'article',
+            speed: 300,
+            timeout: 0,
+            prev: '.videos nav.prev',
+            next: '.videos nav.next'
         });
 	});
 
