@@ -9,6 +9,8 @@
                     printf( __( 'Arquivo mensal: %s', 'institutotim' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'institutotim' ) ) );
                 elseif ( is_year() ) :
                     printf( __( 'Arquivo anual: %s', 'institutotim' ), get_the_date( _x( 'Y', 'yearly archives date format', 'institutotim' ) ) );
+                elseif ( is_post_type_archive( 'solucoes' ) ):
+                    echo '';
                 else :
                     _e( 'Arquivo', 'institutotim' );
                 endif;
@@ -17,7 +19,7 @@
 
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="row">        
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12">
                 <?php html::part('loop'); ?>
             </div>
         </div>

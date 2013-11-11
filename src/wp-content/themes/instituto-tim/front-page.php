@@ -11,7 +11,7 @@
                 <article id="post-<?php the_ID();?>">
                     <div class="content">
                         <h1><?php echo get_the_title(); ?></h1>
-                        <p class="excerpt"><?php echo get_the_excerpt();?></p>
+                        <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 19, ' [...]')?></p>
                     </div>
                     <div class="img-wrapper">
                         <a href="<?php echo get_permalink();?>">
@@ -58,7 +58,7 @@
                           $term_link = get_term_link( $term );
                     ?>
                         <li class="<?php echo $term->slug; ?>">
-                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
+                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-md-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
                                 <?php echo $term->name; ?>
                             </a>
                         </li>
@@ -71,11 +71,13 @@
                     'post_type' => 'project',
                     'posts_per_page' => -1
                 )) ?>
+                
+                <?php $cc = 0; ?>
 
                 <?php while( $projects->have_posts() ) : $projects->the_post(); ?>
 
                     <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
-
+                    
                     <article id="project-<?php the_ID() ?>" class="col-lg-4 col-md-4 col-sm-6">
                         <div class="img-wrapper shadow">
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
@@ -87,6 +89,9 @@
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
                         <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
                     </article>
+                    <?php $cc++; if ($cc % 3 == 0) : $cc = 0; ?>
+                    <div class="clearfix"></div>
+                    <?php endif; ?>
 
                 <?php endwhile; wp_reset_query(); ?>
             </div>

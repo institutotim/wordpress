@@ -23,7 +23,7 @@ add_filter('comment_class','comment_add_microid');
 
 <?php if ('open' == $post->comment_status) : ?>
 
-    <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1') );?>>
+    <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-md-offset-1') );?>>
         <h3 class="entry-title title-post-line"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
 
         <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
@@ -31,7 +31,7 @@ add_filter('comment_class','comment_add_microid');
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-md-10">
                     <nav class="comments-nav">
                         <div class="alignleft"><?php previous_comments_link( __( '&laquo; Older Comments', 'institutotim' ) ); ?></div>
                         <div class="alignright"><?php next_comments_link( __( 'Newer Comments &raquo;', 'institutotim' ) ); ?></div>
@@ -56,15 +56,15 @@ add_filter('comment_class','comment_add_microid');
                     <?php else : ?>
                     
                         <div class="row">
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-4 col-md-4">
                                 <label for="author">Nome <span>(*)</span>:</label>
                                 <input class="form-control" name="author" control="author" id="author" value="<?php echo $comment_author; ?>" size="22" type="text" />
                             </div>
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-4 col-md-4">
                                 <label for="email">Email <span>(*)</span>:</label>
                                 <input class="form-control" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" type="text" />
                             </div>
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-4 col-md-4">
                                 <label for="url">WebSite:</label>
                                 <input class="form-control" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" type="text" />
                             </div>
@@ -73,13 +73,13 @@ add_filter('comment_class','comment_add_microid');
                     <?php endif; ?>
 
                         <div class="row">
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-lg-12 col-md-12">
                                 <label for="comment">Comentário:</label>
                                 <textarea class="form-control" name="comment" id="comment" rows="7"></textarea>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-lg-12">
+                            <div class="form-group col-lg-12 col-md-12">
                                 <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="Enviar comentário" type="submit" />
                                 <?php cancel_comment_reply_link( __('cancel', 'institutotim') ); ?>
                             </div>
