@@ -3,6 +3,7 @@
         <div class="page-header top">
             <h1 class="entry-title top"><?php the_title(); ?></h1>
             <p><strong>Categoria:</strong> <?php the_terms($post->ID, 'projects_categories'); ?></p>
+				<?php html::part('share');?>
         </div>
         <div class="entry-content">
             <?php the_content(); ?>

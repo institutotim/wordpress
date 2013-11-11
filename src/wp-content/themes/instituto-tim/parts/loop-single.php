@@ -3,6 +3,7 @@
         <div class="page-header top">
             <h1 class="entry-title top"><?php the_title(); ?></h1>
             <p><strong>Por:</strong> <?php the_author();?> &nbsp;&nbsp;<strong>Em:</strong> <?php the_date( 'd/m/Y' )?> &nbsp;&nbsp;<strong>Categorias: </strong> <?php the_category( ', ' );?> </p>
+			<?php html::part('share');?>
         </div>
         <div class="entry-content">
             <?php the_content(); ?>
