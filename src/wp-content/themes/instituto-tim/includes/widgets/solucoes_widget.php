@@ -21,9 +21,9 @@
         </div>
     </div>
 
-<?php }?>
+<?php }
 
-<?php wp_register_sidebar_widget(
+wp_register_sidebar_widget(
     'solucoes_wg',        // your unique widget id
     'Soluções',          // widget name
     'solucoes_wg',  // callback function
@@ -31,4 +31,3 @@
         'description' => 'Todas as soluções apresentadas pela TIM'
     )
 );
-?>
