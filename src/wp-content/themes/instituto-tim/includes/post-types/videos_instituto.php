@@ -50,6 +50,7 @@ class videos_instituto
             'has_archive' => true, //se precisar de arquivo
 			'supports' => array(
                 'title',
+				'excerpt',
 				'url_videos_instituto',
                 'page-attributes'
             ),
