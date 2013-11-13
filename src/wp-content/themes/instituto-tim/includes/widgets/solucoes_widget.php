@@ -8,9 +8,9 @@
             <?php while( $solucoes_w->have_posts() ) : $solucoes_w->the_post();?>
                 <article class="col-lg-12 col-md-12">
                     <div class="img-wrapper">
-                        <img src="<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id($post->ID) ) ?>" class="img">
+                        <a href="<?php the_permalink();?>"><img src="<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id($post->ID) ) ?>" class="img"></a>
                     </div>
-                    <h2 class="top"><?php the_title();?></h2>
+                    <h2 class="top"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
                     <?php $excerpt_text = get_the_excerpt(); ?>
                     <div class="excerpt"><a href="<?php the_permalink();?>"><?php echo wp_trim_words($excerpt_text, 21, ' [...]');?></a></div>
                     <p><a href="<?php the_permalink();?>" class="more">Saiba mais...</a></p>

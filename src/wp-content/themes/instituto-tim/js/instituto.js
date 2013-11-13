@@ -62,6 +62,21 @@
             prev: '.videos nav.prev',
             next: '.videos nav.next'
         });
+		
+		$('.modal-video').click(function(){
+			jQuery.ajax({
+				type: 'POST',
+				url: vars.ajaxurl,
+				data: {
+					action: 'doVideoInstituto',
+					videoUrl:  jQuery(this).attr('data-videoUrl')
+				}, 
+				success: function( response ){
+					jQuery('.modal-body').html(response);
+				}
+			});
+		});
+
 	});
 
 })(jQuery);

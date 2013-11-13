@@ -6,7 +6,15 @@
 			<?php html::part('share');?>
         </div>
         <div class="entry-content">
-            <?php the_content(); ?>
+			<?php if ( get_post_type( $post ) == "videos_instituto" ) : ?>
+		
+				<?php echo html::getVideo( get_post_meta($post->ID, 'url_video_instituto', true), "100%", "500px" );?>
+
+			<?php else : ?>
+
+				<?php the_content(); ?>
+			
+			<?php endif; ?>
         </div>
         <?php if( get_the_tags() ) : ?>
             <div class="entry-content fild-tags">

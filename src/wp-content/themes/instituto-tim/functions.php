@@ -158,6 +158,19 @@ function institutotim_addJS() {
 
 }
 
+
+function doVideoInstituto()
+{
+	    //doSomeStuff
+		$videoUrl = $_POST['videoUrl'];
+		echo html::getVideo( $videoUrl, "100%", "375px" );
+		
+		die(); //Lembre sempre de finalizar a execução pois, caso contrario o wordpress retornará 0.
+}
+//Adiciona a funcao extra votos aos hooks ajax do WordPress.
+add_action('wp_ajax_doStuff', 'doVideoInstituto');
+add_action('wp_ajax_nopriv_doVideoInstituto', 'doVideoInstituto');
+
 //=========================================================== Size Thumbnail ===========================================================//
 
 add_image_size('destaque_high_light', 603, 300, true);

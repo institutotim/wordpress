@@ -710,7 +710,11 @@ section#main-section {
     p.excerpt {
       height: auto;
     }
-
+    .video-dialog {
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
     .editais, .solutions, .videos {
       background: rgb(224, 236, 242);
       border-color: rgb(203, 215, 220);
@@ -718,7 +722,14 @@ section#main-section {
       border-style: solid;
       border-width: 1px;
       margin-bottom: 25px;
-      
+	  
+      .modal-video {
+	      cursor: pointer;
+	  }
+	  h2.modal-video:hover {
+	      color: rgb(42, 100, 150);
+		  text-decoration: underline;
+	  }
       div.excerpt {
           margin-bottom: 10px;
           max-height: 46px;
