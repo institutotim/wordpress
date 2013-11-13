@@ -64,6 +64,8 @@
         });
 		
 		$('.modal-video').click(function(){
+			var titlePost = jQuery(this).attr('data-titlePost');
+			jQuery('.modal-title').html(titlePost);
 			jQuery.ajax({
 				type: 'POST',
 				url: vars.ajaxurl,

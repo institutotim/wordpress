@@ -9,12 +9,12 @@ global $post;
             <?php $videos_w = new WP_Query(array('post_type' => 'videos_instituto', 'post_per_page' => -1));?>
             <?php while( $videos_w->have_posts() ) : $videos_w->the_post();?>
                 <article class="col-lg-12 col-md-12"> 
-					<div class="modal-video" data-videoUrl="<?php echo get_post_meta($post->ID, 'url_video_instituto', true); ?>" data-toggle="modal" data-target="#myModalVideo">
+					<div class="modal-video" data-titlePost="<?php echo get_the_title();?>" data-videoUrl="<?php echo get_post_meta($post->ID, 'url_video_instituto', true); ?>" data-toggle="modal" data-target="#myModalVideo">
 						<div class="img-wrapper">
 							<img src="<?php html::videoThumbURL( get_post_meta($post->ID, 'url_video_instituto', true) );?>" class="img">
 						</div>
 					</div>
-                    <h2 class="top modal-video" data-videoUrl="<?php echo get_post_meta($post->ID, 'url_video_instituto', true); ?>" data-toggle="modal" data-target="#myModalVideo"><?php the_title();?></h2>
+                    <h2 class="top modal-video" data-titlePost="<?php echo get_the_title();?>" data-videoUrl="<?php echo get_post_meta($post->ID, 'url_video_instituto', true); ?>" data-toggle="modal" data-target="#myModalVideo"><?php the_title();?></h2>
                     <?php $excerpt_text = get_the_excerpt(); ?>
                     <div class="excerpt"><a href="#" data-toggle="modal" data-target="#myModalVideo"><?php echo wp_trim_words($excerpt_text, 21, ' [...]');?></a></div>
                     <p><a href="<?php the_permalink();?>" class="more">Saiba mais...</a></p>
@@ -31,7 +31,7 @@ global $post;
 		
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				<h4 class="modal-title" id="myModalLabel"></h4>
 			</div>
 
 			<div class="modal-body">	

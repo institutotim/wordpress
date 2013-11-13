@@ -168,7 +168,7 @@ function doVideoInstituto()
 		die(); //Lembre sempre de finalizar a execução pois, caso contrario o wordpress retornará 0.
 }
 //Adiciona a funcao extra votos aos hooks ajax do WordPress.
-add_action('wp_ajax_doStuff', 'doVideoInstituto');
+add_action('wp_ajax_doVideoInstituto', 'doVideoInstituto');
 add_action('wp_ajax_nopriv_doVideoInstituto', 'doVideoInstituto');
 
 //=========================================================== Size Thumbnail ===========================================================//
