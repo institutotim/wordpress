@@ -10,6 +10,11 @@
                 <ul class="textcenter">
                     <?php $BannersApoiadores->print_items_by_position('apoiadores'); ?>
                 </ul>
+                <p class="textcenter">
+                    <small>
+                    Para entrar em contado com a equipe do Instituto TIM escreva para <a href="mailto:contato@institutotim.com.br">contato@institutotim.com.br</a>
+                    </small>
+                </p>
                 <p class="textcenter"><small><?php echo get_option('text_copyright_footer');?></small></p>
             </footer>
         </div>
