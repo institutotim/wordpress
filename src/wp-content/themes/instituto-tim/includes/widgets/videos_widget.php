@@ -3,10 +3,15 @@ global $post;
 ?>
 
     <div class="videos col-lg-12 col-md-12">
+        
+        <?php $videos_w = new WP_Query(array('post_type' => 'videos_instituto', 'post_per_page' => -1)); $num_of_videos = intval($videos_w->found_posts); ?>
+        
         <h1>Vídeos</h1>
-        <nav class="prev"><a href=""></a></nav>
+        <?php if ($num_of_videos > 1): ?>
+            <nav class="prev"><a href=""></a></nav>
+        <?php endif; ?>
         <div class="highlight-sidebar">
-            <?php $videos_w = new WP_Query(array('post_type' => 'videos_instituto', 'post_per_page' => -1));?>
+            
             <?php while( $videos_w->have_posts() ) : $videos_w->the_post();?>
                 <article class="col-lg-12 col-md-12"> 
 					<div class="modal-video" data-titlePost="<?php echo get_the_title();?>" data-videoUrl="<?php echo get_post_meta($post->ID, 'url_video_instituto', true); ?>" data-toggle="modal" data-target="#myModalVideo">
@@ -21,7 +26,9 @@ global $post;
                 </article>
             <?php endwhile;?>
         </div>
-        <nav class="next"><a href=""></a></nav>
+        <?php if ($num_of_videos > 1): ?>
+            <nav class="next"><a href=""></a></nav>
+        <?php endif; ?>
     </div>
 
 <!--MODAL-VIDEO-->

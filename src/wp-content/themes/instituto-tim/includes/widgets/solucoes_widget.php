@@ -1,10 +1,13 @@
 <?php function solucoes_wg (){ ?>
 
     <div class="solutions col-lg-12 col-md-12">
+        <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1)); $num_of_items = intval($videos_w->found_posts); ?>
         <h1>Soluções</h1>
-        <nav class="prev"><a href=""></a></nav>
+        <?php if ($num_of_items > 1): ?>
+            <nav class="prev"><a href=""></a></nav>
+        <?php endif; ?>
         <div class="highlight-sidebar">
-            <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1));?>
+            
             <?php while( $solucoes_w->have_posts() ) : $solucoes_w->the_post();?>
                 <article class="col-lg-12 col-md-12">
                     <div class="img-wrapper">
@@ -17,7 +20,9 @@
                 </article>
             <?php endwhile;?>
         </div>
-        <nav class="next"><a href=""></a></nav>
+        <?php if ($num_of_items > 1): ?>
+            <nav class="next"><a href=""></a></nav>
+        <?php endif; ?>
     </div>
 
 <?php }
