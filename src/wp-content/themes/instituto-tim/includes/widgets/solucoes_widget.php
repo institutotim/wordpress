@@ -1,7 +1,7 @@
 <?php function solucoes_wg (){ ?>
 
     <div class="solutions col-lg-12 col-md-12">
-        <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1)); $num_of_items = intval($videos_w->found_posts); ?>
+        <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1)); $num_of_items = intval($solucoes_w->found_posts); ?>
         <h1>Soluções</h1>
         <?php if ($num_of_items > 1): ?>
             <nav class="prev"><a href=""></a></nav>
