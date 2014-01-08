@@ -5,6 +5,9 @@
     <?php html::part('loop'); ?>
 
 <?php endwhile; ?>
+
+        <?php html::part('pagination'); ?>
+
 <?php else : ?>
     <div <?php post_class( 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-md-offset-1' );?>>
         <h1 class="entry-title">Erro 404</h1>
