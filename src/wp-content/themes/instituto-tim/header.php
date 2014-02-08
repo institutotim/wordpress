@@ -66,13 +66,19 @@
           </div>
 
           <div class="row">
-            <div id="brand" class="col-lg-4 col-md-4 left">
+            <div id="brand" class="col-lg-4 col-md-4 left hidden-sm hidden-xs">
                 <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="col-lg-12 col-md-12"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="col-lg-12 col-md-12 col-sm-12"/>
+                </a>
+            </div>
+            
+            <div id="brand" class="visible-xs visible-sm col-lg-sm-12">
+                <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="img-responsive"/>
                 </a>
             </div>
         
-            <div id="search" class="col-lg-8 col-md-8 right">
+            <div id="search" class="col-lg-8 col-md-8 right hidden-sm hidden-xs">
                 <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
                     <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="O que você procura?"/>
@@ -80,6 +86,16 @@
                     <button type="submit" class="col-lg-1-col-md-1"><i class="icon-search"></i></button>
                 </form>
             </div>
+
+            <div id="search" class="visible-sm visible-xs">
+                <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
+                    <div class="search-wrapper">
+                        <input type="text" class="form-control" name="s" placeholder="O que você procura?"/>
+                    </div>
+                    <button type="submit" class="col-lg-1-col-md-1"><i class="icon-search"></i></button>
+                </form>
+            </div>
+
           </div>
         </div>
       </div>
@@ -87,7 +103,7 @@
     
     <div class="container">
         <div class="col-lg-offset-1 col-lg-10 col-md-12">
-            <nav id="main-nav" class="row">
+            <nav id="main-nav" class="row hidden-xs hidden-sm">
                 <div class="col-lg-12 col-md-12">
                     <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix textcenter">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>
                 </div>

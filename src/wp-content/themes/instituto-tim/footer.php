@@ -1,3 +1,8 @@
+            
+            <div class="main-navbar visible-xs visible-sm">
+              <?php wp_nav_menu( array( 'theme_location' => 'header', 'items_wrap' => '<ul class="clearfix">%3$s</ul>', 'container' => '', 'fallback_cb' => '', 'depth' => 2 ) ); ?>
+            </div>
+
             </section>
 
             <footer id="main-footer">

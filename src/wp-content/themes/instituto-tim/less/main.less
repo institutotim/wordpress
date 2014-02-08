@@ -282,6 +282,10 @@ header#main-header {
       line-height: 7;
     }
   }
+  #brand.visible-xs {
+    height: 62px;
+    margin-top: 20px;
+  }
   #search {
     height: 82px;
     position: relative;
@@ -315,6 +319,13 @@ header#main-header {
         width: 35px;
         z-index: 2;
       }
+    }
+  }
+  #search.visible-xs {
+    form {
+      height: 49px;
+      margin-top: 0;
+      padding-top: 7px;
     }
   }
 }
@@ -1378,3 +1389,37 @@ svg:not(:root) {
 figure {
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: @screen-sm) {
+  section#main-section {
+    margin-top: 80px;
+    #secondary-nav {
+      ul {
+        li {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+    }
+    .main-navbar.visible-xs {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li ul {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
