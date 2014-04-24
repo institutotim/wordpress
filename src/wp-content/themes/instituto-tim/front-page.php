@@ -36,7 +36,7 @@
             <?php $pageURLID = get_option('rela_highlight_box');
                 $linkURL = get_page_link($pageURLID); 
             ?>
-            <p class="more textright"><a href="<?php echo $linkURL;?>" class="btn btn-warning">Saiba mais</a></p>
+            <p class="more textright"><a href="<?php echo $linkURL;?>" class="btn btn-warning"><?php _e('Saiba mais', 'institutotim');?></a></p>
         </article>
     </div>
 </div>
@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12"><h1 class="top">Projetos Instituto TIM</h1></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12"><h1 class="top"><?php _e('Projetos Instituto TIM', 'institutotim');?></h1></div>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                         </div>
                         <h2 class="top"><?php the_title(); ?></h2>
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
-                        <p><a href="<?php the_permalink(); ?>" class="more">Saiba mais...</a></p>
+                        <p><a href="<?php the_permalink(); ?>" class="more"><?php _e('Saiba mais', 'institutotim');?>...</a></p>
                     </article>
                     <?php $cc++; if ($cc % 3 == 0) : $cc = 0; ?>
                     <div class="clearfix"></div>

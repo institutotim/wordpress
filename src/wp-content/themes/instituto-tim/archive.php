@@ -30,11 +30,11 @@
     <?php else : ?>
         
         <div class="page-header">
-            <h1 class="entry-title">Erro 404</h1>
+            <h1 class="entry-title"><?php _e('Erro 404', 'institutotim'); ?></h1>
         </div>
         
         <div class="entry-content">
-            <p>A página solicitada não existe ou está fora do ar temporariamente</p>
+            <p><?php _e('A página solicitada não existe ou está fora do ar temporariamente', 'institutotim'); ?></p>
         </div>
         
     <?php endif; ?>

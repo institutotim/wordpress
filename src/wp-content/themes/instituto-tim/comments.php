@@ -57,15 +57,15 @@ add_filter('comment_class','comment_add_microid');
                     
                         <div class="row">
                             <div class="form-group col-lg-4 col-md-4">
-                                <label for="author">Nome <span>(*)</span>:</label>
+                                <label for="author"><?php _e('Nome', 'institutotim');?> <span>(*)</span>:</label>
                                 <input class="form-control" name="author" control="author" id="author" value="<?php echo $comment_author; ?>" size="22" type="text" />
                             </div>
                             <div class="form-group col-lg-4 col-md-4">
-                                <label for="email">Email <span>(*)</span>:</label>
+                                <label for="email"><?php _e('Email', 'institutotim';?> <span>(*)</span>:</label>
                                 <input class="form-control" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" type="text" />
                             </div>
                             <div class="form-group col-lg-4 col-md-4">
-                                <label for="url">WebSite:</label>
+                                <label for="url"><?php _e('WebSite', 'institutotim');?>:</label>
                                 <input class="form-control" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" type="text" />
                             </div>
                         </div>
@@ -74,7 +74,7 @@ add_filter('comment_class','comment_add_microid');
 
                         <div class="row">
                             <div class="form-group col-lg-12 col-md-12">
-                                <label for="comment">Comentário:</label>
+                                <label for="comment"><?php _e('Comentário', 'institutotim');?>:</label>
                                 <textarea class="form-control" name="comment" id="comment" rows="7"></textarea>
                             </div>
                         </div>

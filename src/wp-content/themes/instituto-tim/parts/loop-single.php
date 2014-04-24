@@ -2,7 +2,7 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class( array('post-entry', 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-sm-12') );?>>
         <div class="page-header top">
             <h1 class="entry-title top"><?php the_title(); ?></h1>
-            <p><strong>Por:</strong> <?php the_author();?> &nbsp;&nbsp;<strong>Em:</strong> <?php the_date( 'd/m/Y' )?> &nbsp;&nbsp;<strong>Categorias: </strong> <?php the_category( ', ' );?> </p>
+            <p><strong><?php _e('Por', 'institutotim');?>:</strong> <?php the_author();?> &nbsp;&nbsp;<strong><?php _e('Em', 'institutotim');?>:</strong> <?php the_date( 'd/m/Y' )?> &nbsp;&nbsp;<strong><?php _e('Categorias', 'institutotim');?>: </strong> <?php the_category( ', ' );?> </p>
 			<?php html::part('share');?>
         </div>
         <div class="entry-content">
@@ -18,7 +18,7 @@
         </div>
         <?php if( get_the_tags() ) : ?>
             <div class="entry-content fild-tags">
-                <strong>Tags:</strong>
+                <strong><?php _e('Tags', 'institutotim');?>:</strong>
                 <?php the_tags( ' ', NULL ) ?>
             </div>
         <?php endif; ?>

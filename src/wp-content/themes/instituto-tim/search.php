@@ -12,7 +12,7 @@
 
     <?php endwhile; ?>
     <?php else : ?>
-        <p>Nenhum resultado encontrado. Por favor, realize uma nova busca.</p>
+        <p><?php _e('Nenhum resultado encontrado. Por favor, realize uma nova busca.', 'institutotim');?></p>
     <?php endif; ?>
 
 </div>

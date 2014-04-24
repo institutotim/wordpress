@@ -2,7 +2,7 @@
 
     <div class="solutions col-lg-12 col-md-12">
         <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1)); $num_of_items = intval($solucoes_w->found_posts); ?>
-        <h1>Soluções</h1>
+        <h1><?php _e('Soluções', 'institutotim');?></h1>
         <?php if ($num_of_items > 1): ?>
             <nav class="prev"><a href=""></a></nav>
         <?php endif; ?>
@@ -16,7 +16,7 @@
                     <h2 class="top"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
                     <?php $excerpt_text = get_the_excerpt(); ?>
                     <div class="excerpt"><a href="<?php the_permalink();?>"><?php echo wp_trim_words($excerpt_text, 21, ' [...]');?></a></div>
-                    <p><a href="<?php the_permalink();?>" class="more">Saiba mais...</a></p>
+                    <p><a href="<?php the_permalink();?>" class="more"><?php _e('Saiba mais', 'institutotim');?>...</a></p>
                 </article>
             <?php endwhile;?>
         </div>

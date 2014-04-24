@@ -61,7 +61,7 @@
         <div class="col-lg-offset-1 col-lg-10 col-md-12">
           <div class="row">
             <div id="goto-tim" class="col-lg-12 col-md-12">
-                <a href="http://www.tim.com.br">Portal Tim</a>
+                <a href="http://www.tim.com.br"><?php _e('Portal Tim', 'institutotim');?></a>
             </div>
           </div>
 

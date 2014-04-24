@@ -11,7 +11,7 @@
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12">
             <h1 class="entry-title top"><a href="<?php the_permalink();?>" title="<?php echo get_the_title();?>"><?php the_title();?></a></h1>
-			<p><strong>Publicado em </strong><?php the_date();?></p>
+			<p><strong><?php _e('Publicado em', 'institutotim');?> </strong><?php the_date();?></p>
             <?php $post_ID = get_the_ID(); ?>
             <div class="excerpt-archive">
                 <?php echo get_the_excerpt();?>
