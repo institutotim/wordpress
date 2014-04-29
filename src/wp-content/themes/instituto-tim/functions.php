@@ -183,7 +183,7 @@ function comments_tim_clear( $comment, $args, $depth ) {
     <div <?php comment_class( array('comments', 'clearfix') ); ?> id="comment-<?php comment_ID();?>">
         <?php echo get_avatar( $comment, '56' ); ?>
         <div class="content-of-comment">
-            <h3><?php comment_author_link(); ?> <span>(<?php comment_date('d/m/Y'); ?> <?php _e('ás', 'institutotim');?> <?php comment_date('H:i'); ?>)</span>
+            <h3><?php comment_author_link(); ?> <span>(<?php comment_date( get_option('date_format') ); ?> <?php _e('às', 'institutotim');?> <?php comment_date('H:i'); ?>)</span>
             </h3>
             <div class="text-comment"><?php comment_text(); ?></div>
         </div>
