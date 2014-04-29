@@ -11,6 +11,8 @@
                     printf( __( 'Arquivo anual: %s', 'institutotim' ), get_the_date( _x( 'Y', 'yearly archives date format', 'institutotim' ) ) );
                 elseif ( is_post_type_archive( 'solucoes' ) ):
                     echo '';
+                elseif ( is_category() ):
+                    echo single_cat_title( '', false );
                 else :
                     _e( 'Arquivo', 'institutotim' );
                 endif;
