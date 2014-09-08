@@ -42,7 +42,7 @@ class solucoes
                 'parent_item_colon' => ''
             ),
             'public' => true,
-            'rewrite' => array('solucoes' => 'Soluções'),
+            'rewrite' => array('slug' => 'solucoes'),
             'capability_type' => 'post',
             'hierarchical' => true,
             'map_meta_cap ' => true,
