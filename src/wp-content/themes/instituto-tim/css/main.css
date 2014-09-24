@@ -7559,7 +7559,8 @@ body {
 .btn-work {
   background-color: #00c4df;
 }
-.btn-inclusao {
+.btn-inclusao,
+.btn-inclusion {
   background-color: #2c9cd3;
 }
 .img-wrapper {
@@ -8013,11 +8014,13 @@ section#main-section #secondary-nav ul li.trabalho .tooltip .tooltip-inner {
 section#main-section #secondary-nav ul li.trabalho .tooltip.bottom .tooltip-arrow {
   border-bottom-color: #00c4df !important;
 }
-section#main-section #secondary-nav ul li.inclusao .tooltip .tooltip-inner {
+section#main-section #secondary-nav ul li.inclusao .tooltip .tooltip-inner,
+section#main-section #secondary-nav ul li.inclusion .tooltip .tooltip-inner {
   background: #2c9cd3 !important;
   color: #fff;
 }
-section#main-section #secondary-nav ul li.inclusao .tooltip.bottom .tooltip-arrow {
+section#main-section #secondary-nav ul li.inclusao .tooltip.bottom .tooltip-arrow,
+section#main-section #secondary-nav ul li.inclusion .tooltip.bottom .tooltip-arrow {
   border-bottom-color: #2c9cd3 !important;
 }
 section#main-section #secondary-nav a {
@@ -8040,7 +8043,8 @@ section#main-section #projects article.applications h2 {
 section#main-section #projects article.trabalho h2 {
   color: #00c4df;
 }
-section#main-section #projects article.inclusao h2 {
+section#main-section #projects article.inclusao h2,
+section#main-section #projects article.inclusion h2 {
   color: #2c9cd3;
 }
 section#main-section #projects h1 {
