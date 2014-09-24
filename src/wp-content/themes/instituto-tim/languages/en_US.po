@@ -420,7 +420,7 @@ msgstr "Videos"
 msgid "Soluções"
 msgstr "Solutions"
 
-#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/post-types/solucoes.php:18
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/post-types/solucoes.php:45
 msgid "solucoes"
 msgstr "solutions"
 

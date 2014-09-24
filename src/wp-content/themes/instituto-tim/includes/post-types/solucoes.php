@@ -1,5 +1,5 @@
 <?php
-// Dê um Find Replace (CASE SENSITIVE!) em _POST_TYPE_ pelo nome do seu post type 
+// Dê um Find Replace (CASE SENSITIVE!) em _POST_TYPE_ pelo nome do seu post type
 
 class solucoes
 {
@@ -7,7 +7,7 @@ class solucoes
     const MENU_NAME = 'Soluções';
 
     /**
-     * alug do post type: deve conter somente minúscula 
+     * alug do post type: deve conter somente minúscula
      * @var string
      */
     protected static $post_type;
@@ -42,7 +42,7 @@ class solucoes
                 'parent_item_colon' => ''
             ),
             'public' => true,
-            'rewrite' => array('slug' => 'solucoes'),
+            'rewrite' => array('slug' => __('solucoes', 'institutotim')),
             'capability_type' => 'post',
             'hierarchical' => true,
             'map_meta_cap ' => true,
@@ -116,7 +116,7 @@ class solucoes
         global $post;
 
         if ($post->post_type == self::$post_type) {
-            // faça algo com o post 
+            // faça algo com o post
         }
     }
 
