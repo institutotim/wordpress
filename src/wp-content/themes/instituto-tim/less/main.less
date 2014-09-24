@@ -52,7 +52,7 @@
   font-style: normal;
 }
 
-a:link, a:visited, a:active, a { 
+a:link, a:visited, a:active, a {
     outline: none;
 }
 // BODY
@@ -90,7 +90,7 @@ body {
   box-shadow: 0 0 7px #ddd;
   color: #fff;
   font-size: 11px;
-  text-transform: uppercase;   
+  text-transform: uppercase;
 }
 
 .btn-danger {
@@ -130,15 +130,18 @@ body {
   }
 }
 
-.btn-ensino {
+.btn-ensino,
+.btn-education {
   background-color: @ensino;
 }
 
-.btn-aplicacoes {
+.btn-aplicacoes,
+.btn-applications {
   background-color: @aplicacoes;
 }
 
-.btn-trabalho {
+.btn-trabalho,
+.btn-work {
   background-color: @trabalho;
 }
 
@@ -164,17 +167,21 @@ body {
     right: 0;
     text-transform: uppercase;
     top: 0;
-    &.ensino {
-      background-color: @ensino; 
+    &.ensino,
+    &.education {
+      background-color: @ensino;
     }
-    &.aplicacoes {
-      background-color: @aplicacoes; 
+    &.aplicacoes,
+    &.applications {
+      background-color: @aplicacoes;
     }
-    &.inclusao {
-      background-color: @inclusao; 
+    &.inclusao,
+    &.inclusion {
+      background-color: @inclusao;
     }
-    &.trabalho {
-      background-color: @trabalho; 
+    &.trabalho,
+    &.work {
+      background-color: @trabalho;
     }
   }
 }
@@ -189,7 +196,7 @@ body {
     left: 0;
     margin-top: 1px;
     position: absolute;
-    right: 0;    
+    right: 0;
   }
 }
 
@@ -236,7 +243,7 @@ a.more {
   background-image: url(../img/bullet.png);
   background-position: left center;
   background-repeat: no-repeat;
-  padding-left: 12px;        
+  padding-left: 12px;
 }
 
 p.excerpt {
@@ -253,7 +260,7 @@ p.excerpt {
 // HEADER
 header#main-header {
   background-image: url(../img/barra-tim-fundo.gif);
-  background-repeat: repeat-x;  
+  background-repeat: repeat-x;
   height: 123px;
   #goto-tim {
     height: 41px;
@@ -386,7 +393,7 @@ nav#main-nav {
   position: relative;
   z-index: 30;
 
-  a { 
+  a {
     color: #0072AC;
     display: inline-block;
     font-family: 'Trade Gothic';
@@ -467,8 +474,8 @@ section#main-section {
         a {
             background: @timBlue5;
             border-radius: 50%;
-            -moz-border-radius: 50%;            
-            -webkit-border-radius: 50%;            
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
             -o-border-radius: 50%;
             -ms-border-radius: 50%;
             display: inline-block;
@@ -514,7 +521,7 @@ section#main-section {
           color: #fff;
           margin: 0;
           min-height: 0;
-		  max-height: 15px;
+          max-height: 15px;
           padding: 0;
         }
       }
@@ -577,7 +584,8 @@ section#main-section {
         &:last-child {
           margin-right: 0;
         }
-        &.ensino {
+        &.ensino,
+        &.education {
           .tooltip {
             .tooltip-inner {
               background: @ensino !important;
@@ -590,7 +598,8 @@ section#main-section {
             }
           }
         }
-        &.aplicacoes {
+        &.aplicacoes,
+        &.applications {
           .tooltip {
             .tooltip-inner {
               background: @aplicacoes !important;
@@ -642,12 +651,14 @@ section#main-section {
       color: rgb(102,102,102);
       font-family: @font-family-sans-serif;
       font-size: 11px;
-      &.ensino {
+      &.ensino,
+      &.education {
         h2 {
           color: @ensino;
         }
       }
-      &.aplicacoes {
+      &.aplicacoes,
+      &.applications {
         h2 {
           color: @aplicacoes;
         }
@@ -726,10 +737,10 @@ section#main-section {
       height: auto;
     }
     .video-dialog {
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-	}
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
     .editais, .solutions, .videos {
       background: rgb(224, 236, 242);
       border-color: rgb(203, 215, 220);
@@ -737,14 +748,14 @@ section#main-section {
       border-style: solid;
       border-width: 1px;
       margin-bottom: 25px;
-	  
+
       .modal-video {
-	      cursor: pointer;
-	  }
-	  h2.modal-video:hover {
-	      color: rgb(42, 100, 150);
-		  text-decoration: underline;
-	  }
+          cursor: pointer;
+      }
+      h2.modal-video:hover {
+          color: rgb(42, 100, 150);
+          text-decoration: underline;
+      }
       div.excerpt {
           margin-bottom: 10px;
           max-height: 46px;
@@ -831,13 +842,13 @@ section#main-section {
     text-decoration: none;
   }
   .share {
-	text-align: left;
+    text-align: left;
   }
-  .share div { 
-	  display: inline-block; 
+  .share div {
+      display: inline-block;
   }
   .share .gplus {
-	width: 68px !important;
+    width: 68px !important;
   }
     .entry-content {
         word-wrap: break-word;
@@ -846,11 +857,11 @@ section#main-section {
             max-width: 100%;
         }
     }
-	.wp-caption-text {
-		text-align: center;
-		font-style: italic;
-		margin-top: 5px;
-	}
+    .wp-caption-text {
+        text-align: center;
+        font-style: italic;
+        margin-top: 5px;
+    }
     .fild-tags {
         border-top: solid 1px #EEEEEE;
         margin: 15px 0;
@@ -947,7 +958,7 @@ section#main-section {
         float: left;
         margin-left: 10px;
         max-width: 89.4%;
-    } 
+    }
     .content-of-comment img {
         max-width: 100%;
     }
@@ -990,7 +1001,7 @@ section#main-section {
         box-shadow: 0 0 7px #ddd;
         color: #fff;
         font-size: 11px;
-        text-transform: uppercase;   
+        text-transform: uppercase;
         border-radius: @border-radius-base;
         white-space: nowrap;
         .user-select(none);
@@ -1044,16 +1055,16 @@ section#main-section {
     margin-bottom: 32px;
     .padding-content-list-posts {
         padding: 1em;
-		.date-post {
-			background: rgb(44, 156, 211);
-			color: #FFF;
-			left: 15px;
-			padding: 5px 10px;
-			position: absolute;
-			top: 0;
-		}
+        .date-post {
+            background: rgb(44, 156, 211);
+            color: #FFF;
+            left: 15px;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+        }
         .excerpt-archive {
-            margin: 5px 0 20px 0 
+            margin: 5px 0 20px 0
         }
     }
     .global-open-description-post-here {
@@ -1069,7 +1080,7 @@ section#main-section {
         position: absolute;
         right: 30px;
         text-align: center;
-		text-decoration: none;
+        text-decoration: none;
         top: -28px;
         width: 30px;
     }
