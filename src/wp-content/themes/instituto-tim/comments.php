@@ -24,7 +24,7 @@ add_filter('comment_class','comment_add_microid');
 <?php if ('open' == $post->comment_status) : ?>
 
     <div <?php post_class( array( 'col-lg-10', 'col-lg-offset-1', 'col-md-10', 'col-md-offset-1') );?>>
-        <h3 class="entry-title title-post-line"><?php _e( 'Comments', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
+        <h3 class="entry-title title-post-line"><?php _e( 'Comentários', 'institutotim' )?> (<?php comments_number('0','1', __('%','institutotim') );?>)</h3>
 
         <?php wp_list_comments( array( 'callback' => 'comments_tim_clear' ) ); ?>
 
@@ -54,7 +54,7 @@ add_filter('comment_class','comment_add_microid');
                         <p><?php _e('Logged in as', 'institutotim'); ?> <a href="<?php print get_option('siteurl'); ?>/wp-admin/profile.php"><?php print $user_identity; ?></a>. <a href="<?php print get_option('siteurl'); ?>/wp-login.php?action=logout" title="Logout">Logout &raquo;</a></p>
 
                     <?php else : ?>
-                    
+
                         <div class="row">
                             <div class="form-group col-lg-4 col-md-4">
                                 <label for="author"><?php _e('Nome', 'institutotim');?> <span>(*)</span>:</label>
@@ -80,8 +80,8 @@ add_filter('comment_class','comment_add_microid');
                         </div>
                         <div class="row">
                             <div class="form-group col-lg-12 col-md-12">
-                                <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="Enviar comentário" type="submit" />
-                                <?php cancel_comment_reply_link( __('cancel', 'institutotim') ); ?>
+                                <input name="submit" id="submit" tabindex="5" class="btn btn-info" value="<?php _e('Enviar Comentário', 'institutotim');?>" type="submit" />
+                                <?php cancel_comment_reply_link( __('cancelar', 'institutotim') ); ?>
                             </div>
                         </div>
 

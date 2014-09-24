@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: /home/leo/devel/instituto-tim/src/wp-content/themes/"
 "instituto-tim\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-SearchPath-0: /home/leo/devel/instituto-tim/src/wp-content/themes/"
 "instituto-tim\n"
 
@@ -26,6 +26,11 @@ msgstr "Página %s"
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/header.php:64
 msgid "Portal Tim"
 msgstr "Tim Portal"
+
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/header.php:84
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/header.php:93
+msgid "O que você procura?"
+msgstr "Search"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/taxonomy-projects_categories.php:9
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/front-page.php:49
@@ -110,6 +115,10 @@ msgstr "Footer Menu"
 msgid "às"
 msgstr "at"
 
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/functions.php:191
+msgid "Responder"
+msgstr "Reply"
+
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/404.php:4
 msgid "404 - Página não encontrada"
 msgstr "404 - Page not found"
@@ -121,8 +130,8 @@ msgid ""
 msgstr "The page you are looking for does not exist."
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:27
-msgid "Comments"
-msgstr "Comentários"
+msgid "Comentários"
+msgstr "Comments"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:27
 msgid "%"
@@ -142,8 +151,8 @@ msgid "You must be %sloggedin%s to post a comment."
 msgstr "Você precisa estar %slogado%s para publicar um comentário."
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:54
-msgid "Logged in as"
-msgstr "Conectado como "
+msgid "Conectado como"
+msgstr "Logged in as"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:60
 msgid "Nome"
@@ -161,9 +170,13 @@ msgstr "Website"
 msgid "Comentário"
 msgstr "Comment"
 
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:83
+msgid "Enviar Comentário"
+msgstr "Send Comment"
+
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/comments.php:84
-msgid "cancel"
-msgstr "cancelar"
+msgid "cancelar"
+msgstr "cancel"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/parts/loop-single-project.php:5
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/post-types/projects.php:68
@@ -406,6 +419,10 @@ msgstr "Videos"
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/post-types/solucoes.php:33
 msgid "Soluções"
 msgstr "Solutions"
+
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/post-types/solucoes.php:18
+msgid "solucoes"
+msgstr "solutions"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/template-widgets/WidgetTemplate.php:108
 msgid "save"

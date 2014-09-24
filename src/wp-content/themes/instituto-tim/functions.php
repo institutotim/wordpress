@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include dirname(__FILE__).'/includes/congelado-functions.php';
 include dirname(__FILE__).'/includes/html.class.php';
@@ -89,7 +89,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 //========================================================== Sidebars ==========================================================//
 
 if(function_exists('register_sidebar')) {
-// sidebar 
+// sidebar
 register_sidebar( array(
     'name' =>  'Sidebar',
         'description' => __('Sidebar', 'institutotim'),
@@ -164,7 +164,7 @@ function doVideoInstituto()
 	    //doSomeStuff
 		$videoUrl = $_POST['videoUrl'];
 		echo html::getVideo( $videoUrl, "100%", "375px" );
-		
+
 		die(); //Lembre sempre de finalizar a execução pois, caso contrario o wordpress retornará 0.
 }
 //Adiciona a funcao extra votos aos hooks ajax do WordPress.
@@ -188,7 +188,7 @@ function comments_tim_clear( $comment, $args, $depth ) {
             <div class="text-comment"><?php comment_text(); ?></div>
         </div>
 
-        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => 'Responder', 'depth' => $depth, 'max_depth' => '4' ) ) ); ?>
+        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Responder', 'institutotim' ), 'depth' => $depth, 'max_depth' => '4' ) ) ); ?>
     </div>
 
 <?php
