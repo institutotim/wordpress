@@ -62,7 +62,7 @@
             <div id="goto-tim" class="col-lg-6 col-md-6">
                 <a href="http://www.tim.com.br"><?php _e('Portal Tim', 'institutotim');?></a>
             </div>
-            <div id="languages" class="col-lg-6 col-md-6 text-right">
+            <div id="languages" class="col-lg-6 col-md-6 text-right right">
                 <ol class="breadcrumb">
                     <li<?php if ( get_current_blog_id() === 2 ) : echo ' class="active"'; endif;?>><a href="<?php echo get_blog_details(2)->siteurl; ?>">English</a></li>
                     <li<?php if ( get_current_blog_id() === 1 ) : echo ' class="active"'; endif;?>><a href="<?php echo get_blog_details(1)->siteurl; ?>">Português</a></li>
