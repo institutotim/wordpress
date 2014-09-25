@@ -7694,6 +7694,23 @@ header#main-header #goto-tim a:hover {
   color: white;
   text-decoration: none;
 }
+header#main-header #languages {
+  height: 41px;
+}
+header#main-header #languages .breadcrumb {
+  background: transparent;
+  padding: 0 !important;
+  margin: 0!important;
+}
+header#main-header #languages .breadcrumb li.active {
+  font-weight: bold;
+}
+header#main-header #languages .breadcrumb li a {
+  color: #888888;
+  line-height: 3.5;
+  opacity: 0.7;
+  text-decoration: none;
+}
 header#main-header #brand {
   height: 82px;
   z-index: 10;
