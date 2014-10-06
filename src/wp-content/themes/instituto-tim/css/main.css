@@ -8148,6 +8148,7 @@ section#main-section #main-aside .videos {
 section#main-section #main-aside .editais .see-more,
 section#main-section #main-aside .solutions .see-more,
 section#main-section #main-aside .videos .see-more {
+  border: solid 1px #EBEBEB;
   position: absolute;
   right: 20px;
   top: 16px;
