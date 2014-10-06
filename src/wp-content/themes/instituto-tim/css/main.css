@@ -8134,6 +8134,13 @@ section#main-section #main-aside .videos {
   border-width: 1px;
   margin-bottom: 25px;
 }
+section#main-section #main-aside .editais .see-more,
+section#main-section #main-aside .solutions .see-more,
+section#main-section #main-aside .videos .see-more {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+}
 section#main-section #main-aside .editais .modal-video,
 section#main-section #main-aside .solutions .modal-video,
 section#main-section #main-aside .videos .modal-video {
