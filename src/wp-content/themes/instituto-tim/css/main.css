@@ -8075,6 +8075,12 @@ section#main-section #projects h1 {
   line-height: 1;
   margin-bottom: 35px;
 }
+@media (max-width: 767px) {
+  section#main-section #projects h1 {
+    font-size: 17px;
+    padding-top: 5px !important;
+  }
+}
 section#main-section #projects h2 {
   color: #007dc3;
   font-size: 16px;
