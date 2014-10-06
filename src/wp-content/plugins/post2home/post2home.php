@@ -26,8 +26,8 @@ License: GPL2
  *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-add_filter( 'manage_solucoes_posts_columns', 'post2home_add_column' );
-add_action( 'manage_solucoes_posts_custom_column', 'post2home_create_input', 10, 2 );
+add_filter( 'manage_project_posts_columns', 'post2home_add_column' );
+add_action( 'manage_project_posts_custom_column', 'post2home_create_input', 10, 2 );
 add_action( 'admin_enqueue_scripts', 'post2home_enqueue_scripts' );
 add_action( 'wp_ajax_post2home_handle_post_meta', 'post2home_handle_post_meta' );
 
@@ -39,7 +39,7 @@ add_action( 'wp_ajax_post2home_handle_post_meta', 'post2home_handle_post_meta' )
 function post2home_add_column( $columns ) {
     global $post_type;
 
-    if ( $post_type == 'solucoes' )
+    if ( $post_type == 'project' )
         $columns['post2home-feature'] = __( 'Feature', 'post2home' );
 
     return $columns;
@@ -72,7 +72,7 @@ function post2home_enqueue_scripts( $hook ) {
 
 	global $post_type;
 
-	if ( $hook == 'edit.php' && $post_type == 'solucoes' ) {
+	if ( $hook == 'edit.php' && $post_type == 'project' ) {
 		wp_enqueue_script( 'post2home', plugins_url( '/post2home.js', __FILE__ ), array( 'jquery' ) );
 
 		wp_register_style( 'post2home', plugins_url( '/post2home.css', __FILE__ ), false );
