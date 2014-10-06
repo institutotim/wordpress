@@ -8064,6 +8064,11 @@ section#main-section #projects article.inclusao h2,
 section#main-section #projects article.inclusion h2 {
   color: #2c9cd3;
 }
+section#main-section #projects .see-more-projects {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
 section#main-section #projects h1 {
   color: #007dc3;
   font-size: 24px;
