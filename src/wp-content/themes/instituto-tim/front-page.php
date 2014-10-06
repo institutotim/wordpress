@@ -44,7 +44,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
-                            <a class="see-more-projects btn btn-primary" href="<?php echo get_post_type_archive_link( 'project' );?>">Veja Mais</a>
+                            <a class="see-more-projects btn btn-primary" href="<?php echo get_post_type_archive_link( 'project' );?>"><?php _e('Veja Mais', 'institutotim');?></a>
                             <h1 class="top"><?php _e('Projetos Instituto TIM', 'institutotim');?></h1>
                         </div>
                     </div>

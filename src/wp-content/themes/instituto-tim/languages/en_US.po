@@ -45,6 +45,11 @@ msgstr "Instituto TIM Projects"
 msgid "Saiba mais"
 msgstr "Learn more"
 
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/front-page.php:47
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/widgets/solucoes_widget.php:6
+msgid "Veja Mais"
+msgstr "See More"
+
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/search.php:6
 #, php-format
 msgid "Resultados da busca por \"%s\""
