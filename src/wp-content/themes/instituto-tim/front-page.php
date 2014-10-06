@@ -64,13 +64,21 @@
             </nav>
 
             <div class="row">
-                <?php $projects = new WP_Query(array(
+                <?php
+                    $projects = new WP_Query(array(
                     'post_type' => 'project',
-                    'posts_per_page' => -1
-                )) ?>
+                    'posts_per_page' => -1,
+                    'ignore_sticky_posts' => 1,
+                    'meta_key' => '_post2home',
+                    'meta_value' => 1
+                ));
 
-                <?php $cc = 0; ?>
+                if( !$projects->have_posts() ) :
+                    $projects = new WP_Query(array( 'post_type' => 'project', 'posts_per_page' => -1));
+                endif;
 
+                $cc = 0;
+                ?>
                 <?php while( $projects->have_posts() ) : $projects->the_post(); ?>
 
                     <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
