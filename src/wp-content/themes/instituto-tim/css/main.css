@@ -7689,6 +7689,11 @@ header#main-header #goto-tim a {
   padding-left: 26px;
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  header#main-header #goto-tim a {
+    margin-left: 0;
+  }
+}
 header#main-header #goto-tim a:hover {
   background-image: url(../img/spritesMenuSup_03-hover.png);
   color: white;
