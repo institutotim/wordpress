@@ -71,19 +71,19 @@
           </div>
 
           <div class="row">
-            <div id="brand" class="col-lg-4 col-md-4 left hidden-sm hidden-xs">
+            <div id="brand" class="col-lg-4 col-md-4 col-sm-4 left hidden-xs">
                 <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="col-lg-12 col-md-12 col-sm-12"/>
                 </a>
             </div>
 
-            <div id="brand" class="visible-xs visible-sm col-lg-sm-12">
+            <div id="brand" class="visible-xs col-xs-12">
                 <a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/instituto-tim-white.png" class="img-responsive"/>
                 </a>
             </div>
 
-            <div id="search" class="col-lg-8 col-md-8 right hidden-sm hidden-xs">
+            <div id="search" class="col-lg-8 col-md-8 col-sm-8 right hidden-xs">
                 <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
                     <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="<?php _e('O que você procura?', 'institutotim');?>"/>
@@ -92,7 +92,7 @@
                 </form>
             </div>
 
-            <div id="search" class="visible-sm visible-xs">
+            <div id="search" class="visible-xs">
                 <form method="get" class="form-horizontal row" action="<?php echo home_url( '/' ); ?>">
                     <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="<?php _e('O que você procura?', 'institutotim');?>"/>
