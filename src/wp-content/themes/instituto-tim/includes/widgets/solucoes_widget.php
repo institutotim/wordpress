@@ -3,7 +3,7 @@
     <div class="solutions col-lg-12 col-md-12">
         <?php $solucoes_w = new WP_Query(array('post_type' => 'solucoes', 'post_per_page' => -1)); $num_of_items = intval($solucoes_w->found_posts); ?>
         <h1><?php _e('Soluções', 'institutotim');?></h1>
-        <a class="btn btn-warning see-more" href="<?php echo get_post_type_archive_link( 'solucoes' );?>"><?php _e('Veja Mais', 'institutotim');?></a>
+        <a class="btn btn-warning see-more" href="<?php echo get_post_type_archive_link( 'solucoes' );?>"><?php _e('Ver todas', 'institutotim');?></a>
         <?php if ($num_of_items > 1): ?>
             <nav class="prev"><a href=""></a></nav>
         <?php endif; ?>
