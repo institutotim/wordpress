@@ -8785,6 +8785,11 @@ svg:not(:root) {
 figure {
   margin: 0;
 }
+@media (min-width: 767px) and (max-width: 992px) {
+  section#main-section {
+    margin-top: 30px;
+  }
+}
 @media (max-width: 768px) {
   section#main-section {
     margin-top: 80px;
