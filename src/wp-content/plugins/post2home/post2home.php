@@ -40,7 +40,7 @@ function post2home_add_column( $columns ) {
     global $post_type;
 
     if ( $post_type == 'project' )
-        $columns['post2home-feature'] = __( 'Feature', 'post2home' );
+        $columns['post2home-feature'] = __( 'Home', 'post2home' );
 
     return $columns;
 }
