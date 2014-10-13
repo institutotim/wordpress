@@ -193,3 +193,15 @@ function comments_tim_clear( $comment, $args, $depth ) {
 
 <?php
 }
+
+////// Tira Limite de projetos por página
+
+add_action('pre_get_posts', function($query) {
+
+    if ($query->is_post_type_archive('project') && $query->is_main_query())
+        $query->set('posts_per_page', -1);
+
+});
+
+
+
