@@ -9,7 +9,7 @@ add_action('load-edit.php', 'hacklab_post2home_JS');
 add_action('load-edit-pages.php', 'hacklab_post2home_JS');
 
 function hacklab_post2home_add_column($defaults){
-    $defaults['destaques'] = 'Home';
+    $defaults['destaques'] = 'Destaque';
     return $defaults;
 }
 
@@ -17,7 +17,7 @@ function hacklab_post2home_select($column_name, $id){
 
     if ($column_name=="destaques"){
         $highlighted = get_post_meta($id, "_home", true) == 1 ?  "checked" : "";
-    ?>  
+    ?>
         <input type="checkbox" class="hacklab_post2home_button" id="hacklab_post2home_<?php echo $id; ?>" <?php echo $highlighted; ?>>
     <?php
     }

@@ -105,7 +105,7 @@ register_sidebar( array(
 function institutotim_custom_login_logo() {
 	echo '
         <style type="text/css">
-	        .login h1 a { background-image: url('. html::getImageUrl('logotipo.png') .'); height: 105px; background-size: auto; }
+	        .login h1 a { background-image: url('. html::getImageUrl('logotipo.png') .'); width: 180px; height: 107px; background-size: auto; }
         </style>';
 }
 add_action('login_head', 'institutotim_custom_login_logo');

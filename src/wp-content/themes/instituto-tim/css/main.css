@@ -8082,11 +8082,22 @@ section#main-section #projects article.inclusao h2,
 section#main-section #projects article.inclusion h2 {
   color: #2c9cd3;
 }
+section#main-section #projects .see-more-projects {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
 section#main-section #projects h1 {
   color: #007dc3;
   font-size: 24px;
   line-height: 1;
   margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  section#main-section #projects h1 {
+    font-size: 17px;
+    padding-top: 5px !important;
+  }
 }
 section#main-section #projects h2 {
   color: #007dc3;
@@ -8151,6 +8162,14 @@ section#main-section #main-aside .videos {
   border-style: solid;
   border-width: 1px;
   margin-bottom: 25px;
+}
+section#main-section #main-aside .editais .see-more,
+section#main-section #main-aside .solutions .see-more,
+section#main-section #main-aside .videos .see-more {
+  border: solid 1px #EBEBEB;
+  position: absolute;
+  right: 20px;
+  top: 16px;
 }
 section#main-section #main-aside .editais .modal-video,
 section#main-section #main-aside .solutions .modal-video,

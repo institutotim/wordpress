@@ -699,11 +699,23 @@ section#main-section {
       }
     }
 
+    .see-more-projects {
+      position: absolute;
+      right: 20px;
+      top: 0px;
+    }
+
     h1 {
       color: rgb(0, 125, 195);
       font-size: 24px;
       line-height: 1;
       margin-bottom: 35px;
+    }
+    @media (max-width: @screen-xs-max) {
+        h1 {
+          font-size: 17px;
+          padding-top: 5px !important;
+        }
     }
 
     h2 {
@@ -772,7 +784,12 @@ section#main-section {
       border-style: solid;
       border-width: 1px;
       margin-bottom: 25px;
-
+      .see-more {
+        border: solid 1px #EBEBEB;
+        position: absolute;
+        right: 20px;
+        top: 16px;
+      }
       .modal-video {
           cursor: pointer;
       }
