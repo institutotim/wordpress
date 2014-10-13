@@ -5,7 +5,7 @@
         <div class="highlight-wrapper shadow">
             <span id="high-light-navigation"></span>
             <div class="highlight-container">
-                <?php $destaques = new WP_Query( array('posts_per_page' => -1, 'post_type' => 'post', 'meta_key' => '_home', 'ignore_sticky_posts' => true )); ?>
+                <?php $destaques = new WP_Query( array('posts_per_page' => -1, 'post_type' => 'any', 'meta_key' => '_home', 'ignore_sticky_posts' => true )); ?>
                 <?php if ($destaques->have_posts()) : ?>
                     <?php while ($destaques->have_posts()): $destaques->the_post(); ?>
                         <?php if ( get_the_post_thumbnail() ) :?>
