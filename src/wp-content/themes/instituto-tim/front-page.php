@@ -80,7 +80,7 @@
                         ),
                         array(
                             'key' => 'projeto_concluido',
-                            'value' => 'on'
+                            'value' => 'off'
                         ),
                     )
                 ));
