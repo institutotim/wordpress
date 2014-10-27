@@ -86,7 +86,7 @@
                 ));
 
                 if( !$projects->have_posts() ) :
-                    $projects = new WP_Query(array( 'post_type' => 'project', 'posts_per_page' => -1, array( 'key' => 'projeto_concluido', 'value' => 'on' )));
+                    $projects = new WP_Query(array( 'post_type' => 'project', 'posts_per_page' => -1 ));
                 endif;
 
                 $cc = 0;
