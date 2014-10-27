@@ -72,17 +72,8 @@
                     'post_type' => 'project',
                     'posts_per_page' => -1,
                     'ignore_sticky_posts' => 1,
-                    'meta_query' => array(
-                        'relation' => 'AND',
-                        array(
-                            'key' => '_post2home',
-                            'value' => 1
-                        ),
-                        array(
-                            'key' => 'projeto_concluido',
-                            'value' => 'off'
-                        ),
-                    )
+                    'meta_key' => '_post2home',
+                    'meta_value' => 1
                 ));
 
                 if( !$projects->have_posts() ) :
