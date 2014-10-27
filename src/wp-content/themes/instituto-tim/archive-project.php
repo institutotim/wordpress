@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-kkfkkfkkfkfkfk
 <div class="row">
     <div class="col-lg-8 col-md-8">
         <div id="projects">
@@ -27,11 +26,14 @@ kkfkkfkkfkfkfk
             </nav>
 
             <div class="row">
+                <div class="col-lg-12"><h3>Projetos Não Concluídos</h3></div>
+            </div>
+            <div class="row">
                 <?php while( have_posts() ) : the_post(); ?>
 
-                    <?php $project_categories = get_the_terms( $post->ID, 'projects_categories'); ?>
+                    <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
 
-                    <article id="project-<?php the_ID() ?>" class="col-lg-4 col-md-4 col-sm-6">
+                    <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6">
                         <div class="img-wrapper shadow">
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                 <?php foreach ($project_categories as $category) { echo $category->name; } ?>
@@ -40,7 +42,43 @@ kkfkkfkkfkfkfk
                         </div>
                         <h2 class="top"><?php the_title(); ?></h2>
                         <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
-                        <p><a href="<?php the_permalink(); ?>" class="more"><?php _e('Saiba mais', 'institutotim');?>...</a></p>
+                        <p><a href="<?php the_permalink(); ?>" class="more"><?php _e('saiba mais', 'institutotim');?>...</a></p>
+                    </article>
+
+                <?php endwhile; wp_reset_query(); ?>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12"><h3>Projetos Concluídos</h3></div>
+            </div>
+            <div class="row">
+                <?php
+                    $projetos = new WP_Query(array(
+                    'post_type' => 'project',
+                    'posts_per_page' => -1,
+                    'ignore_sticky_posts' => 1,
+                    'meta_query' => array(
+                        array(
+                            'key' => 'projeto_concluido',
+                            'value' => 'on'
+                        ),
+                    )
+                ));
+            ?>
+                <?php while( $projetos->have_posts() ) : $projetos->the_post(); ?>
+
+                    <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
+
+                    <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="img-wrapper shadow">
+                            <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
+                                <?php foreach ($project_categories as $category) { echo $category->name; } ?>
+                            </span>
+                            <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?>
+                        </div>
+                        <h2 class="top"><?php the_title(); ?></h2>
+                        <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
+                        <p><a href="<?php the_permalink(); ?>" class="more"><?php _e('saiba mais', 'institutotim');?>...</a></p>
                     </article>
 
                 <?php endwhile; wp_reset_query(); ?>
