@@ -7547,6 +7547,9 @@ body {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff78ab00', endColorstr='#ff528500', GradientType=0);
 }
+.btn_category_opacity {
+  opacity: 0.7;
+}
 .btn-ensino,
 .btn-education {
   background-color: #1a2769;

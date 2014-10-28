@@ -10,14 +10,20 @@
                 </div>
             </div>
 
+            <?php
+                if (is_tax('projects_categories')) {
+                    $term_color = get_queried_object();
+                }
+            ?>
             <nav id="secondary-nav" class="row">
                 <ul class="clearfix">
                     <?php $terms = get_terms('projects_categories', array('hide_empty' => 0)); ?>
                     <?php foreach($terms as $term) :
                           $term_link = get_term_link( $term );
+
                     ?>
                         <li class="<?php echo $term->slug; ?>">
-                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
+                            <a href="<?php echo $term_link;?>" class="btn btn-<?php echo $term->slug; ?> col-lg-12 col-mg-12 <?php if ( $term->slug != $term_color->slug && is_tax('projects_categories') ) { echo " btn_category_opacity"; }?>" data-toggle="tooltip" data-placement="bottom" data-original-title="<?php echo $term->description; ?>">
                                 <?php echo $term->name; ?>
                             </a>
                         </li>
@@ -44,7 +50,6 @@
 
                 <?php endwhile; wp_reset_query(); ?>
             </div>
-
 
             <?php
                 $tax_query = array();
