@@ -198,7 +198,7 @@ function comments_tim_clear( $comment, $args, $depth ) {
 
 add_action('pre_get_posts', function($query) {
 
-    if ($query->is_post_type_archive('project') && $query->is_main_query() && !is_admin() ) {
+    if ( ($query->is_post_type_archive('project') || $query->is_tax('projects_categories')) && $query->is_main_query() && !is_admin() ) {
         $query->set('meta_key', 'projeto_concluido');
         $query->set('meta_value', 'off');
         $query->set('posts_per_page', -1);
