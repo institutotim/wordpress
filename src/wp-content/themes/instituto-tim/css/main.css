@@ -8105,6 +8105,9 @@ section#main-section #projects h2 {
   line-height: 1;
   margin-bottom: 10px;
 }
+section#main-section #projects .title-archive {
+  margin: 28px 0 34px 0;
+}
 section#main-section #main-aside {
   min-height: 200px;
 }
