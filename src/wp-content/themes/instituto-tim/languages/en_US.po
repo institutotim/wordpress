@@ -107,6 +107,10 @@ msgstr "Y"
 msgid "Arquivo"
 msgstr "Archive"
 
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/archive-project.php:80
+msgid "Projetos Concluídos"
+msgstr "Completed Projects"
+
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/functions.php:95
 msgid "Sidebar"
 msgstr "Barra lateral"

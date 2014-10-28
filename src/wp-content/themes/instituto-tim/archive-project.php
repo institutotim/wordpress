@@ -59,7 +59,7 @@
                         );
                     }
                 }
-                
+
                 $projetos = new WP_Query(array(
                     'post_type' => 'project',
                     'posts_per_page' => -1,
@@ -73,14 +73,14 @@
                     'tax_query' => $tax_query
                 ));
             ?>
-            
+
             <?php if ($projetos->have_posts()): ?>
 
                 <div class="row">
-                    <div class="col-lg-12"><h3>Projetos Concluídos</h3></div>
+                    <div class="col-lg-12"><h3 class="title-archive"><?php _e('Projetos Concluídos', 'institutotim');?></h3></div>
                 </div>
                 <div class="row">
-                    
+
                     <?php while( $projetos->have_posts() ) : $projetos->the_post(); ?>
 
                         <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
@@ -98,11 +98,11 @@
                         </article>
                     <?php endwhile; ?>
                 </div>
-                
+
             <?php endif; ?>
-            
+
             <?php wp_reset_query(); ?>
-            
+
         </div>
     </div>
     <div class="col-lg-4 col-md-4">
