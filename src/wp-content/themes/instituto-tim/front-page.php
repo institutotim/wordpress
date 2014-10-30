@@ -11,7 +11,7 @@
                         <?php if ( get_the_post_thumbnail() ) :?>
                         <article id="post-<?php the_ID();?>">
                             <div class="content">
-                                <h1><?php echo get_the_title(); ?></h1>
+                                <h1><a href="<?php echo get_permalink();?>"><?php echo get_the_title(); ?></a></h1>
                                 <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 19, ' [...]')?></p>
                             </div>
                             <div class="img-wrapper">

@@ -7962,6 +7962,10 @@ section#main-section .highlight-wrapper .highlight-container .content h1 {
   padding: 0;
   text-transform: uppercase;
 }
+section#main-section .highlight-wrapper .highlight-container .content h1 a {
+  color: #fff;
+  text-decoration: none;
+}
 section#main-section .highlight-wrapper .highlight-container .content p.excerpt {
   color: #fff;
   margin: 0;
