@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: /home/leo/devel/instituto-tim/src/wp-content/themes/"
 "instituto-tim\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: /home/leo/devel/instituto-tim/src/wp-content/themes/"
 "instituto-tim\n"
 
@@ -109,7 +109,7 @@ msgstr "Archive"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/archive-project.php:80
 msgid "Projetos Concluídos"
-msgstr "Completed Projects"
+msgstr "Concluded Projects"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/functions.php:95
 msgid "Sidebar"
