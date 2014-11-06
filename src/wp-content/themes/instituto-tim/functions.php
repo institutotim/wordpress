@@ -5,7 +5,7 @@ include dirname(__FILE__).'/includes/html.class.php';
 include dirname(__FILE__).'/includes/utils.class.php';
 include dirname(__FILE__).'/includes/banners-apoiadores.php';
 include dirname(__FILE__).'/includes/hacklab_post2home/hacklab_post2home.php';
-// include dirname(__FILE__).'/includes/form.class.php';
+include dirname(__FILE__).'/includes/form/form.class.php';
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -206,5 +206,12 @@ add_action('pre_get_posts', function($query) {
 
 });
 
+////////// Formulário de contato ///////////
 
+register_congelado_form('formulario-contato', array(
+            'name' => array('not_empty'),
+            'email' => array('not_empty','is_valid_email'),
+            'message' => array('not_empty')
+        ));
+        
 
