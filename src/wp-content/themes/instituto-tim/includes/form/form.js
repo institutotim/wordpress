@@ -1,10 +1,11 @@
 (function($){
     $(document).ready(function(){
-
+        
         var $form = $(".hl-form");
         var formID = $form.attr('id');
 
-        $form.children(".hl-form-submit").click(function( event ){
+        $form.find(".hl-form-submit").click(function( event ){
+            
             event.preventDefault();
 
             $form.find('.hl-error-alert').hide();
@@ -43,7 +44,7 @@
             }
         };
 
-        $('input[type=tel]').mask(maskBehavior, options);
+        //$('input[type=tel]').mask(maskBehavior, options);
 
     });
 })(jQuery);
