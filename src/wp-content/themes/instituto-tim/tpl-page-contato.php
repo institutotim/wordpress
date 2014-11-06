@@ -1,8 +1,8 @@
 <?php
-/* 
+/*
  * Template Name: Formulário de Contato
- * 
- */ 
+ *
+ */
 
 ?>
 <?php get_header(); ?>
@@ -17,47 +17,49 @@
             <div class="entry-content">
                 <?php the_content(); ?>
             </div>
-            
+
             <form action="" id="formulario-contato" class="hl-form" method="post" role="form">
 
                 <div id="error-general" class="hl-message-alert"></div>
 
-                <div class="article--content--form--content">
+                <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="name" ><?php _e('Nome completo', 'institutotim');?></label>
                         <div id="error-name" class="hl-error-alert"></div>
                     </div>
-                    <input id="name" type="text" name="name" />
+                    <input class="form-control" id="name" type="text" name="name" />
                 </div>
 
-                <div class="article--content--form--content">
+                <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="email" ><?php _e('E-mail', 'institutotim');?></label>
                         <div id="error-email" class="hl-error-alert"></div>
                     </div>
-                    <input id="email" type="email" name="email" />
+                    <input class="form-control" id="email" type="email" name="email" />
                 </div>
 
-                <div class="article--content--form--content">
+                <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="message" ><?php _e('Mensagem', 'institutotim');?></label>
                         <div id="error-message" class="hl-error-alert"></div>
                     </div>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="10"></textarea>
                 </div>
 
-                <input type="submit" class="hl-form-submit" value="Enviar" />
+                <p class="textright">
+                    <input class="btn btn-info" type="submit" class="hl-form-submit" value="Enviar" />
+                </p>
 
             </form>
-            
-            
+
+
         </article>
     </div>
-    
+
     <div class="row">
         <?php comments_template(); ?>
     </div>
-    
+
 
 
 <?php endwhile; ?>
