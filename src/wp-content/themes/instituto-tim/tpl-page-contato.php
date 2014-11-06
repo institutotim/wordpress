@@ -20,12 +20,12 @@
 
             <form action="" id="formulario-contato" class="hl-form" method="post" role="form">
 
-                <div id="error-general" class="hl-message-alert"></div>
+                <div id="error-general" class="hl-message-alert alert alert-success"></div>
 
                 <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="name" ><?php _e('Nome completo', 'institutotim');?></label>
-                        <div id="error-name" class="hl-error-alert"></div>
+                        <span id="error-name" class="hl-error-alert error-alert"></span>
                     </div>
                     <input class="form-control" id="name" type="text" name="name" />
                 </div>
@@ -33,7 +33,7 @@
                 <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="email" ><?php _e('E-mail', 'institutotim');?></label>
-                        <div id="error-email" class="hl-error-alert"></div>
+                        <span id="error-email" class="hl-error-alert error-alert"></span>
                     </div>
                     <input class="form-control" id="email" type="email" name="email" />
                 </div>
@@ -41,14 +41,12 @@
                 <div class="form-group article--content--form--content">
                     <div class="form--content--label">
                         <label for="message" ><?php _e('Mensagem', 'institutotim');?></label>
-                        <div id="error-message" class="hl-error-alert"></div>
+                        <span id="error-message" class="hl-error-alert error-alert"></span>
                     </div>
                     <textarea class="form-control" id="message" name="message" rows="10"></textarea>
                 </div>
 
-                <p class="textright">
-                    <input class="btn btn-info" type="submit" class="hl-form-submit" value="Enviar" />
-                </p>
+                <input class="hl-form-submit btn btn-info alignright" type="submit" value="Enviar" />
 
             </form>
 
