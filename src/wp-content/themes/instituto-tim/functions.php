@@ -214,4 +214,15 @@ register_congelado_form('formulario-contato', array(
             'message' => array('not_empty')
         ));
         
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// EMAILS SENDER  /////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
 
+add_filter( 'wp_mail_from_name', 'colband_mail_sender_name' );
+function colband_mail_sender_name($from_name) {
+    return get_option('blogname');
+}
+//add_filter( 'wp_mail_from', 'colband_mail_sender' );
+function colband_mail_sender($from_name) {
+    return get_option('admin_email');
+}
