@@ -23,7 +23,7 @@
                             elementError.html(dataJSON.error_messages[i]).fadeIn().delay(3000).fadeOut();
                         }
                     } else {
-                        $form.find('.hl-message-alert').html("Formulário enviado com sucesso!").fadeIn().delay(3000).fadeOut();
+                        $form.find('.hl-message-alert').html(formvars.successMessage).fadeIn().delay(3000).fadeOut();
                         if ( $form.find('input[type=submit]') ) {
                             $form.find('input, textarea').val('');
                         }

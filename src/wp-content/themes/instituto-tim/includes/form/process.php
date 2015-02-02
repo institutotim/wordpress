@@ -10,7 +10,11 @@ function form_modular() {
 
     wp_enqueue_style('form', get_stylesheet_directory_uri().'/includes/form/css/form.css');
 
-    wp_localize_script('form', 'formvars', array ( 'ajaxurl' => admin_url('admin-ajax.php')) );
+    wp_localize_script('form', 'formvars', array ( 
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'successMessage' => __('Formulário enviado com sucesso!', 'institutotim')
+        ) 
+    );
 }
 
 /*

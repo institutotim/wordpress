@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SLUG\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-06 14:58-0300\n"
+"POT-Creation-Date: 2015-02-02 14:16-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Leo Germani <leogermani@hacklab.com.br>\n"
 "Language-Team: \n"
@@ -86,6 +86,10 @@ msgstr "Email"
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/tpl-page-contato.php:43
 msgid "Mensagem"
 msgstr "Message"
+
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/tpl-page-contato.php:49
+msgid "Enviar"
+msgstr "Send"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/front-page.php:36
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/front-page.php:100
@@ -449,6 +453,10 @@ msgstr "Solutions"
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/widgets/solucoes_widget.php:6
 msgid "Ver todas"
 msgstr "See all"
+
+#: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/form/process.php:15
+msgid "Formulário enviado com sucesso!"
+msgstr "Your message has been successfully sent!"
 
 #: /home/leo/devel/instituto-tim/src/wp-content/themes/instituto-tim/includes/form/validation.php:44
 msgid "Este campo não pode ser vazio"
