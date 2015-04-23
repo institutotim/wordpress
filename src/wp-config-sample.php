@@ -16,13 +16,13 @@
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'instituto-tim');
+define('DB_NAME', 'nomedoBD');
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'username_here');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'password_here');
 
 /** nome do host do MySQL */
 define('DB_HOST', 'localhost');
@@ -32,15 +32,6 @@ define('DB_CHARSET', 'utf8');
 
 /** O tipo de collate do banco de dados. Não altere isso se tiver dúvidas. */
 define('DB_COLLATE', '');
-define('DOMAIN_CURRENT_SITE', 'instituto-tim.mu');
-
-define('WP_ALLOW_MULTISITE', true);
-
-define('MULTISITE', true);
-define('SUBDOMAIN_INSTALL', true);
-define('PATH_CURRENT_SITE', '/');
-define('SITE_ID_CURRENT_SITE', 1);
-define('BLOG_ID_CURRENT_SITE', 1);
 
 /**#@+
  * Chaves únicas de autenticação e salts.
@@ -68,17 +59,8 @@ define('NONCE_SALT',       'put your unique phrase here');
  * Você pode ter várias instalações em um único banco de dados se você der para cada um um único
  * prefixo. Somente números, letras e sublinhados!
  */
-$table_prefix  = 'hl_';
+$table_prefix  = 'wp_';
 
-/**
- * O idioma localizado do WordPress é o inglês por padrão.
- *
- * Altere esta definição para localizar o WordPress. Um arquivo MO correspondente ao
- * idioma escolhido deve ser instalado em wp-content/languages. Por exemplo, instale
- * pt_BR.mo em wp-content/languages e altere WPLANG para 'pt_BR' para habilitar o suporte
- * ao português do Brasil.
- */
-define('WPLANG', 'pt_BR');
 
 /**
  * Para desenvolvedores: Modo debugging WordPress.
