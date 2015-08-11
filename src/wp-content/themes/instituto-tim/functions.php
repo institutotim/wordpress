@@ -226,3 +226,16 @@ function colband_mail_sender_name($from_name) {
 function colband_mail_sender($from_name) {
     return get_option('admin_email');
 }
+
+
+add_filter('upload_mimes', function ( $existing_mimes=array() ) {
+ 
+    // add your ext => mime to the array
+    $existing_mimes['extension'] = 'application/zip';
+ 
+    // add as many as you like
+ 
+    // and return the new full result
+    return $existing_mimes;
+ 
+}
