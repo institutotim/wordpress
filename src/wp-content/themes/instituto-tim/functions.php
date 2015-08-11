@@ -231,7 +231,7 @@ function colband_mail_sender($from_name) {
 add_filter('upload_mimes', function ( $existing_mimes=array() ) {
  
     // add your ext => mime to the array
-    $existing_mimes['extension'] = 'application/zip';
+    $existing_mimes['zip'] = 'application/zip';
  
     // add as many as you like
  
