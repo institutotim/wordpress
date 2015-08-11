@@ -238,4 +238,4 @@ add_filter('upload_mimes', function ( $existing_mimes=array() ) {
     // and return the new full result
     return $existing_mimes;
  
-}
+});
