@@ -1,0 +1,24 @@
+#   BULLETPROOF DEFAULT .HTACCESS      
+
+# WARNING!!! THE default.htaccess FILE DOES NOT PROTECT YOUR WEBSITE AGAINST HACKERS
+# This is a standard generic htaccess file that does NOT provide any website security
+# The DEFAULT .HTACCESS file should be used for testing and troubleshooting purposes only
+
+# BEGIN BPS WordPress
+# WP REWRITE LOOP START
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+
+# add a trailing slash to /wp-admin
+RewriteRule ^wp-admin$ wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(wp-(content|admin|includes).*) $1 [L]
+RewriteRule ^(.*\.php)$ $1 [L]
+RewriteRule . index.php [L]
+# WP REWRITE LOOP END
+# END BPS WordPress

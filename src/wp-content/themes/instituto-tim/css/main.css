@@ -7566,6 +7566,10 @@ body {
 .btn-inclusion {
   background-color: #2c9cd3;
 }
+.btn-outras-iniciativas,
+.btn-other-iniciatives {
+  background-color: #0e578f;
+}
 .img-wrapper {
   overflow: hidden;
   padding-bottom: 35px;
@@ -7600,6 +7604,12 @@ body {
 .img-wrapper span.work {
   background-color: #00c4df;
 }
+
+.img-wrapper span.outras-iniciativas,
+.img-wrapper span.others-iniciatives {
+  background-color: #0e578f;
+}
+
 .shadow {
   position: relative;
 }

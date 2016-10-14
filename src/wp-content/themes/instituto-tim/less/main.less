@@ -6,6 +6,8 @@
 @aplicacoes: rgb(0, 115, 207);
 @inclusao: rgb(44, 156, 211);
 @trabalho: rgb(0, 196, 223);
+@outras-iniciativas: #0e578f;
+}
 
 @timBlue1: rgb(7, 47, 230);
 @timBlue2: rgb(0, 115, 207);
@@ -154,6 +156,11 @@ body {
   background-color: @inclusao;
 }
 
+.btn-outras-iniciativas,
+.btn-other-iniciatives {
+  background-color: @outras-iniciativas;
+}
+
 
 // IMAGES CUSTOMIZATION
 .img-wrapper {
@@ -189,6 +196,10 @@ body {
       background-color: @trabalho;
     }
   }
+    &.outras-iniciativas,
+    &.outras-iniciativas {
+      background-color: @outras-iniciativas;
+    }
 }
 .shadow {
   position: relative;
@@ -664,6 +675,20 @@ section#main-section {
             }
           }
         }
+        &.outras-iniciativas,
+        &.other-iniciatives {
+          .tooltip {
+            .tooltip-inner {
+              background: @inclusao !important;
+              color: #fff;
+            }
+            &.bottom {
+              .tooltip-arrow {
+                border-bottom-color: @outras-iniciativas !important;
+              }
+            }
+          }
+        }
       }
     }
     a {
@@ -698,6 +723,12 @@ section#main-section {
       &.inclusion {
         h2 {
           color: @inclusao;
+        }
+      }
+      &.outras-iniciativas,
+      &.other-initiatives {
+        h2 {
+          color: @outras-iniciativas;
         }
       }
     }
