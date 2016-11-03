@@ -211,9 +211,10 @@ add_action('pre_get_posts', function($query) {
 register_congelado_form('formulario-contato', array(
             'name' => array('not_empty'),
             'email' => array('not_empty','is_valid_email'),
-            'message' => array('not_empty')
+            'message' => array('not_empty'),
+
         ));
-        
+
 /////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////// EMAILS SENDER  /////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -229,13 +230,24 @@ function colband_mail_sender($from_name) {
 
 
 add_filter('upload_mimes', function ( $existing_mimes=array() ) {
- 
+
     // add your ext => mime to the array
     $existing_mimes['zip'] = 'application/zip';
- 
+
     // add as many as you like
- 
+
     // and return the new full result
     return $existing_mimes;
- 
+
 });
+
+function csrf_token_login(){
+    wp_nonce_field('login', '_csrf_login');
+}
+add_action( 'login_form', 'csrf_token_login' );
+
+function csrf_verify_login(){
+    if (!wp_verify_nonce($_REQUEST['login']), '_csrf_login')
+        exit();
+}
+add_action( 'wp_authenticate' , 'csrf_verify_login' );

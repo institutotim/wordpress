@@ -62,6 +62,7 @@ class congeladoform {
                                 <td><input type="text" id="assunto-<?php echo $key;?>" class="text" name="<?php echo $this->nameClass.'['.$key.'][assunto]'; ?>" value="<?php echo htmlspecialchars($this->options[$key]['assunto']); ?>" /></td>
                             </tr>
                         <?php }?>
+                        <?php wp_nonce_field('contact', '_csrf_contact'); ?>
                     </tbody>
                 </table>
             <?php submit_button(); ?>

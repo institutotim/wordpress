@@ -1,12 +1,12 @@
 <?php
 class Validator {
     public $fields_rules = array();
-    
+
     function Validator() {
         global $congeladoForm;
         $this->fields_rules = $congeladoForm->forms;
     }
-    
+
     /**
     * Return 'true' if field is valid, an error message if field is invalid
     * or 'null' if field is not recognized

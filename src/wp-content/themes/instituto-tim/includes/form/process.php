@@ -10,10 +10,10 @@ function form_modular() {
 
     wp_enqueue_style('form', get_stylesheet_directory_uri().'/includes/form/css/form.css');
 
-    wp_localize_script('form', 'formvars', array ( 
+    wp_localize_script('form', 'formvars', array (
         'ajaxurl' => admin_url('admin-ajax.php'),
         'successMessage' => __('Formulário enviado com sucesso!', 'institutotim')
-        ) 
+        )
     );
 }
 
@@ -22,6 +22,9 @@ function form_modular() {
  */
 function form_process () {
     if ( isset($_GET['send']) ) :
+        if (!wp_verify_nonce($_REQUEST['contact'], '_csrf_contact'))
+            exit();
+
         $validation = new Validator();
 
         $struct = array(
@@ -32,7 +35,7 @@ function form_process () {
 
         $formID = $_GET['formID'];
         $emailMsg = '';
-        
+
         foreach ($_GET as $fieldname => $fieldvalue) :
             if (array_key_exists($fieldname, $validation->fields_rules[$formID])) :
                 $valid = $validation->validate_field($formID, $fieldname, $fieldvalue);
