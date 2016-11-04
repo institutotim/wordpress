@@ -46,6 +46,8 @@
                     <textarea class="form-control" id="message" name="message" rows="10"></textarea>
                 </div>
 
+                <?php wp_nonce_field('contact', '_csrf_contact'); ?>
+
                 <input class="hl-form-submit btn btn-info alignright" type="submit" value="<?php _e('Enviar', 'institutotim');?>" />
 
             </form>
