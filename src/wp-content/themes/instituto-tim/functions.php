@@ -247,7 +247,8 @@ function csrf_token_login(){
 add_action( 'login_form', 'csrf_token_login' );
 
 function csrf_verify_login(){
-    if (!wp_verify_nonce($_REQUEST['login'], '_csrf_login'))
+echo $_REQUEST['_csrf_login'];
+    if ( $_SERVER['REQUEST_METHOD'] === 'POST' && !wp_verify_nonce($_REQUEST['_csrf_login'], 'login'))
         exit();
 }
 add_action( 'wp_authenticate' , 'csrf_verify_login' );
