@@ -22,7 +22,7 @@ function form_modular() {
  */
 function form_process () {
     if ( isset($_GET['send']) ) :
-        if (!wp_verify_nonce($_REQUEST['contact'], '_csrf_contact'))
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && !wp_verify_nonce($_REQUEST['_csrf_contact'], 'contact'))
             exit();
 
         $validation = new Validator();
