@@ -253,7 +253,12 @@ function csrf_verify_login(){
 add_action( 'wp_authenticate' , 'csrf_verify_login' );
 
 function verify_search(){
-    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['s']) && && !wp_verify_nonce($_REQUEST['_csrf_search'], 'search'))
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['s']) &&
+        (
+            (isset($_REQUEST['_csrf_search_xs']) && !wp_verify_nonce($_REQUEST['_csrf_search_xs'], 'search_xs'))
+            || (isset($_REQUEST['_csrf_search_md']) && !wp_verify_nonce($_REQUEST['_csrf_search_md'], 'search_md'))
+        )
+    )
         exit();
 }
 
