@@ -88,6 +88,7 @@
                     <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="<?php _e('O que você procura?', 'institutotim');?>"/>
                     </div>
+                    <?php wp_nonce_field('search', '_csrf_search'); ?>
                     <button type="submit" class="col-lg-1-col-md-1"><i class="icon-search"></i></button>
                 </form>
             </div>
@@ -97,6 +98,7 @@
                     <div class="search-wrapper">
                         <input type="text" class="form-control" name="s" placeholder="<?php _e('O que você procura?', 'institutotim');?>"/>
                     </div>
+                    <?php wp_nonce_field('search', '_csrf_search'); ?>
                     <button type="submit" class="col-lg-1-col-md-1"><i class="icon-search"></i></button>
                 </form>
             </div>

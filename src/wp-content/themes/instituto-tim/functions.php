@@ -247,8 +247,28 @@ function csrf_token_login(){
 add_action( 'login_form', 'csrf_token_login' );
 
 function csrf_verify_login(){
-echo $_REQUEST['_csrf_login'];
     if ( $_SERVER['REQUEST_METHOD'] === 'POST' && !wp_verify_nonce($_REQUEST['_csrf_login'], 'login'))
         exit();
 }
 add_action( 'wp_authenticate' , 'csrf_verify_login' );
+
+function verify_search(){
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && !wp_verify_nonce($_REQUEST['_csrf_search'], 'search'))
+        exit();
+}
+
+add_action( 'pre_get_posts', 'verify_search' );
+
+
+function csrf_lost_pass(){
+    wp_nonce_field('lost_pass', '_csrf_lost_pass');
+}
+
+add_action('login_form_lostpassword', 'csrf_lost_pass');
+
+function verify_lost_pass() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && !wp_verify_nonce($_REQUEST['_csrf_lost_pass'], 'lost_pass'))
+        exit();
+}
+
+add_action( 'password_reset', 'verify_lost_pass');
