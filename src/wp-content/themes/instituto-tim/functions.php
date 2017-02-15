@@ -277,3 +277,17 @@ function verify_lost_pass() {
 }
 
 add_action( 'password_reset', 'verify_lost_pass');
+
+//
+// Funcao para o dropdown menu do header
+require_once('wp_bootstrap_navwalker.php');
+
+function wpb_theme_setup(){
+
+    register_nav_menus(array(
+        'primary' => __('Primary Menu')
+        ));
+}
+
+    
+add_action('after_setup_theme','wpb_theme_setup');

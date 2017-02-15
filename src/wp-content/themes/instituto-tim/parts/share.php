@@ -4,8 +4,8 @@
     </div>
     <div class="gplus"><g:plusone size="medium" href="<?php the_permalink();?>"></g:plusone></div>
     <div class="tt">
-        <a href="http://twitter.com/share" class="twitter-share-button" data-via="<?php the_permalink();?>" data-count="horizontal">Tweet</a>
-        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="<?php the_permalink();?>" data-count="horizontal">Tweet</a>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     </div>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </div>

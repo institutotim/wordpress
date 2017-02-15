@@ -31,7 +31,7 @@
                 </ul>
             </nav>
 
-            <div class="row">
+            <div class="row row-flex">
                 <?php while( have_posts() ) : the_post(); ?>
 
                     <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
@@ -97,9 +97,9 @@
                                 <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                     <?php foreach ($project_categories as $category) { echo $category->name; } ?>
                                 </span>
-                                <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?>
+                               <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('thumbnail', array('class' => 'img')); ?></a>
                             </div>
-                            <h2 class="top"><?php the_title(); ?></h2>
+                            <h2 class="top"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <p class="excerpt"><a href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a></p>
                             <p><a href="<?php the_permalink(); ?>" class="more"><?php _e('saiba mais', 'institutotim');?>...</a></p>
                         </article>

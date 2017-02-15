@@ -3790,12 +3790,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #333333;
   background-color: transparent;
 }
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #e7e7e7;
-}
+/*
+* .navbar-default .navbar-nav > .active > a,
+* .navbar-default .navbar-nav > .active > a:hover,
+* .navbar-default .navbar-nav > .active > a:focus {
+*  color: #555555;
+*  background-color: #e7e7e7;
+*}
+*/
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
@@ -7674,7 +7676,7 @@ a.more {
   padding-left: 12px;
 }
 p.excerpt {
-  font-size: 12px;
+  font-size: 11px;
   max-height: 48px;
   overflow: hidden;
   position: relative;
@@ -7914,7 +7916,7 @@ section#main-section .highlight-wrapper {
   position: relative;
 }
 section#main-section .highlight-wrapper #high-light-navigation {
-  bottom: 43px;
+  bottom: 48px;
   position: absolute;
   right: 10px;
   z-index: 99;
@@ -7951,7 +7953,7 @@ section#main-section .highlight-wrapper .highlight-container article {
 }
 section#main-section .highlight-wrapper .highlight-container .content {
   background: rgba(10, 26, 66, 0.9);
-  bottom: 0;
+  bottom: 8px;
   border-radius: 0 0 4px 24px;
   left: 0;
   padding: 26px 20px;
@@ -7961,7 +7963,7 @@ section#main-section .highlight-wrapper .highlight-container .content {
 }
 section#main-section .highlight-wrapper .highlight-container .content h1 {
   color: #fff;
-  font-size: 27px;
+  font-size: 20px;
   line-height: 1;
   margin: 0 0 7px 0;
   padding: 0;
@@ -7985,7 +7987,7 @@ section#main-section #about {
 section#main-section #about article {
   background: #00c4df;
   border-radius: 0 0 4px 24px;
-  bottom: 35px;
+  bottom: 42px;
   color: #fff;
   left: 0;
   position: absolute;
@@ -8030,7 +8032,7 @@ section#main-section #secondary-nav ul {
 }
 section#main-section #secondary-nav ul li {
   float: left;
-  margin-right: 10px;
+  margin-right: 5px;
   width: calc(23.75%);
 }
 section#main-section #secondary-nav ul li:last-child {
@@ -8844,4 +8846,16 @@ figure {
 #formulario-contato .error-alert {
   color: red;
   float: right;
+}
+
+.single-project .wp-caption.alignleft {
+    margin: 5px 0px 3px 0;
+}
+
+.row-flex {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+flex-wrap: wrap;
 }
