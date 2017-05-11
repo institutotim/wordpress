@@ -128,6 +128,15 @@ add_action( 'login_enqueue_scripts', 'favicon_wp_login' );
 
 //========================================================== Custom menus ==========================================================//
 
+register_nav_menus( array(
+            'header-1' => __( 'Header Menu 1'),
+	    'footer-1' => __( 'Footer Menu 1'),
+	    'footer-2' => __( 'Footer Menu 2'),
+	    'footer-3' => __( 'Footer Menu 3'),
+	    'footer-4' => __( 'Footer Menu 4'),
+) );
+
+
 add_action( 'init', 'institutotim_custom_menus' );
 function institutotim_custom_menus() {
     register_nav_menus( array(

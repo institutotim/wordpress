@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row">
+<div class="row" style="position:relative;z-index:0">
     <div id="highlight" class="col-lg-8 col-md-8 hidden-sm hidden-xs">
         <div class="highlight-wrapper shadow">
             <span id="high-light-navigation"></span>
