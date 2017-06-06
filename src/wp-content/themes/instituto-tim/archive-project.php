@@ -36,7 +36,7 @@
 
                     <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
 
-                    <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6">
+                    <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="img-wrapper shadow">
                             <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                 <?php foreach ($project_categories as $category) { echo $category->name; } ?>
@@ -92,7 +92,7 @@
 
                         <?php $project_categories = get_the_terms( $post->id, 'projects_categories'); ?>
 
-                        <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6">
+                        <article id="project-<?php the_id() ?>" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div class="img-wrapper shadow">
                                 <span class="<?php foreach ($project_categories as $category) { echo $category->slug; } ?>">
                                     <?php foreach ($project_categories as $category) { echo $category->name; } ?>

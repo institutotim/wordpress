@@ -56,8 +56,8 @@
             <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie8.css">
         <![endif]-->
         <?php wp_head(); ?>
-        
-        
+
+
 
 <style>
 #tim-container {width:100%;margin:0;padding:0;background-color: #075aa5}
@@ -95,7 +95,7 @@
 .rm-creditos {width:170px;float:right;font-family: 'TIMSansWeb', Fallback, times-new-roman;font-size:7px;padding-top:7px}
 #et-featured-posts {margin-top: 14px}
 }
-  
+
 @media only screen and (min-width: 360px) {
 .container-2, .rodape-mobile, .bar-primary, .bar-secundary {width:360px}
 .nav-f {width:340px}
@@ -128,7 +128,7 @@
 #searchbox input[type="text"] {background-color:#fff;border: 0px;font-size: 12px;color: #666;padding: 8px;width: 260px;border: 1px solid #fff;border-radius: 4px;font-size: 12px;text-indent: -140px;}
 #searchbox input[type="text"]:focus {color: #000;text-indent:0px}
 #button-submit{background: url(<?php echo get_template_directory_uri(); ?>/imagens/searchicon.png) no-repeat;margin-left: -32px;border-width: 0px;width: 21px;height: 21px;}
-#mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {color:#fff;font-size:9px}
+#mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {color:#fff;font-size:11px}
 #mega-menu-wrap-header-1 ul#mega-menu-header-1  {margin-top:0}
 .logo2 {width:188px;float:left;padding-right:15px;z-index:99999;height:21px}
 .logo2 img {width:188px;z-index:99999}
@@ -202,7 +202,7 @@
 .menu-fixed-border-left {border-color: #155ea3;border-style: solid;border-width: 0 2px 0 0;}
 .menu-fixed-bottom-left {top: 34px;}
 .rede-social {width:200px;float:right;display:block;font-size:16pt}
-#mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {font-size:13px}
+#mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {font-size:12px}
 #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {margin-right: 33px}
 .rede-social li {display:inline-block;padding:10px 5px}
 .rede-social li a {color:#fff}
@@ -263,17 +263,17 @@
 
 		</div>
 	</div>
-	
+
 	<div class="menu-it">
 		<div class="container-2 bar-secundary">
 			<div class="logo2 menu-fixed-bottom-left menu-fixed-border-left">
 				<a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_header_institutotim.png" alt="" title="" /></a>
 			</div>
-			
+
 			<div class="logo-project">
 				<!--<a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_timfazciencia.png" alt="" title="" /></a>-->
 			</div>
-			
+
 			<div class="nav-f">
                                 <div class="nav-i">
                                         <div class="nav-e">
@@ -287,7 +287,7 @@
                                                 Search
                                                 <?php } ?>" title="O que você procura?" />
                                                 <input id="button-submit" type="submit" value=" "/>
-                                                </form> 
+                                                </form>
                                         </div>
 
 <!--
