@@ -88,7 +88,8 @@
 .menu-fixed-border-left {border-color: #075aa5}
 .rede-social, .logo-project, .nav-e, .logo2, #footer-tim {display:none}
 .menu-fixed-border-left {border-color: #155ea3;border-style: solid;border-width: 0 2px 0 0;top: 34px;}
-.rodape-mobile {width:320px;background-color: #075aa5;height:56px;color:#00a4e4;display:block;margin-top:20px}
+.rodape-mobile {width:100%;background-color: #075aa5;height:56px;color:#00a4e4;display:block;margin-top:20px}
+/*.rodape-mobile {width:320px;background-color: #075aa5;height:56px;color:#00a4e4;display:block;margin-top:20px} */
 .rm-content {width:290px;margin:0 auto;padding-top:18px}
 .rm-logo {width:120px;float:left}
 .rm-logo img {width:115px}
@@ -97,7 +98,7 @@
 }
 
 @media only screen and (min-width: 360px) {
-.container-2, .rodape-mobile, .bar-primary, .bar-secundary {width:360px}
+.container-2, .bar-primary, .bar-secundary {width:360px}
 .nav-f {width:340px}
 .bar-primary {padding-left:25px}
 .bar-secundary {padding-left:10px}
@@ -119,7 +120,6 @@
 .bar-primary, .bar-secundary {padding-left:20px;width:640px}
 .bar-secundary {height:94px}
 .nav-it {padding-right:0;border-top:1px solid #00a4e4;height:39px}
-.rodape-mobile {width:640px}
 #searchbox {width: 280px;margin-top: 11px;height:38px;position: relative;}
 #searchbox input {outline: none}
 #searchbox input:focus::-webkit-input-placeholder {color: transparent}
