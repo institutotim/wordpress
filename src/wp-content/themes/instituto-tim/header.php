@@ -113,6 +113,10 @@
 
 
 @media only screen and (min-width: 600px) {
+.nav-f {display:block;width:320px;z-index:9999;position:relative}
+.rede-social, .logo-project, .nav-e, .logo2, #footer-tim {display:none}
+.rodape-mobile {width:100%;background-color: #075aa5;height:56px;color:#00a4e4;display:block;margin-top:20px}
+
 .container-2 {width:640px;margin:0 auto}
 .logo-project img {width:71px;z-index:99999}
 .logo-project {display:block;width:100px;float:left;margin-top:7px;padding-left:10px;z-index:99999}
