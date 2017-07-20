@@ -90,7 +90,7 @@
 #searchbox input[type="text"] {
     font-family: 'TIMSansWeb', Fallback, times-new-roman
 }
-/*#mega-menu-wrap-header-1 .mega-menu-toggle .mega-toggle-block-2 .mega-search .search-icon::before, #mega-menu-wrap-header-1 .mega-menu-toggle #mega-toggle-block-2 .mega-search .search-icon::before {color:#00a4e4}*/
+
 
 @media only screen and (min-width: 320px) {
     .container-2 {
@@ -213,7 +213,8 @@
         padding-top: 8px
     }
 }
-@media only screen and (min-width: 480px) {} @media only screen and (min-width: 600px) {
+
+@media only screen and (min-width: 600px) {
     .nav-f {
         display: block;
         width: 320px;
@@ -586,7 +587,6 @@
         margin: 0 auto;
         padding-top: 40px
     }
-    /*#mega-menu-wrap-header-1 #mega-menu-header-1 li.mega-menu-flyout.mega-menu-item-has-children > a.mega-menu-link::after, #mega-menu-wrap-header-1 #mega-menu-header-1 li.mega-menu-flyout li.mega-menu-item-has-children > a.mega-menu-link::after, #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item-has-children > a.mega-menu-link::after {color:#00a4e4}*/
 
     .bar-primary,
     .bar-secundary {
@@ -740,33 +740,22 @@
 			</div>
 
 			<div class="nav-f">
-                                <div class="nav-i">
-                                        <div class="nav-e">
-                                                <form id="searchbox" method="get" action="/" autocomplete="off">
-                                                <input name="s" type="text" size="15" placeholder="<?php
-                                                $blog_id = get_current_blog_id();
-                                                if ( 1 == $blog_id ) {
-                                                ?>
-                                                O que você procura?
-                                                <?php } else { ?>
-                                                Search
-                                                <?php } ?>" title="O que você procura?" />
-                                                <input id="button-submit" type="submit" value=" "/>
-                                                </form>
-                                        </div>
+                <div class="nav-i">
+                    <div class="nav-e">
+                        <form id="searchbox" method="get" action="/" autocomplete="off">
+                            <input name="s" type="text" size="15" placeholder="<?php
+                            $blog_id = get_current_blog_id();
+                            if ( 1 == $blog_id ) {
+                            ?>
+                            O que você procura?
+                            <?php } else { ?>
+                            Search
+                            <?php } ?>" title="O que você procura?" />
+                            <input id="button-submit" type="submit" value=" "/>
+                        </form>
+                    </div>
 
-<!--
-                                          <div class="rede-social">
-						  <ul>
-						  <li><a href="https://www.facebook.com/TIMFazCiencia/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						  <li><a href="https://www.youtube.com/channel/UCWnd3qxdHRziiDG_yJfU1hQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-						  <li><a href="https://www.flickr.com/photos/121406068@N03/albums" target="_blank"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-						  <li><a href="https://www.flickr.com/photos/128197418@N02/albums" target="_blank"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-						  </ul>
-                                          </div>
---->
-
-                                </div>
+                </div>
 				<div class="nav-it">
 					<?php wp_nav_menu( array( 'theme_location' => 'header-1' ) ); ?>
 				</div>
