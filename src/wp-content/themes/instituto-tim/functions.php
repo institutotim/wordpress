@@ -6,6 +6,7 @@ include dirname(__FILE__).'/includes/utils.class.php';
 include dirname(__FILE__).'/includes/banners-apoiadores.php';
 include dirname(__FILE__).'/includes/hacklab_post2home/hacklab_post2home.php';
 include dirname(__FILE__).'/includes/form/form.class.php';
+require_once(dirname(__FILE__).'inc/wp_bootstrap_navwalker.php');
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -298,5 +299,5 @@ function wpb_theme_setup(){
         ));
 }
 
-    
+
 add_action('after_setup_theme','wpb_theme_setup');

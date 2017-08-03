@@ -57,8 +57,6 @@
         <![endif]-->
         <?php wp_head(); ?>
 
-
-
 <style>
 
 #tim-container {
@@ -69,152 +67,247 @@
 }
 .logo-it {
     background-color: #00427f;
-    border-bottom: 2px solid #82b9e6
+    border-bottom: 2px solid #82b9e6;
+    height: 27px;
+    padding-top: 3px;
 }
 .menu-it {
-    background-color: #075aa5;
+    background-color: #004691;
+}
+#menu-nav-it{
+    text-transform: uppercase;
 }
 .menu-fixed-bottom-left {
     left: 0;
     position: relative;
-    top: 30px;
 }
 .navbar-overtop-tim-en-pt a {
     color: #82b9e6;
 }
-#mega-menu-wrap-header-1,
+#menu-nav-it,
 .box-it li,
 .box-it,
 .creditos,
 .box-sz1 h2,
-#searchbox input[type="text"] {
+.searchbox input[type="text"] {
     font-family: 'TIMSansWeb', Fallback, times-new-roman
 }
+.logo2 {
+    width: 188px;
+    float: left;
+}
+.logo2 img {
+    width: 188px;
+}
+.navbar-toggle{
+    margin-top: 10px;
+    margin-right: 0;
+}
+.navbar-default,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+    border: none;
+    background-color: transparent;
+}
+#menu-nav-it {
+    margin-top: 0;
+}
+#menu-nav-it li > a{
+    margin-right: 15px;
+    margin-left: 0;
+    padding: 10px;
+    color: #FFF;
+    border-radius: inherit;
+}
+#menu-nav-it li > a > .dropdown-toggle .fa-angle-down:before{
+    color: #00a4e4 !important;
+}
+.nav .open a:hover,
+.nav .open a:active,
+.nav .open a:focus,
+#menu-nav-it li > a:hover,
+#menu-nav-it li > a:active,
+#menu-nav-it li > a:focus,
+#menu-nav-it li.open > a:hover,
+#menu-nav-it li.open > a:active,
+#menu-nav-it li.open > a:focus
+{
+    color: #FFF;
+    border-radius: inherit;
+    background-color: #428bca !important;
+}
+#menu-nav-it li > ul > li > a,
+#menu-nav-it li.open > ul > li > a:hover,
+#menu-nav-it li.open > ul > li > a:focus,
+#menu-nav-it li.open > ul > li > a:active{
+    color: #075aa5;
+    font-size: 12px;
+    background-color: #fff;
+}
+#menu-nav-it li > ul > li > a:hover{
+    color: #00a4e4;
+}
 
+.navbar-toggle {
+    background: transparent;
+    border: none;
+}
 
-@media only screen and (min-width: 320px) {
-    .container-2 {
-        width: 320px
-    }
-    .nav-f {
-        display: block;
-        width: 320px;
-        z-index: 9999;
-        position: relative
-    }
-    .bar-primary {
-        width: 305px;
-        height: 27px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 5px
-    }
-    .bar-secundary {
-        width: 290px;
-        margin-left: 9px;
-        height: 56px
-    }
-    #mega-menu-wrap-header-1 .mega-menu-toggle {
-        padding-top: 5px;
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {
-        color: #004279
-    }
-    #mega-menu-wrap-header-1 ul#mega-menu-header-1 {
-        margin-top: 16px
-    }
-    .ltrad {
-        margin-right: 15px
-    }
-    .mega-sub-menu {
-        margin-top: 20px
-    }
-    .nav-it {
-        padding-right: 15px
-    }
-    .home-first-section {
-        margin-top: 10px
-    }
-    .menu-fixed-border-left {
-        border-color: #075aa5
-    }
-    .rede-social,
-    .logo-project,
-    .nav-e,
-    .logo2,
-    #footer-tim {
-        display: none
-    }
-    .menu-fixed-border-left {
-        border-color: #155ea3;
-        border-style: solid;
-        border-width: 0 2px 0 0;
-        top: 34px;
-    }
-    .rodape-mobile {
-        width: 100%;
-        background-color: #075aa5;
-        height: 56px;
-        color: #00a4e4;
-        display: block;
-        margin-top: 20px
-    }
-    /*.rodape-mobile {width:320px;background-color: #075aa5;height:56px;color:#00a4e4;display:block;margin-top:20px} */
+.menu-nav-it-container{
+    padding: 0;
+}
 
-    .rm-content {
-        width: 290px;
-        margin: 0 auto;
-        padding-top: 18px
-    }
-    .rm-logo {
-        width: 120px;
-        float: left
-    }
-    .rm-logo img {
-        width: 115px
-    }
-    .rm-creditos {
-        width: 170px;
-        float: right;
-        font-family: 'TIMSansWeb', Fallback, times-new-roman;
+.searchbox {
+    width: 280px;
+    position: relative;
+    margin-top: 5px;
+    height: 25px
+}
+.searchbox input {
+    outline: none
+}
+.searchbox input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+.searchbox input:focus:-moz-placeholder {
+    color: transparent;
+}
+.searchbox input:focus::-moz-placeholder {
+    color: transparent
+}
+.searchbox input[type="text"] {
+    background-color: #fff;
+    border: 0px;
+    font-size: 12px;
+    color: #666;
+    padding: 8px;
+    width: 260px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    text-indent: -80px;
+}
+.searchbox input[type="text"]:focus {
+    color: #000;
+    text-indent: 0px;
+}
+#button-submit {
+    background: url(<?php echo get_template_directory_uri();
+    ?>/imagens/searchicon.png) no-repeat;
+    margin-left: -32px;
+    border-width: 0px;
+    width: 21px;
+    height: 21px;
+}
+#search-row-mobile{
+    padding: 0;
+    height: 52px;
+}
+#search-row-mobile > .searchbox {
+    width: 100%;
+    padding-top: 8px;
+    margin-bottom: 8px;
+    height: 33px;
+    border-top: 1px solid #00a4e4;
+}
+#search-row-mobile > .searchbox > input[type="text"]{
+    width: 99%;
+    text-indent: -55px;
+}
+.footer-mobile {
+    width: 100%;
+    background-color: #075aa5;
+    height: 56px;
+    color: #00a4e4;
+    display: block;
+    margin: 0;
+    margin-top: 20px;
+    min-height: inherit;
+    padding: 17px 20px;
+}
+
+.footer-logo img {
+    width: 117px;
+}
+
+.footer-creditos{
+    margin-top: 6px;
+    text-align: right;
+
+}
+
+@media only screen and (max-width: 799px){
+    .footer-creditos{
         font-size: 7px;
-        padding-top: 7px
     }
-    #et-featured-posts {
-        margin-top: 14px
+    #menu-nav-it{
+        background-color: #e7e7e7;
     }
-}
-@media only screen and (min-width: 360px) {
-    .container-2,
-    .bar-primary,
-    .bar-secundary {
-        width: 360px
+    #menu-nav-it li > a{
+        color: #004279;
+        margin-right: 0;
     }
-    .nav-f {
-        width: 340px
+    .nav-e{
+        display: none;
     }
-    .bar-primary {
-        padding-left: 25px
+    #search-row-mobile{
+        display: block;
     }
-    .bar-secundary {
-        padding-left: 10px
+    .menu-it,
+    .menu-it > .container.container-2.bar-secundary {
+        min-height: 56px;
     }
-    .ltrad {
-        margin-right: 8px
+    .menu-fixed-bottom-left{
+        margin-top: 18px;
+        margin-left: 2px;
+        padding-left: 15px;
     }
-    .rm-content {
-        width: 300px
+    .navbar{
+        margin-bottom: 0;
     }
-    .rm-logo {
-        width: 130px
+    .navbar-header {
+        float: none;
     }
-    .rm-creditos {
-        width: 170px;
-        padding-top: 8px
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 0;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+    #footer-tim{
+        display: none;
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
+    #search-row-mobile{
+        display: none;
+    }
     .nav-f {
         display: block;
         width: 320px;
@@ -223,100 +316,12 @@
     }
     .rede-social,
     .logo-project,
-    .nav-e,
-    .logo2,
     #footer-tim {
         display: none
-    }
-    .rodape-mobile {
-        width: 100%;
-        background-color: #075aa5;
-        height: 56px;
-        color: #00a4e4;
-        display: block;
-        margin-top: 20px
     }
     .container-2 {
         width: 640px;
         margin: 0 auto
-    }
-    .logo-project img {
-        width: 71px;
-        z-index: 99999
-    }
-    .logo-project {
-        display: block;
-        width: 100px;
-        float: left;
-        margin-top: 7px;
-        padding-left: 10px;
-        z-index: 99999
-    }
-    .nav-e,
-    .logo2 {
-        display: block
-    }
-    .bar-primary,
-    .bar-secundary {
-        padding-left: 20px;
-        width: 640px
-    }
-    .bar-secundary {
-        height: 94px
-    }
-    .nav-it {
-        padding-right: 0;
-        border-top: 1px solid #00a4e4;
-        height: 39px
-    }
-    #searchbox {
-        width: 280px;
-        margin-top: 11px;
-        height: 38px;
-        position: relative;
-    }
-    #searchbox input {
-        outline: none
-    }
-    #searchbox input:focus::-webkit-input-placeholder {
-        color: transparent
-    }
-    #searchbox input:focus:-moz-placeholder {
-        color: transparent;
-    }
-    #searchbox input:focus::-moz-placeholder {
-        color: transparent
-    }
-    #searchbox input[type="text"] {
-        background-color: #fff;
-        border: 0px;
-        font-size: 12px;
-        color: #666;
-        padding: 8px;
-        width: 260px;
-        border: 1px solid #fff;
-        border-radius: 4px;
-        font-size: 12px;
-        text-indent: -140px;
-    }
-    #searchbox input[type="text"]:focus {
-        color: #000;
-        text-indent: 0px
-    }
-    #button-submit {
-        background: url(<?php echo get_template_directory_uri();
-        ?>/imagens/searchicon.png) no-repeat;
-        margin-left: -32px;
-        border-width: 0px;
-        width: 21px;
-        height: 21px;
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {
-        color: #fff;
-        font-size: 11px
-    }
-    #mega-menu-wrap-header-1 ul#mega-menu-header-1 {
-        margin-top: 0
     }
     .logo2 {
         width: 188px;
@@ -328,6 +333,20 @@
     .logo2 img {
         width: 188px;
         z-index: 99999
+    }
+    .bar-primary,
+    .bar-secundary {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 640px
+    }
+    .bar-secundary {
+        height: 99px;
+    }
+    .nav-it {
+        padding-right: 0;
+        border-top: 1px solid #00a4e4;
+        height: 39px
     }
     .nav-f {
         width: 430px;
@@ -349,29 +368,15 @@
         padding-top: 0;
         height: 48px
     }
-}
-@media only screen and (min-width: 768px) {
     .container-2 {
-        width: 768px
-    }
-    .bar-primary,
-    .bar-secundary {
-        padding-left: 30px;
-        width: 768px
-    }
-    .bar-secundary {
-        height: 94px
-    }
-    #searchbox {
-        margin-top: 5px;
-        height: 25px
+        width: 800px
     }
     .nav-f {
-        width: 500px;
-        padding-left: 46px
+        width: 510px;
+        padding-left: 36px;
     }
-    .logo-project {
-        display: none
+    #menu-nav-it li > a {
+        margin-right: 0
     }
     .nav-i {
         width: 402px;
@@ -385,7 +390,7 @@
     #menu-menu-1 li {
         display: inline-block
     }
-    .rodape-mobile {
+    .footer-mobile {
         display: none
     }
     #et-featured-posts {
@@ -393,18 +398,6 @@
     }
     .ltrad {
         margin-right: 15px
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 li.mega-menu-flyout.mega-menu-item-has-children > a.mega-menu-link::after,
-    #mega-menu-wrap-header-1 #mega-menu-header-1 li.mega-menu-flyout li.mega-menu-item-has-children > a.mega-menu-link::after,
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item-has-children > a.mega-menu-link::after {
-        color: #00a4e4 !important
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {
-        font-size: 12px;
-        height: 36px
-    }
-    #mega-menu-wrap-header-1 ul#mega-menu-header-1 {
-        margin-top: 0
     }
     #footer-tim {
         display: block;
@@ -484,9 +477,6 @@
         color: #00a4e4;
         text-transform: uppercase;
     }
-    /*.footerborder-left {height: 150px;border-image: linear-gradient(to right, rgba(24, 86, 154, 1), rgba(1, 60, 125, 1)) 1 100% 1 100%;border-style: solid;border-width: 3px 0 3px 3px}*/
-    /*.footerborder-left {height: 150px;background: url('<?php echo get_template_directory_uri(); ?>/imagens/separacao.png')no-repeat 0 0;}*/
-
     .footer-links2 {
         margin-left: 0px;
         margin-top: -7px
@@ -514,31 +504,21 @@
         -moz-box-shadow: -1px 0 0 0 rgb(39, 100, 191);
         -webkit-box-shadow: -1px 0 0 0 rgb(39, 100, 191)
     }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
-        margin-top: 8px;
-        line-height: 20px
+    .menu-fixed-bottom-left {
+        margin-top: 34px;
     }
 }
-@media only screen and (min-width: 960px) {
-    /*.footerborder-left {box-shadow: -1px 0 0 0 rgba(24, 86, 155, 1);border-left: 1px solid #003b7b;height: 150px;-webkit-box-shadow: -1px 0 0 0 #1a589c;-moz-box-shadow: -1px 0 0 0 #1a589c} */
-    /*.footerborder-left {box-shadow: -1px 0 0 0 #1a589c;border-left: 1px solid #003b7b;}*/
-    /*.footerborder-left {box-shadow: -1px 0 0 0 #00a4e4;border-left: 1px solid #003b7b;height: 150px;}*/
-
+@media only screen and (min-width: 992px) {
+    #menu-nav-it > li > a{
+        margin-right: 30px;
+        padding-left: 10px;
+    }
     .container-2 {
-        width: 1170px;
+        width: 970px;
         margin: 0 auto
     }
-    .logo-project {
-        display: block;
-        width: 112px;
-        padding-left: 15px;
-        padding-top: 27px;
-        margin-top: 0;
-        height: 94px;
-        z-index: 99999
-    }
     .logo-project img {
-        width: 112px;
+        width: 0px;
         z-index: 99999
     }
     .menu-fixed-border-left {
@@ -546,20 +526,11 @@
         border-style: solid;
         border-width: 0 2px 0 0;
     }
-    .menu-fixed-bottom-left {
-        top: 34px;
-    }
     .rede-social {
         width: 200px;
         float: right;
         display: block;
         font-size: 16pt
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {
-        font-size: 12px
-    }
-    #mega-menu-wrap-header-1 #mega-menu-header-1 > li.mega-menu-item > a.mega-menu-link {
-        margin-right: 33px
     }
     .rede-social li {
         display: inline-block;
@@ -588,35 +559,20 @@
         padding-top: 40px
     }
 
-    .bar-primary,
-    .bar-secundary {
-        padding-right: 30px
-    }
-    #searchbox {
+    .searchbox {
         width: 280px;
         margin-top: 5px;
         height: 25px
     }
-    #searchbox input[type="text"] {
+    .searchbox input[type="text"] {
         background-color: #fff;
         border: 0px;
         font-size: 12px;
         padding: 8px;
         width: 260px
     }
-    .logo2 {
-        width: 188px;
-        float: left;
-        padding-right: 15px;
-        z-index: 99999;
-        height: 21px
-    }
-    .logo2 img {
-        width: 188px;
-        z-index: 99999
-    }
     .nav-f {
-        width: 730px;
+        width: 722px;
         float: left;
         padding-left: 70px;
         display: block;
@@ -713,7 +669,7 @@
 <div id="tim-container">
 
 	<div class="logo-it">
-		<div class="container-2 bar-primary">
+		<div class="container container-2 bar-primary">
 			<a href="http://tim.com.br/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_header_portal_tim.png" title="Instituto TIM" alt="Instituto TIM" /></a>
 <!--                <div class="ltrad"> --><span style="width:30px">&nbsp;</span>
                             <?php
@@ -730,7 +686,7 @@
 	</div>
 
 	<div class="menu-it">
-		<div class="container-2 bar-secundary">
+		<div class="container container-2 bar-secundary">
 			<div class="logo2 menu-fixed-bottom-left menu-fixed-border-left">
 				<a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_header_institutotim.png" alt="" title="" /></a>
 			</div>
@@ -742,7 +698,7 @@
 			<div class="nav-f">
                 <div class="nav-i">
                     <div class="nav-e">
-                        <form id="searchbox" method="get" action="/" autocomplete="off">
+                        <form class="searchbox" method="get" action="/" autocomplete="off">
                             <input name="s" type="text" size="15" placeholder="<?php
                             $blog_id = get_current_blog_id();
                             if ( 1 == $blog_id ) {
@@ -757,9 +713,44 @@
 
                 </div>
 				<div class="nav-it">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-1' ) ); ?>
-				</div>
+                    <nav class="navbar">
+                        <div class="navbar-header navbar-default">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-nav-it-container" aria-expanded="false">
+                                <span class="sr-only">Expandir Navegação</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <?php
+                            wp_nav_menu( array(
+                                'items_wrap'        => '<ul id="menu-nav-it" class="nav navbar-nav">%3$s</ul>',
+                                'menu'              => 'header-1',
+                                'theme_location'    => 'header-1',
+                                'depth'             => 2,
+                                'container'         => 'div',
+                                'container_class'   => 'menu-nav-it-container collapse navbar-collapse',
+                                'menu_class'        => 'nav navbar-nav',
+                                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                'walker'            =>  new wp_bootstrap_navwalker()
+                            ));
+                        ?>
+                    </nav>
+                </div>
 			</div>
+            <div class="col-xs-12 col-sm-12 col-md-12" id="search-row-mobile">
+                <form class="searchbox" method="get" action="/" autocomplete="off">
+                    <input name="s" type="text" size="15" placeholder="<?php
+                    $blog_id = get_current_blog_id();
+                    if ( 1 == $blog_id ) {
+                    ?>
+                    O que você procura?
+                    <?php } else { ?>
+                    Search
+                    <?php } ?>" title="O que você procura?" />
+                    <input id="button-submit" type="submit" value=" "/>
+                </form>
+            </div>
 		</div>
 	</div>
 </div>
@@ -770,4 +761,3 @@
         <div class="col-lg-offset-1 col-lg-10 col-md-12">
 
             <section id="main-section" style="clear:both;margin-top:30px;z-index:9">
-

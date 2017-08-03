@@ -11,7 +11,7 @@
 				$(this).parent().find('> a:first-child').css('background-color', 'white');
 			},
 			function() {
-				$(this).parent().find('> a:first-child').css('background-color', 'transparent');	
+				$(this).parent().find('> a:first-child').css('background-color', 'transparent');
 			}
 		);
 
@@ -20,7 +20,7 @@
 				$(this).find('> a:first-child').css('background-color', 'white');
 			},
 			function() {
-				$(this).find('> a:first-child').css('background-color', 'transparent');	
+				$(this).find('> a:first-child').css('background-color', 'transparent');
 			}
 		);
 
@@ -28,13 +28,13 @@
 
         //Open description of post
         $('.global-open-description-post-here').each(function(){
-            
+
             var close_or_open_description = $(this).find('> .description-post-here');
 
             $(this).find('.open-description-post-here').click(function(){
                 close_or_open_description.slideToggle("fast");
             });
-        
+
         });
 
         $('.highlight-container').cycle({
@@ -42,7 +42,7 @@
             timeout: 4500,
             speed: 300,
             pager: '#high-light-navigation'
-            
+
         });
 
         $('.solutions .highlight-sidebar').cycle({
@@ -51,7 +51,8 @@
             speed: 300,
             timeout: 0,
             prev: '.solutions nav.prev',
-            next: '.solutions nav.next'
+            next: '.solutions nav.next',
+            width: '100%'
         });
 
         $('.videos .highlight-sidebar').cycle({
@@ -60,9 +61,10 @@
             speed: 300,
             timeout: 0,
             prev: '.videos nav.prev',
-            next: '.videos nav.next'
+            next: '.videos nav.next',
+            width: '100%'
         });
-		
+
 		$('.modal-video').click(function(){
 			var titlePost = jQuery(this).attr('data-titlePost');
 			jQuery('.modal-title').html(titlePost);
@@ -72,7 +74,7 @@
 				data: {
 					action: 'doVideoInstituto',
 					videoUrl:  jQuery(this).attr('data-videoUrl')
-				}, 
+				},
 				success: function( response ){
 					jQuery('.modal-body').html(response);
 				}

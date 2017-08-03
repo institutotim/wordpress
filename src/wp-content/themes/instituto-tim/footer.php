@@ -17,61 +17,61 @@
 ?>
 <h2>Sobre</h2>
 
-                          <?php 
+                          <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-1',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>', 
-                          'container' => '', 
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 
 <?php } else { ?>
-                          <?php 
+                          <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-1',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>', 
-                          'container' => '', 
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 
 
 
 <?php } ?>
-			
+
 		</div>
 
 		<div class="box-it box-sz1 footerborder-left">
-		
+
 <?php
    $blog_id = get_current_blog_id();
    if ( 1 == $blog_id ) {
 ?>
 <h2>Iniciativas</h2>
-                          <?php 
+                          <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-2',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>', 
-                          'container' => '', 
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 <?php } else { ?>
-                          <?php 
+                          <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-2',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>', 
-                          'container' => '', 
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 
@@ -88,32 +88,32 @@
                           <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-3',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>', 
-                          'container' => '',   
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 <?php } else { ?>
                           <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-3',
-                          'menu' => '', 
+                          'menu' => '',
                           'menu-class' => '',
-                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>', 
-                          'container' => '',   
-                          'fallback_cb' => '', 
+                          'items_wrap' => '<ul id="%1$s" class="footer-links2">%3$s</ul>',
+                          'container' => '',
+                          'fallback_cb' => '',
                           'depth' => 2)
                           ); ?>
 
 <?php } ?>
 
 		</div>
-		  
+
 		<div class="box-it box-sz1 footerborder-left" style="margin-top:-4px">
 			<!--<h2>Queremos Ouvir Você</h2>-->
-                          <?php 
+                          <?php
                           wp_nav_menu ( array(
                           'theme_location' => 'footer-4',
                           'menu' => '',
@@ -132,7 +132,7 @@
 	</div>
 
 	<div class="creditos">
-		 Copyright TIM Celular <?php echo date('Y'); ?> - 
+		 Copyright TIM Celular <?php echo date('Y'); ?> -
                 <?php
                 $blog_id = get_current_blog_id();
                 if ( 1 == $blog_id ) {
@@ -148,25 +148,24 @@
 
 
 
-<div class="rodape-mobile">
-	<div class="rm-content">
-		<div class="rm-logo">
-			<a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_header_institutotim.png" alt="" title="" /></a>
-		</div>
-		<div class="rm-creditos">
-                    &copy; TIM Celular <?php echo date('Y'); ?> - 
-                    <?php
-                    $blog_id = get_current_blog_id();
-                    if ( 1 == $blog_id ) {
-                    ?>
-                    Todos os direitos reservados.
+<div class="container footer-mobile">
+  <div class="footer-logo col-sm-5 col-xs-4">
+    <a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/imagens/logo_header_institutotim.png" alt="" title="" /></a>
+  </div>
+  <div class="footer-creditos col-sm-7 col-xs-8">
+                &copy; TIM Celular <?php echo date('Y'); ?> -
+                <?php
+                $blog_id = get_current_blog_id();
+                if ( 1 == $blog_id ) {
+                ?>
+                Todos os direitos reservados.
 
-                    <?php } else { ?>
-                    All rights reserved.
-                    <?php } ?>
+                <?php } else { ?>
+                All rights reserved.
+                <?php } ?>
 
-		</div>
-	</div>
+  </div>
+  </div>
 </div>
 
 
